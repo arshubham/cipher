@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright 2017 Shubham Arora <shubhamarora@protonmail.com> -->
+<component type="desktop-application">
+    <id>com.github.arshubham.cipher.desktop</id>
+    <metadata_license>CC0-1.0</metadata_license>
+    <project_license>GPL-3.0+</project_license>
+    <name>Cipher</name>
+    <summary>Cipher</summary>
+    <developer_name>Shubham Arora</developer_name>
+    <provides>
+        <binary>com.github.arshubham.cipher</binary>
+    </provides>
+    <screenshots>
+        <screenshot type="default">
+            <image>https://raw.githubusercontent.com/robertsanseries/template-for-vala-apps/master/data/images/screenshot.png</image>
+        </screenshot>
+    </screenshots>
+    <description>
+        <p>My application template Vala for elementary OS.</p>
+    </description>   
+    <url type="homepage">https://robertsanseries.github.io/template-for-vala-apps/</url>
+    <url type="bugtracker">https://github.com/robertsanseries/template-for-vala-apps/issues</url>
+    <url type="help">https://github.com/robertsanseries/template-for-vala-apps/issues</url>
+    <update_contact>robertsanseries@gmail.com</update_contact>
+    <custom>
+        <value key="x-appcenter-color-primary">#546A79</value>
+        <value key="x-appcenter-color-primary-text">#ECF0F1</value>
+        <value key="x-appcenter-suggested-price">1</value>
+    </custom>
+</component>
