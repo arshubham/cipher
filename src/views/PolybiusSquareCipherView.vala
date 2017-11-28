@@ -26,35 +26,26 @@ using Cipher.Ciphers;
 namespace Cipher.Views {
 
 
-public class CaesarCipherView : Gtk.Grid  {
+public class PolybiusSquareCipherView : Gtk.Grid  {
     private Gtk.TextView plainTextTextView;
     private Gtk.TextView cipherTextTextView;
 
-    private Gtk.CellRendererText renderer;
-    private Gtk.ComboBox shiftComboBox;
-    private Gtk.TreeIter iter;
-    private Gtk.ListStore list_store;
-
     private Gtk.ScrolledWindow plainTextScrolledWindow;
     private Gtk.ScrolledWindow cipherTextScrolledWindow;
-
-    private Gtk.Box box;
 
     private Gtk.Button enchiperButton;
     private Gtk.Button dechiperButton;
 
     private Gtk.Label labelPlainText;
     private Gtk.Label labelCipherText;
-    private Gtk.Label labelShift;
     private Gtk.Label labelTitle;
 
-    private int shift;
     private string plainText;
     private string cipherText;
 
     construct {
 
-        labelTitle = new Gtk.Label ("Caeser Cipher");
+        labelTitle = new Gtk.Label ("Polybius Square Cipher");
         labelTitle.halign = Gtk.Align.CENTER;
         labelTitle.margin_top = 6;
         labelTitle.margin_bottom = 6;
@@ -74,29 +65,7 @@ public class CaesarCipherView : Gtk.Grid  {
         plainTextScrolledWindow.expand = true;
         plainTextScrolledWindow.get_style_context ().add_class (Gtk.STYLE_CLASS_VIEW);
         plainTextScrolledWindow.add (plainTextTextView);
-
-        labelShift = new Gtk.Label ("<b>Number of letters to shift to the right: </b>");
-        labelShift.set_use_markup (true);
-        labelShift.margin = 6;
-        labelShift.halign = Gtk.Align.START;
-        labelShift.set_line_wrap (true);
-        list_store = new Gtk.ListStore (1, typeof (int));
         
-        shiftComboBox = new Gtk.ComboBox.with_model(list_store);
-        shiftComboBox.halign = Gtk.Align.START;
-        shiftComboBox.set_active (0);      
-        shiftComboBox.margin = 6;
-
-        renderer = new Gtk.CellRendererText ();
-		shiftComboBox.pack_start (renderer, true);
-		shiftComboBox.add_attribute (renderer, "text", 0);
-
-        
-        for (int i = 0; i < 26; i++ ) {
-            list_store.append (out iter);
-            list_store.set (iter, 0, i+1);
-        }
-
         enchiperButton = new Gtk.Button.with_label ("Enchiper");
         enchiperButton.margin = 6;
         enchiperButton.halign = Gtk.Align.END;
@@ -117,37 +86,31 @@ public class CaesarCipherView : Gtk.Grid  {
         dechiperButton = new Gtk.Button.with_label ("Dechiper");
         dechiperButton.margin = 6;
         dechiperButton.halign = Gtk.Align.END;
-        box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0);
-        box.pack_start (labelShift, false, false, 0);
-        box.pack_start (shiftComboBox, false, false, 0);
 
         attach (labelTitle, 0, 0, 1, 1);
         attach (new Gtk.Separator (Gtk.Orientation.HORIZONTAL), 0, 1, 1, 1);
         attach (labelPlainText, 0, 2, 1, 1);
         attach (plainTextScrolledWindow, 0, 4, 1, 1);
-        attach (box, 0, 5, 1, 1);
         attach (enchiperButton, 0, 5, 1, 1);
         attach (new Gtk.Separator (Gtk.Orientation.HORIZONTAL), 0, 6, 1, 1);
         attach (labelCipherText, 0, 7, 1, 1);
         attach (cipherTextScrolledWindow, 0, 8, 1, 1);
         attach (dechiperButton, 0, 9, 1, 1);
         
-        Caesar caesar = new Caesar ();
+        PolybiusSquare polybiusSquare = new PolybiusSquare ();
 
         enchiperButton.clicked.connect (() => {
             plainText = plainTextTextView.buffer.text;
-            shift = caesar.getComboBoxValue (shiftComboBox, list_store);
-
             cipherText = ""; 
-            cipherTextTextView.buffer.text = caesar.encryptCaeser (plainText, shift);
+            cipherTextTextView.buffer.text = polybiusSquare.encryptPolybiusSquare (plainText);
         });
 
         dechiperButton.clicked.connect (() => {
             cipherText = cipherTextTextView.buffer.text;
-            shift = caesar.getComboBoxValue (shiftComboBox, list_store);
 
             plainText = "";
-            plainTextTextView.buffer.text = caesar.decryptCaeser (cipherText, shift);
+     
+            plainTextTextView.buffer.text = polybiusSquare.decryptPolybiusSquare (cipherText);
         });
     }
 

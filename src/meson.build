@@ -9,6 +9,8 @@ sources = files(
     'controllers/AppController.vala',
 
     'ciphers/Caesar.vala',
+    'ciphers/Atbash.vala',
+    'ciphers/PolybiusSquare.vala',
     # 'utils/FileUtil.vala',
     # 'utils/StringUtil.vala',
     # 'utils/TimeUtil.vala',
@@ -17,8 +19,10 @@ sources = files(
     
     'views/AppView.vala',
     
-    'views/AlertViewView.vala',
+    # 'views/AlertViewView.vala',
     'views/CaesarCipherView.vala',
+    'views/AtbashCipherView.vala',
+    'views/PolybiusSquareCipherView.vala',
 
     'widgets/HeaderBar.vala',
 

@@ -47,16 +47,18 @@ namespace Cipher.Views {
             this.headerbar = new HeaderBar ();
 			this.app.set_titlebar (this.headerbar);
 
-            var alert_view = new AlertViewView ();
+            var atbash_cipher = new AtbashCipherView ();
             var caesar_cipher = new CaesarCipherView ();
+            var polybius_cipher = new PolybiusSquareCipherView ();
     
             var main_stack = new Gtk.Stack ();
             main_stack.add_titled (caesar_cipher, "caesar", "Caesar Cipher");
-            main_stack.add_titled (alert_view, "alert", "AlertView");
+            main_stack.add_titled (atbash_cipher, "atbash", "Atbash Cipher");
+            main_stack.add_titled (polybius_cipher, "polybius", "Polybius Square Cipher");
     
             var stack_sidebar = new Gtk.StackSidebar ();
             stack_sidebar.stack = main_stack;
-            stack_sidebar.set_size_request (100, 200);
+            stack_sidebar.set_size_request (150, 200);
     
             var paned = new Gtk.Paned (Gtk.Orientation.HORIZONTAL);
             paned.add1 (stack_sidebar);
