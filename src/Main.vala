@@ -19,23 +19,14 @@
  * Authored by: Shubham Arora <shubhamarora@protonmail.com>
  */
 
-using Cipher.Widgets;
-using Cipher.Configs;
-
-namespace Cipher.Views {
-
-
-public class AlertViewView : Gtk.Grid {
-    construct {
-        var alert = new Granite.Widgets.AlertView ("Nothing here", "Maybe you can enable <b>something</b> to hide it but <i>otherwise</i> it will stay here", "dialog-warning");
-        alert.show_action ("Hide this button");
-
-        alert.action_activated.connect (() => {
-            alert.hide_action ();
-        });
-
-        add (alert);
-    }
-}
-
+/**
+ * Main method. Responsible for starting the {@code Application} class.
+ *
+ * @see App.Application
+ * @return {@code void}
+ * @since 0.1.0
+ */
+public static void main (string [] args) {
+    var app = new Cipher.Application ();
+    app.run (args);
 }

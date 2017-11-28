@@ -19,6 +19,12 @@
  * Authored by: Shubham Arora <shubhamarora@protonmail.com>
  */
 
+using Cipher.Widgets;
+using Cipher.Configs;
+
+namespace Cipher.Views {
+
+
 public class WelcomeView : Gtk.Grid {
     construct {
         var welcome = new Granite.Widgets.Welcome ("Granite Demo", "This is a demo of the Granite library.");
@@ -48,4 +54,6 @@ public class WelcomeView : Gtk.Grid {
             }
         });
     }
+}
+
 }

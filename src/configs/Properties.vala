@@ -19,23 +19,20 @@
  * Authored by: Shubham Arora <shubhamarora@protonmail.com>
  */
 
-using Cipher.Widgets;
-using Cipher.Configs;
+namespace Cipher.Configs {
 
-namespace Cipher.Views {
+    /**
+     * The {@code Properties} class is responsible for defining all 
+     * the texts that are displayed in the application and must be translated.
+     *
+     * @since 0.1.0
+     */
+    public class Properties {
+        
+        public abstract const string TITLE_HEADER_BAR = "App Template";
+        public abstract const string CLOSE = "Close";
+        public abstract const string WELCOME = "Welcome";
+        public abstract const string THIS_APP_JUST_TEMPLATE = "This app is just a template";
 
-
-public class AlertViewView : Gtk.Grid {
-    construct {
-        var alert = new Granite.Widgets.AlertView ("Nothing here", "Maybe you can enable <b>something</b> to hide it but <i>otherwise</i> it will stay here", "dialog-warning");
-        alert.show_action ("Hide this button");
-
-        alert.action_activated.connect (() => {
-            alert.hide_action ();
-        });
-
-        add (alert);
     }
-}
-
 }

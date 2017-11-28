@@ -1,6 +1,6 @@
 [Desktop Entry]
-Name=App Template
-Comment=Template for vala apps
+Name=Cipher
+Comment=Cipher App
 Icon=com.github.arshubham.cipher
 Exec=com.github.arshubham.cipher
 Terminal=false

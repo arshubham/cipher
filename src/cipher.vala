@@ -23,15 +23,15 @@ public class Cipher : Granite.Application {
     /**
      * Basic app information for Granite.Application.
      */
-    construct {
-        application_id = "com.github.arshubham.cipher";
-        flags = ApplicationFlags.FLAGS_NONE;
+    //  construct {
+    //      application_id = "com.github.arshubham.cipher";
+    //      flags = ApplicationFlags.FLAGS_NONE;
 
-        program_name = "Cipher";
+    //      program_name = "Cipher";
 
-        build_version = "0.1";
-        app_icon = "applications-interfacedesign";
-    }
+    //      build_version = "0.1";
+    //      app_icon = "applications-interfacedesign";
+    //  }
 
     public override void activate () {
         var window = new Gtk.Window ();
@@ -59,8 +59,8 @@ public class Cipher : Granite.Application {
         add_window (window);
     }
 
-    public static int main (string[] args) {
-        var application = new Cipher ();
-        return application.run (args);
-    }
+    //  public static int main (string[] args) {
+    //      var application = new Cipher ();
+    //      return application.run (args);
+    //  }
 }
