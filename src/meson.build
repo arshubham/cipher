@@ -18,7 +18,7 @@ sources = files(
     'views/AppView.vala',
     
     'views/AlertViewView.vala',
-    'views/WelcomeView.vala',
+    'views/CaesarCipherView.vala',
 
     'widgets/HeaderBar.vala',
 

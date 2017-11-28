@@ -39,23 +39,24 @@ namespace Cipher.Views {
          */
 		public AppView (Gtk.ApplicationWindow app) {
             this.app = app;
-            this.app.set_default_size (700, 600);
-            this.app.set_size_request (700, 600);
+            this.app.set_default_size (800, 700);
+            this.app.set_size_request (800, 700);
             this.app.deletable = true;
             this.app.resizable = true;
-			
+            
             this.headerbar = new HeaderBar ();
 			this.app.set_titlebar (this.headerbar);
 
             var alert_view = new AlertViewView ();
-            var welcome = new WelcomeView ();
+            var caesar_cipher = new CaesarCipherView ();
     
             var main_stack = new Gtk.Stack ();
-            main_stack.add_titled (welcome, "welcome", "Welcome");
+            main_stack.add_titled (caesar_cipher, "caesar", "Caesar Cipher");
             main_stack.add_titled (alert_view, "alert", "AlertView");
     
             var stack_sidebar = new Gtk.StackSidebar ();
             stack_sidebar.stack = main_stack;
+            stack_sidebar.set_size_request (100, 200);
     
             var paned = new Gtk.Paned (Gtk.Orientation.HORIZONTAL);
             paned.add1 (stack_sidebar);
