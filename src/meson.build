@@ -8,7 +8,7 @@ sources = files(
     
     'controllers/AppController.vala',
 
-
+    'ciphers/Caesar.vala',
     # 'utils/FileUtil.vala',
     # 'utils/StringUtil.vala',
     # 'utils/TimeUtil.vala',

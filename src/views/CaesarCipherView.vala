@@ -1,5 +1,5 @@
 /*-
- * Copyright (c) 2017 Shubham Arora (https://github.com/arshubham/cipher)
+ * Copyright (character) 2017 Shubham Arora (https://github.com/arshubham/cipher)
  *
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU Lesser General Public
@@ -21,127 +21,125 @@
 
 using Cipher.Widgets;
 using Cipher.Configs;
+using Cipher.Ciphers;
 
 namespace Cipher.Views {
 
 
 public class CaesarCipherView : Gtk.Grid  {
-    private Gtk.TextView textView;
-    private Gtk.TextView textView2;
+    private Gtk.TextView plainTextTextView;
+    private Gtk.TextView cipherTextTextView;
+
+    private Gtk.CellRendererText renderer;
+    private Gtk.ComboBox shiftComboBox;
+    private Gtk.TreeIter iter;
+    private Gtk.ListStore list_store;
+
+    private Gtk.ScrolledWindow plainTextScrolledWindow;
+    private Gtk.ScrolledWindow cipherTextScrolledWindow;
+
+    private Gtk.Box box;
+
+    private Gtk.Button enchiperButton;
+    private Gtk.Button dechiperButton;
+
+    private Gtk.Label labelPlainText;
+    private Gtk.Label labelCipherText;
+    private Gtk.Label labelShift;
+
+    private int shift;
+    private string plainText;
+    private string cipherText;
 
     construct {
-        textView = new Gtk.TextView ();
-        textView2 = new Gtk.TextView ();
+        plainTextTextView = new Gtk.TextView ();
+        cipherTextTextView = new Gtk.TextView ();
 
-        Gtk.ListStore list_store = new Gtk.ListStore (1, typeof (int));
-        Gtk.TreeIter iter;
-        Gtk.ComboBox box = new Gtk.ComboBox.with_model(list_store);
-        box.halign = Gtk.Align.START;
-        box.set_active (0);
-        Gtk.CellRendererText renderer = new Gtk.CellRendererText ();
-		box.pack_start (renderer, true);
-		box.add_attribute (renderer, "text", 0);
-        box.active = 1;        
-        box.margin = 6;
+        list_store = new Gtk.ListStore (1, typeof (int));
+        
+        shiftComboBox = new Gtk.ComboBox.with_model(list_store);
+        shiftComboBox.halign = Gtk.Align.START;
+        shiftComboBox.set_active (0);
+        shiftComboBox.active = 1;        
+        shiftComboBox.margin = 6;
 
-        for (int i = 1; i <= 26 ; i++) {
+        renderer = new Gtk.CellRendererText ();
+		shiftComboBox.pack_start (renderer, true);
+		shiftComboBox.add_attribute (renderer, "text", 0);
+
+
+        for (int i = 0; i < 26; i++ ) {
             list_store.append (out iter);
-            list_store.set (iter, 0, i);
-    
+            list_store.set (iter, 0, i+1);
         }
 
-        var scrolled = new Gtk.ScrolledWindow (null, null);
-        scrolled.expand = true;
-        scrolled.get_style_context ().add_class (Gtk.STYLE_CLASS_VIEW);
-        scrolled.add (textView);
-        var scrolled2 = new Gtk.ScrolledWindow (null, null);
-        scrolled2.expand = true;
-        scrolled2.get_style_context ().add_class (Gtk.STYLE_CLASS_VIEW);
-        scrolled2.add (textView2);
+        labelPlainText = new Gtk.Label ("<b>Plain Text</b>");
+        labelPlainText.set_use_markup (true);
+        labelPlainText.margin = 6;
+        labelPlainText.halign = Gtk.Align.START;
+        labelPlainText.set_line_wrap (true);
+
+        plainTextScrolledWindow = new Gtk.ScrolledWindow (null, null);
+        plainTextScrolledWindow.expand = true;
+        plainTextScrolledWindow.get_style_context ().add_class (Gtk.STYLE_CLASS_VIEW);
+        plainTextScrolledWindow.add (plainTextTextView);
+
+        labelShift = new Gtk.Label ("<b>Number of letters to shift to the right: </b>");
+        labelShift.set_use_markup (true);
+        labelShift.margin = 6;
+        labelShift.halign = Gtk.Align.START;
+        labelShift.set_line_wrap (true);
+
+        enchiperButton = new Gtk.Button.with_label ("Enchiper");
+        enchiperButton.margin = 6;
+        enchiperButton.halign = Gtk.Align.END;
+
+        labelCipherText = new Gtk.Label ("<b>Cipher Text</b>");
+        labelCipherText.set_use_markup (true);
+        labelCipherText.margin = 6;
+        labelCipherText.halign = Gtk.Align.START;
+        labelCipherText.set_line_wrap (true);
+
+        cipherTextScrolledWindow = new Gtk.ScrolledWindow (null, null);
+        cipherTextScrolledWindow.expand = true;
+        cipherTextScrolledWindow.get_style_context ().add_class (Gtk.STYLE_CLASS_VIEW);
+        cipherTextScrolledWindow.add (cipherTextTextView);
         
-        Gtk.Label label = new Gtk.Label ("<b>Plain Text</b>");
-        label.set_use_markup (true);
-        label.margin = 6;
-        label.halign = Gtk.Align.START;
-        label.set_line_wrap (true);
+        dechiperButton = new Gtk.Button.with_label ("Dechiper");
+        dechiperButton.margin = 6;
+        dechiperButton.halign = Gtk.Align.END;
+        box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0);
+        box.pack_start (labelShift, false, false, 0);
+        box.pack_start (shiftComboBox, false, false, 0);
 
-        Gtk.Label label2 = new Gtk.Label ("<b>Cipher Text</b>");
-        label2.set_use_markup (true);
-        label2.margin = 6;
-        label2.halign = Gtk.Align.START;
-        label2.set_line_wrap (true);
-
-        Gtk.Label label3 = new Gtk.Label ("<b>Number of letters to shift to the right: </b>");
-        label3.set_use_markup (true);
-        label3.margin = 6;
-        label3.halign = Gtk.Align.START;
-        label3.set_line_wrap (true);
-
-        var enchiper = new Gtk.Button.with_label ("Enchiper");
-        enchiper.margin = 6;
-        enchiper.halign = Gtk.Align.END;
-        var dechiper = new Gtk.Button.with_label ("Dechiper");
-        dechiper.margin = 6;
-        dechiper.halign = Gtk.Align.END;
-        Gtk.Box box1 = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0);
-        box1.pack_start (label3, false, false,0);
-        box1.pack_start (box, false, false,0);
-
-        attach (scrolled, 0, 2, 1, 1);
-        attach (label, 0, 0, 1, 1);
-        attach (label2, 0, 5, 1, 1);
-        attach (scrolled2, 0, 6,1 , 1);
-        attach (box1, 0,3,1,1);
+        attach (labelPlainText, 0, 0, 1, 1);
+        attach (plainTextScrolledWindow, 0, 2, 1, 1);
+        attach (box, 0, 3, 1, 1);
+        attach (enchiperButton, 0, 3, 1, 1);
         attach (new Gtk.Separator (Gtk.Orientation.HORIZONTAL), 0, 4, 1, 1);
-        attach (enchiper, 0, 3, 1, 1);
-        attach (dechiper, 0, 7, 1, 1);
-        int shift = 3;
-        enchiper.clicked.connect (() => {
-            string text = textView.buffer.text;
-            unichar c;  
-            Value val1;
-            box.get_active_iter (out iter);
-            list_store.get_value (iter, 0, out val1);
-            shift = (int) val1;
-
-            string str = "";
-            //  int shift = box.active_id.to_int ();
-            //  stdout.printf (shift.to_string ());
-        for (int i = 0; text.get_next_char (ref i, out c);) 
-        {
-             if(c >= 'A' && c <= 'Z')
-                     c = (c + shift > 'Z') ? (c + shift) - 26 : (c + shift);
-             else if(c >= 'a' && c <= 'z')
-                c = (c + shift > 'z') ? (c + shift) - 26 : (c + shift);
+        attach (labelCipherText, 0, 5, 1, 1);
+        attach (cipherTextScrolledWindow, 0, 6,1 , 1);
+        attach (dechiperButton, 0, 7, 1, 1);
         
-            str = str.concat(c.to_string());
-         }
-         textView2.buffer.text = str;
-    });
+        Caesar caesar = new Caesar ();
 
-    dechiper.clicked.connect (() => {
-        string text = textView2.buffer.text;
-        unichar c;  
-        Value val1;
-        box.get_active_iter (out iter);
-        list_store.get_value (iter, 0, out val1);
-        shift = (int) val1;
+        enchiperButton.clicked.connect (() => {
+            plainText = plainTextTextView.buffer.text;
+            shift = caesar.getComboBoxValue (shiftComboBox, list_store);
 
-        string str = "";
-        //  int shift = box.active_id.to_int ();
-        //  stdout.printf (shift.to_string ());
-    for (int i = 0; text.get_next_char (ref i, out c);) 
-    {
-        if(c >= 'A' && c <= 'Z')
-        c = (c - shift < 'A') ? (c - shift) + 26 : (c - shift);
-    else if(c >= 'a' && c <= 'z')
-c = (c - shift < 'a') ? (c - shift) + 26 : (c - shift);
-    
-        str = str.concat(c.to_string());
-     }
-     textView.buffer.text = str;
-});
+            cipherText = ""; 
+            cipherTextTextView.buffer.text = caesar.encryptCaeser (plainText, shift);
+        });
+
+        dechiperButton.clicked.connect (() => {
+            cipherText = cipherTextTextView.buffer.text;
+            shift = caesar.getComboBoxValue (shiftComboBox, list_store);
+
+            plainText = "";
+            plainTextTextView.buffer.text = caesar.decryptCaeser (cipherText, shift);
+        });
     }
+
 }
 
 }
