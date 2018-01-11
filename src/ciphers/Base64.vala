@@ -19,17 +19,21 @@
  * Authored by: Shubham Arora <shubhamarora@protonmail.com>
  */
 
-namespace Cipher.Configs {
+namespace Cipher.Ciphers {
 
-    /**
-     * The {@code Properties} class is responsible for defining all 
-     * the texts that are displayed in the application and must be translated.
-     *
-     * @since 0.1.0
-     */
-    public class Properties {
-        
-        public abstract const string TITLE_HEADER_BAR = "Cipher";
+    public class Base64 {
 
+        public string encryptBase64 (string plainText) {
+            string cipherText = "";
+                cipherText = cipherText.concat (GLib.Base64.encode (plainText.data));
+
+            return cipherText;
+        }
+
+        public string decryptBase64 (string cipherText) {
+            string plainText = "";
+                plainText = plainText.concat ((string) GLib.Base64.decode (cipherText));
+            return plainText;
+        }
     }
 }

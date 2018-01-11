@@ -1,5 +1,5 @@
 /*
-* Copyright (c) 2017 Daniel Foré (http://danielfore.com)
+* Copyright (c) 2017 Shubham Arora (https://shubhamarora.in)
 *
 * This program is free software; you can redistribute it and/or
 * modify it under the terms of the GNU General Public
@@ -19,3 +19,11 @@
 
 @define-color colorPrimary #546A79;
 @define-color textColorPrimary #ECF0F1;
+
+GtkListBoxRow {
+    padding: 13px;
+}
+
+GtkListBoxRow:selected {
+    color: black;
+}

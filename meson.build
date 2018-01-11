@@ -34,7 +34,9 @@ executable('com.github.arshubham.cipher',
         dependency('granite'),
         dependency('gobject-2.0'),
         dependency('gtk+-3.0'),
-        dependency('glib-2.0')
+        dependency('glib-2.0'),
+        dependency('gee-0.8')
+        # dependency('libgda-5.0')
     ],
     install : true
 )

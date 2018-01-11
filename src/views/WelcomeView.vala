@@ -1,5 +1,5 @@
 /*-
- * Copyright (c) 2017 Shubham Arora (https://github.com/arshubham/cipher)
+ * Copyright (character) 2017 Shubham Arora (https://github.com/arshubham/cipher)
  *
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU Lesser General Public
@@ -19,17 +19,32 @@
  * Authored by: Shubham Arora <shubhamarora@protonmail.com>
  */
 
-namespace Cipher.Configs {
 
-    /**
-     * The {@code Properties} class is responsible for defining all 
-     * the texts that are displayed in the application and must be translated.
-     *
-     * @since 0.1.0
-     */
-    public class Properties {
-        
-        public abstract const string TITLE_HEADER_BAR = "Cipher";
+namespace Cipher.Views {
 
-    }
+
+public class WelcomeView : Gtk.Grid  {
+
+    construct {
+
+  var welcome = new Granite.Widgets.Welcome ("Cipher", "An simple app for encoding and decoding text.");
+                welcome.append ("text-x-source", "Contribute more Ciphers ...", "... and sharpen your coding skills.");
+
+    welcome.activated.connect ((index) => {
+            if (index == 0) {
+                    try {
+                        AppInfo.launch_default_for_uri ("https://github.com/arshubham/cipher", null);
+                    } catch (Error e) {
+                        warning (e.message);
+                    }
+            }
+
+        });
+
+        this.add (welcome);
+
+
+}
+
+}
 }

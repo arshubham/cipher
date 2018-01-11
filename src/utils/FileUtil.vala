@@ -44,7 +44,8 @@ namespace App.Utils {
 	        try {
 	            Process.spawn_command_line_async (cmd);
 	        } catch (Error e) {
-	            critical ("Unable to open item or folder with command %s. %s".printf (cmd, e.message));
+				critical ("Unable to open item or folder with command %s. %s".printf (cmd, e.message));
+				
 	        }
 	    }
 

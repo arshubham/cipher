@@ -21,41 +21,40 @@
 
 namespace Cipher.Ciphers {
 
-    public class Atbash {
+    public class Rot13 {
 
-        public string encryptAtbash (string plainText) {
+        static string hash = "NOPQRSTUVWXYZABCDEFGHIJKLM      nopqrstuvwxyzabcdefghijklm";
+        static string rhash = "ABCDEFGHIJKLMNOPQRSTUVWXYZ      abcdefghijklmnopqrstuvwxyz";
+        public string encryptROT13 (string plainText) {
             string cipherText = "";
             unichar character;
-            unichar subtractor;
+            unichar c;
+
             for (int i = 0; plainText.get_next_char (ref i, out character); ) {
-                if (character > 96 && character < 123) {
-                    subtractor = 2 * (character % 97);
-                    character = character + (25 - subtractor);
+                if (character > 96 && character < 123 || character > 64 && character < 91) {
+                     c = character - 'A';
+                     c = hash.get_char ((int) c);
+                } else {
+                     c = character;
                 }
-                else if (character > 64 && character < 91) {
-                    subtractor = 2 * (character % 65);
-                    character = character + (25 - subtractor);
-                }
-                cipherText = cipherText.concat (character.to_string());
+                cipherText = cipherText.concat (c.to_string());
             }
             return cipherText;
         }
 
-        public string decryptAtbash (string cipherText) {
+        public string decryptROT13 (string cipherText) {
             string plainText = "";
             unichar character;
-            unichar subtractor;
+            unichar c;
 
             for (int i = 0; cipherText.get_next_char (ref i, out character); ) {
-                if (character > 96 && character < 123) {
-                    subtractor = 2 * (character % 97);
-                    character = character + (25 - subtractor);
+              if (character > 96 && character < 123 || character > 64 && character < 91) {
+                     c = character - 'A';
+                     c = hash.get_char ((int) c);
+                } else {
+                     c = character;
                 }
-                else if (character > 64 && character < 91) {
-                    subtractor = 2 * (character % 65);
-                    character = character + (25 - subtractor);
-                }
-                plainText = plainText.concat (character.to_string());
+                plainText = plainText.concat (c.to_string());
             }
 
             return plainText;

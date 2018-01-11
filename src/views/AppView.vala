@@ -43,27 +43,39 @@ namespace Cipher.Views {
             this.app.set_size_request (800, 700);
             this.app.deletable = true;
             this.app.resizable = true;
-            
+
             this.headerbar = new HeaderBar ();
 			this.app.set_titlebar (this.headerbar);
 
+            var welcome = new WelcomeView ();
             var atbash_cipher = new AtbashCipherView ();
             var caesar_cipher = new CaesarCipherView ();
             var polybius_cipher = new PolybiusSquareCipherView ();
-    
+            var ascii = new AsciiView ();
+            var rot13 = new ROT13View ();
+            var base64 = new Base64View ();
+            var ascii3 = new AsciiView ();
+            //  var binary = new BinaryView ();
+            //  var keyword_cipher = new KeywordCipherView ();
+
             var main_stack = new Gtk.Stack ();
+            main_stack.add_titled (welcome, "welcome", "Welcome");
             main_stack.add_titled (caesar_cipher, "caesar", "Caesar Cipher");
             main_stack.add_titled (atbash_cipher, "atbash", "Atbash Cipher");
-            main_stack.add_titled (polybius_cipher, "polybius", "Polybius Square Cipher");
-    
+            main_stack.add_titled (polybius_cipher, "polybius", "Polybius Square");
+            main_stack.add_titled (rot13, "rot13", "ROT13");
+            main_stack.add_titled (base64, "base64", "Base64");
+            main_stack.add_titled (ascii, "ascii", "Ascii");
+
+
             var stack_sidebar = new Gtk.StackSidebar ();
             stack_sidebar.stack = main_stack;
             stack_sidebar.set_size_request (150, 200);
-    
+
             var paned = new Gtk.Paned (Gtk.Orientation.HORIZONTAL);
             paned.add1 (stack_sidebar);
             paned.add2 (main_stack);
-    
+
             this.add (paned);
 
 		}
