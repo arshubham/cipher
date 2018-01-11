@@ -25,7 +25,7 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="5.484559"
-     inkscape:cx="26.349915"
+     inkscape:cx="-34.183667"
      inkscape:cy="2.6647992"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
@@ -63,7 +63,7 @@
        x2="16.045046"
        y2="-1.4125212"
        gradientUnits="userSpaceOnUse"
-       gradientTransform="matrix(0.65166452,0,0,0.60009761,-3.5354195,-22.837787)" />
+       gradientTransform="matrix(0.65166452,0,0,0.60009761,-3.5354194,-22.837787)" />
     <linearGradient
        inkscape:collect="always"
        xlink:href="#linearGradient853"
@@ -95,7 +95,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -106,43 +106,43 @@
      transform="translate(0,32)">
     <path
        id="rect2099"
-       style="opacity:0.41700003;fill:#53676c;fill-opacity:1;stroke-width:0.34649187;filter:url(#filter2385)"
+       style="opacity:0.41700003;fill:#53676c;fill-opacity:1;stroke-width:0.37250245;filter:url(#filter2385)"
        d="m 4.1757812,18.058594 c -2.8807998,0 -5.2011718,0.339835 -5.2011718,0.759765 0,0.419931 2.320372,0.757813 5.2011718,0.757813 H 41.605469 c 2.8808,0 5.201172,-0.337882 5.201172,-0.757813 0,-0.41993 -2.320372,-0.759765 -5.201172,-0.759765 z"
        inkscape:connector-curvature="0"
-       transform="matrix(0.89904217,0,0,0.91761155,3.5867126,-3.2527186)" />
+       transform="matrix(0.83997637,0,0,0.84976677,5.485756,-3.5095688)" />
     <path
        id="rect3747"
        style="fill:#0088aa;stroke:#00536d;stroke-width:0.419;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       d="m 3.5586175,-30.619768 c -0.4980695,0 -0.8990421,0.409256 -0.8990421,0.917613 v 41.60795 c 0,0.508357 0.4009726,0.917611 0.8990421,0.917611 H 44.914557 c 0.49807,0 0.899044,-0.409254 0.899044,-0.917611 v -41.60795 c 0,-0.508357 -0.400974,-0.917613 -0.899044,-0.917613 z"
+       d="m 5.4595067,-28.853201 c -0.465347,0 -0.8399763,0.378997 -0.8399763,0.849768 V 10.52818 c 0,0.470771 0.3746293,0.849767 0.8399763,0.849767 H 44.09842 c 0.465347,0 0.839978,-0.378996 0.839978,-0.849767 v -38.531613 c 0,-0.470771 -0.374631,-0.849768 -0.839978,-0.849768 z"
        inkscape:connector-curvature="0" />
     <path
        id="path4601"
        style="opacity:0.678;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1.61854804;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       d="M 24.812536,-15.257671 14.536766,5.4940968 23.191803,11.939626 H 44.749499 V -7.5640929 L 34.473728,-15.257671 Z"
+       d="M 25.317073,-14.62692 15.716407,4.5905396 23.80282,10.55951 H 43.944206 V -7.5021761 L 34.343538,-14.62692 Z"
        inkscape:connector-curvature="0" />
     <rect
        id="rect822"
-       width="17.12989"
-       height="16.563511"
-       x="15.307166"
-       y="-25.211424"
-       style="fill:none;stroke:#000000;stroke-width:0.59594595;stroke-opacity:1"
+       width="16.00448"
+       height="15.338866"
+       x="16.436193"
+       y="-23.844728"
+       style="fill:none;stroke:#000000;stroke-width:0.696;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none"
        rx="1.1836461"
        ry="1.1836462" />
     <rect
        style="fill:#53676c;fill-opacity:1;stroke-width:1.76180363"
        id="rect3755"
-       width="21.744276"
-       height="22.394962"
-       x="12.862451"
-       y="-16.475657" />
+       width="20.315708"
+       height="20.739162"
+       x="14.152091"
+       y="-15.754851" />
     <rect
        style="fill:url(#linearGradient855);fill-opacity:1;stroke-width:1.73507249"
        id="rect3757"
-       width="11.603105"
-       height="22.374458"
-       x="23.003618"
-       y="-16.455154" />
+       width="10.840797"
+       height="20.720175"
+       x="23.626999"
+       y="-15.735866" />
     <rect
        style="opacity:0.30199998;fill:#1c2224;fill-opacity:1;stroke:none;stroke-opacity:1"
        id="rect2085"

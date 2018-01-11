@@ -25,8 +25,8 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="15.512675"
-     inkscape:cx="-2.1301986"
-     inkscape:cy="2.0248093"
+     inkscape:cx="-5.5000698"
+     inkscape:cy="13.036898"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -76,7 +76,7 @@
        y2="-2.2073154"
        gradientUnits="userSpaceOnUse"
        spreadMethod="pad"
-       gradientTransform="matrix(0.59182311,0,0,0.60009753,-1.4706887,9.1622119)" />
+       gradientTransform="matrix(0.59182311,0,0,0.60009754,-1.4706887,9.1622119)" />
     <linearGradient
        inkscape:collect="always"
        xlink:href="#linearGradient853"
@@ -108,7 +108,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -118,43 +118,43 @@
      inkscape:label="Layer 1">
     <path
        id="rect2099"
-       style="opacity:0.41700003;fill:#53676c;fill-opacity:1;stroke-width:1.10977685;filter:url(#filter2385)"
+       style="opacity:0.41700003;fill:#53676c;fill-opacity:1;stroke-width:1.31882095;filter:url(#filter2385)"
        d="m 4.1757812,18.058594 c -2.8807998,0 -5.2011718,0.339835 -5.2011718,0.759765 0,0.419931 2.320372,0.757813 5.2011718,0.757813 H 41.605469 c 2.8808,0 5.201172,-0.337882 5.201172,-0.757813 0,-0.41993 -2.320372,-0.759765 -5.201172,-0.759765 z"
        inkscape:connector-curvature="0"
-       transform="matrix(0.30128157,0,0,0.26692002,0.50367898,11.119038)" />
+       transform="matrix(0.25606387,0,0,0.2223848,1.7694234,9.828927)" />
     <path
        id="rect3747"
        style="fill:#0088aa;stroke:#00536d;stroke-width:0.21899998;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       d="m 0.52175325,0.14327686 c -0.18213916,0 -0.32877087,0.14866442 -0.32877087,0.33332803 V 15.590949 c 0,0.184663 0.14663171,0.333327 0.32877087,0.333327 H 15.645211 c 0.182139,0 0.328772,-0.148664 0.328772,-0.333327 V 0.47660489 c 0,-0.18466361 -0.146633,-0.33332803 -0.328772,-0.33332803 z"
+       d="m 1.784785,0.68445663 c -0.1548028,0 -0.2794274,0.12385992 -0.2794274,0.27771271 V 13.554707 c 0,0.153852 0.1246246,0.277712 0.2794274,0.277712 h 12.853661 c 0.154803,0 0.279429,-0.12386 0.279429,-0.277712 V 0.96216934 c 0,-0.15385279 -0.124626,-0.27771271 -0.279429,-0.27771271 z"
        inkscape:connector-curvature="0" />
     <path
        id="path4601"
        style="opacity:0.678;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1.61854792;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       d="m 8.819663,6.4082087 -3.1511387,6.3633073 2.654129,1.97645 H 14.933474 V 8.7673614 L 11.782336,6.4082087 Z"
+       d="M 8.8373072,5.9040935 6.1591055,11.205691 8.4148908,12.852374 H 14.03353 V 7.869625 L 11.355328,5.9040935 Z"
        inkscape:connector-curvature="0" />
     <rect
        id="rect822"
-       width="6.2642326"
-       height="6.0167971"
-       x="4.8180809"
-       y="1.9628458"
-       style="fill:none;stroke:#000000;stroke-width:0.59594595;stroke-opacity:1"
+       width="5.3240685"
+       height="5.0129032"
+       x="5.4363003"
+       y="2.200433"
+       style="fill:none;stroke:#000000;stroke-width:0.196;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none"
        rx="1.1836461"
-       ry="1.1836462" />
+       ry="1.1836463" />
     <rect
        style="fill:url(#linearGradient833);fill-opacity:1;stroke-width:1.76180375"
        id="rect3755"
-       width="7.9516664"
-       height="8.1351061"
-       x="3.9240732"
-       y="5.136168" />
+       width="6.758245"
+       height="6.7777753"
+       x="4.6764693"
+       y="4.8442912" />
     <rect
        style="fill:#1c2224;fill-opacity:1;stroke-width:1.73507261"
        id="rect3757"
-       width="4.2431407"
-       height="8.1276588"
-       x="7.6325974"
-       y="5.1436148" />
+       width="3.6063111"
+       height="6.7715707"
+       x="7.8284016"
+       y="4.8504949" />
     <rect
        style="opacity:0.30199998;fill:#1c2224;fill-opacity:1;stroke:none;stroke-opacity:1"
        id="rect2085"
