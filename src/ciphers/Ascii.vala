@@ -21,45 +21,39 @@
 namespace Cipher.Ciphers {
 
     public class Ascii {
-    
+
         public string encryptAscii (string plainText) {
             string cipherText = "";
             unichar character;
             int asciiNum;
-            //  for (int i = 0; plainText.get_next_char (ref i, out character); ) {
-            //      asciiNum = (int) character;
+             for (int i = 0; plainText.get_next_char (ref i, out character); ) {
+                asciiNum = (int) character;
 
-            //      cipherText = cipherText.concat (asciiNum.to_string (), " ");
-            //  }
-            cipherText = plainText.to_ascii (null);
+                cipherText = cipherText.concat (asciiNum.to_string (), " ");
+             }
+
             return cipherText;
         }
-    
+
         public string decryptAscii (string cipherText) {
             string plainText = "";
-            unichar character, character_next , character_next_next, c;
+            string temp = "";
+            unichar character,c;
             unichar array[] = {};
             for (int i = 0; cipherText.get_next_char (ref i, out character); ) {
-                    cipherText.get_next_char (ref i, out character_next);
-                    cipherText.get_next_char (ref i, out character_next_next);
-
-                    string c1 = character.to_string ();
-                    string c2 = character_next.to_string ();
-                    string c3 = character_next_next.to_string ();
-
-                    if (c3 != " ")
-                    c = (unichar) int.parse(c1.concat (c2));
-                    else 
-                    c = (unichar) int.parse(c1.concat (c2,c3));
+                temp = temp.concat (character.to_string ());
+                if (character == ' ') {
+                    int asciiNum = temp.to_int ();
+                    c = (unichar) asciiNum;
 
                     plainText = plainText.concat (c.to_string ());
-                            
+                    temp = "";
+                }
+
             }
 
-                
-        
-
             return plainText;
-        }}
-    
+        }
+}
+
 }
