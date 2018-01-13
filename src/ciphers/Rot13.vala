@@ -24,7 +24,7 @@ namespace Cipher.Ciphers {
     public class Rot13 {
 
         static string hash = "NOPQRSTUVWXYZABCDEFGHIJKLM      nopqrstuvwxyzabcdefghijklm";
-        static string rhash = "ABCDEFGHIJKLMNOPQRSTUVWXYZ      abcdefghijklmnopqrstuvwxyz";
+
         public string encryptROT13 (string plainText) {
             string cipherText = "";
             unichar character;

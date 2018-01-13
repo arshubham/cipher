@@ -54,18 +54,15 @@ namespace Cipher.Views {
             var ascii = new AsciiView ();
             var rot13 = new ROT13View ();
             var base64 = new Base64View ();
-            var ascii3 = new AsciiView ();
-            //  var binary = new BinaryView ();
-            //  var keyword_cipher = new KeywordCipherView ();
 
             var main_stack = new Gtk.Stack ();
             main_stack.add_titled (welcome, "welcome", "Welcome");
-            main_stack.add_titled (caesar_cipher, "caesar", "Caesar Cipher");
+            main_stack.add_titled (caesar_cipher, "caesar", "Caesar Shift Cipher");
             main_stack.add_titled (atbash_cipher, "atbash", "Atbash Cipher");
-            main_stack.add_titled (polybius_cipher, "polybius", "Polybius Square");
-            main_stack.add_titled (rot13, "rot13", "ROT13");
-            main_stack.add_titled (base64, "base64", "Base64");
-            main_stack.add_titled (ascii, "ascii", "Ascii");
+            main_stack.add_titled (polybius_cipher, "polybius", "Polybius Square Cipher");
+            main_stack.add_titled (rot13, "rot13", "ROT13 Cipher");
+            main_stack.add_titled (base64, "base64", "Base64 Encoding");
+            main_stack.add_titled (ascii, "ascii", "Ascii Encoding");
 
 
             var stack_sidebar = new Gtk.StackSidebar ();

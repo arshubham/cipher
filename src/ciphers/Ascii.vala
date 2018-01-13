@@ -39,7 +39,6 @@ namespace Cipher.Ciphers {
             string plainText = "";
             string temp = "";
             unichar character,c;
-            unichar array[] = {};
             for (int i = 0; cipherText.get_next_char (ref i, out character); ) {
                 temp = temp.concat (character.to_string ());
                 if (character == ' ') {

@@ -36,6 +36,8 @@ public class Base64View : Gtk.Grid  {
     private Gtk.Button enchiperButton;
     private Gtk.Button dechiperButton;
 
+    private Gtk.Box topBox;
+
     private Gtk.Label labelPlainText;
     private Gtk.Label labelCipherText;
     private Gtk.Label labelTitle;
@@ -45,7 +47,7 @@ public class Base64View : Gtk.Grid  {
 
     construct {
 
-        labelTitle = new Gtk.Label ("Base64 Cipher");
+        labelTitle = new Gtk.Label ("Base64 Encoding");
         labelTitle.halign = Gtk.Align.CENTER;
         labelTitle.margin_top = 6;
         labelTitle.margin_bottom = 6;
@@ -53,6 +55,12 @@ public class Base64View : Gtk.Grid  {
         labelTitle.margin_end = 24;
         labelTitle.get_style_context ().add_class (Granite.STYLE_CLASS_H1_LABEL);
 
+        Gtk.Button button = new Gtk.Button.from_icon_name ("dialog-information-symbolic");
+        button.get_style_context().add_class("info_button");
+
+        topBox = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0);
+        topBox.set_center_widget (labelTitle);
+        topBox.pack_end (button, false, false, 0);
 
         labelPlainText = new Gtk.Label ("<b>Plain Text</b>");
         labelPlainText.set_use_markup (true);
@@ -87,7 +95,7 @@ public class Base64View : Gtk.Grid  {
         dechiperButton.margin = 6;
         dechiperButton.halign = Gtk.Align.END;
 
-        attach (labelTitle, 0, 0, 1, 1);
+        attach (topBox, 0, 0, 1, 1);
         attach (new Gtk.Separator (Gtk.Orientation.HORIZONTAL), 0, 1, 1, 1);
         attach (labelPlainText, 0, 2, 1, 1);
         attach (plainTextScrolledWindow, 0, 4, 1, 1);
@@ -98,6 +106,14 @@ public class Base64View : Gtk.Grid  {
         attach (dechiperButton, 0, 9, 1, 1);
 
         Ciphers.Base64 base64 = new Ciphers.Base64 ();
+
+        button.clicked.connect (() => {
+         try {
+                        AppInfo.launch_default_for_uri ("https://en.wikipedia.org/wiki/Base64", null);
+                    } catch (Error e) {
+                        warning (e.message);
+                    }
+        });
 
         enchiperButton.clicked.connect (() => {
             plainText = plainTextTextView.buffer.text;

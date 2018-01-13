@@ -36,6 +36,8 @@ public class PolybiusSquareCipherView : Gtk.Grid  {
     private Gtk.Button enchiperButton;
     private Gtk.Button dechiperButton;
 
+    private Gtk.Box topBox;
+
     private Gtk.Label labelPlainText;
     private Gtk.Label labelCipherText;
     private Gtk.Label labelTitle;
@@ -53,6 +55,12 @@ public class PolybiusSquareCipherView : Gtk.Grid  {
         labelTitle.margin_end = 24;
         labelTitle.get_style_context ().add_class (Granite.STYLE_CLASS_H1_LABEL);
 
+        Gtk.Button button = new Gtk.Button.from_icon_name ("dialog-information-symbolic");
+        button.get_style_context().add_class("info_button");
+
+        topBox = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0);
+        topBox.set_center_widget (labelTitle);
+        topBox.pack_end (button, false, false, 0);
 
         labelPlainText = new Gtk.Label ("<b>Plain Text</b>");
         labelPlainText.set_use_markup (true);
@@ -65,7 +73,7 @@ public class PolybiusSquareCipherView : Gtk.Grid  {
         plainTextScrolledWindow.expand = true;
         plainTextScrolledWindow.get_style_context ().add_class (Gtk.STYLE_CLASS_VIEW);
         plainTextScrolledWindow.add (plainTextTextView);
-        
+
         enchiperButton = new Gtk.Button.with_label ("Enchiper");
         enchiperButton.margin = 6;
         enchiperButton.halign = Gtk.Align.END;
@@ -82,12 +90,12 @@ public class PolybiusSquareCipherView : Gtk.Grid  {
         cipherTextScrolledWindow.expand = true;
         cipherTextScrolledWindow.get_style_context ().add_class (Gtk.STYLE_CLASS_VIEW);
         cipherTextScrolledWindow.add (cipherTextTextView);
-        
+
         dechiperButton = new Gtk.Button.with_label ("Dechiper");
         dechiperButton.margin = 6;
         dechiperButton.halign = Gtk.Align.END;
 
-        attach (labelTitle, 0, 0, 1, 1);
+        attach (topBox, 0, 0, 1, 1);
         attach (new Gtk.Separator (Gtk.Orientation.HORIZONTAL), 0, 1, 1, 1);
         attach (labelPlainText, 0, 2, 1, 1);
         attach (plainTextScrolledWindow, 0, 4, 1, 1);
@@ -96,12 +104,20 @@ public class PolybiusSquareCipherView : Gtk.Grid  {
         attach (labelCipherText, 0, 7, 1, 1);
         attach (cipherTextScrolledWindow, 0, 8, 1, 1);
         attach (dechiperButton, 0, 9, 1, 1);
-        
+
         PolybiusSquare polybiusSquare = new PolybiusSquare ();
+
+        button.clicked.connect (() => {
+         try {
+                        AppInfo.launch_default_for_uri ("https://en.wikipedia.org/wiki/Polybius_square", null);
+                    } catch (Error e) {
+                        warning (e.message);
+                    }
+        });
 
         enchiperButton.clicked.connect (() => {
             plainText = plainTextTextView.buffer.text;
-            cipherText = ""; 
+            cipherText = "";
             cipherTextTextView.buffer.text = polybiusSquare.encryptPolybiusSquare (plainText);
         });
 
@@ -109,7 +125,7 @@ public class PolybiusSquareCipherView : Gtk.Grid  {
             cipherText = cipherTextTextView.buffer.text;
 
             plainText = "";
-     
+
             plainTextTextView.buffer.text = polybiusSquare.decryptPolybiusSquare (cipherText);
         });
     }

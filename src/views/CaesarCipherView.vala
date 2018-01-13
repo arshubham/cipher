@@ -39,6 +39,8 @@ public class CaesarCipherView : Gtk.Grid  {
     private Gtk.ScrolledWindow cipherTextScrolledWindow;
 
     private Gtk.Box box;
+    private Gtk.Box topBox;
+
 
     private Gtk.Button enchiperButton;
     private Gtk.Button dechiperButton;
@@ -54,7 +56,7 @@ public class CaesarCipherView : Gtk.Grid  {
 
     construct {
 
-        labelTitle = new Gtk.Label ("Caeser Cipher");
+        labelTitle = new Gtk.Label ("Caeser Shift Cipher");
         labelTitle.halign = Gtk.Align.CENTER;
         labelTitle.margin_top = 6;
         labelTitle.margin_bottom = 6;
@@ -62,6 +64,12 @@ public class CaesarCipherView : Gtk.Grid  {
         labelTitle.margin_end = 24;
         labelTitle.get_style_context ().add_class (Granite.STYLE_CLASS_H1_LABEL);
 
+        Gtk.Button button = new Gtk.Button.from_icon_name ("dialog-information-symbolic");
+        button.get_style_context().add_class("info_button");
+
+        topBox = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0);
+        topBox.set_center_widget (labelTitle);
+        topBox.pack_end (button, false, false, 0);
 
         labelPlainText = new Gtk.Label ("<b>Plain Text</b>");
         labelPlainText.set_use_markup (true);
@@ -81,17 +89,17 @@ public class CaesarCipherView : Gtk.Grid  {
         labelShift.halign = Gtk.Align.START;
         labelShift.set_line_wrap (true);
         list_store = new Gtk.ListStore (1, typeof (int));
-        
+
         shiftComboBox = new Gtk.ComboBox.with_model(list_store);
         shiftComboBox.halign = Gtk.Align.START;
-        shiftComboBox.set_active (0);      
+        shiftComboBox.set_active (0);
         shiftComboBox.margin = 6;
 
         renderer = new Gtk.CellRendererText ();
 		shiftComboBox.pack_start (renderer, true);
 		shiftComboBox.add_attribute (renderer, "text", 0);
 
-        
+
         for (int i = 0; i < 26; i++ ) {
             list_store.append (out iter);
             list_store.set (iter, 0, i+1);
@@ -113,7 +121,7 @@ public class CaesarCipherView : Gtk.Grid  {
         cipherTextScrolledWindow.expand = true;
         cipherTextScrolledWindow.get_style_context ().add_class (Gtk.STYLE_CLASS_VIEW);
         cipherTextScrolledWindow.add (cipherTextTextView);
-        
+
         dechiperButton = new Gtk.Button.with_label ("Dechiper");
         dechiperButton.margin = 6;
         dechiperButton.halign = Gtk.Align.END;
@@ -121,7 +129,7 @@ public class CaesarCipherView : Gtk.Grid  {
         box.pack_start (labelShift, false, false, 0);
         box.pack_start (shiftComboBox, false, false, 0);
 
-        attach (labelTitle, 0, 0, 1, 1);
+        attach (topBox, 0, 0, 1, 1);
         attach (new Gtk.Separator (Gtk.Orientation.HORIZONTAL), 0, 1, 1, 1);
         attach (labelPlainText, 0, 2, 1, 1);
         attach (plainTextScrolledWindow, 0, 4, 1, 1);
@@ -131,14 +139,22 @@ public class CaesarCipherView : Gtk.Grid  {
         attach (labelCipherText, 0, 7, 1, 1);
         attach (cipherTextScrolledWindow, 0, 8, 1, 1);
         attach (dechiperButton, 0, 9, 1, 1);
-        
+
         Caesar caesar = new Caesar ();
+
+        button.clicked.connect (() => {
+         try {
+                        AppInfo.launch_default_for_uri ("https://en.wikipedia.org/wiki/Caesar_cipher", null);
+                    } catch (Error e) {
+                        warning (e.message);
+                    }
+        });
 
         enchiperButton.clicked.connect (() => {
             plainText = plainTextTextView.buffer.text;
             shift = caesar.getComboBoxValue (shiftComboBox, list_store);
 
-            cipherText = ""; 
+            cipherText = "";
             cipherTextTextView.buffer.text = caesar.encryptCaeser (plainText, shift);
         });
 

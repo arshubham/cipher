@@ -22,10 +22,14 @@
 
 namespace Cipher.Views {
 
-
+private Gtk.Image image;
 public class WelcomeView : Gtk.Grid  {
 
     construct {
+
+        image = new Gtk.Image ();
+		image.set_from_file ("/home/shubhamarora/Projects/cipher/data/images/com.github.arshubham.cipher.svg");
+        image.get_style_context().add_class("welcome_image");
 
   var welcome = new Granite.Widgets.Welcome ("Cipher", "An simple app for encoding and decoding text.");
                 welcome.append ("text-x-source", "Contribute more Ciphers ...", "... and sharpen your coding skills.");
@@ -40,8 +44,11 @@ public class WelcomeView : Gtk.Grid  {
             }
 
         });
-
-        this.add (welcome);
+        insert_row (0);
+        attach (image, 0, 1, 1, 1);
+        attach (welcome, 0, 2, 1, 1);
+        column_spacing = 0;
+        row_spacing = 0;
 
 
 }

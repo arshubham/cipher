@@ -27,3 +27,13 @@ GtkListBoxRow {
 GtkListBoxRow:selected {
     color: black;
 }
+
+.welcome_image {
+    background: white;
+    margin-top: 50px;
+}
+
+.info_button {
+    background: transparent;
+    border: 0px;
+}

@@ -41,23 +41,6 @@ namespace Cipher.Controllers {
 		public AppController (Gtk.ApplicationWindow window, Gtk.Application application,  AppView app_view) {
             this.application = application;
             this.app_view = app_view;
-            
-            //  on_activate_button_preferences (window);
-		}
-
-        /**
-         * When select the preferences option in the settings icon located in the headerbar, 
-         * this method will call the "DialogPreferences".
-         *
-         * @see App.Widgets.DialogPreferences
-         * @param  {@code Gtk.ApplicationWindow} window
-         * @return {@code void}
-         */
-        //  private void on_activate_button_preferences (Gtk.ApplicationWindow window) {
-        //      this.app_view.headerbar.item_selected.connect (() => {
-        //          this.dialog_preferences = new DialogPreferences (window);
-        //          this.dialog_preferences.show_all ();
-        //      }); 
-        //  }
 	}
+}
 }
