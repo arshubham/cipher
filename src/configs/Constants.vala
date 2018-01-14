@@ -35,7 +35,7 @@ namespace Cipher.Configs {
         public abstract const string PROGRAME_NAME = "Cipher";
         public abstract const string APP_YEARS = "2018";
         public abstract const string APP_ICON = "com.github.arshubham.cipher";
-        public abstract const string ABOUT_COMMENTS = "Cipher App";
+        public abstract const string ABOUT_COMMENTS = "An simple app for encoding and decoding text";
         public abstract const string TRANSLATOR_CREDITS = "Github Translators";
         public abstract const string MAIN_URL = "https://github.com/arshubham/cipher";
         public abstract const string BUG_URL = "https://github.com/arshubham/cipher/issues";
