@@ -29,6 +29,6 @@
     <custom>
         <value key="x-appcenter-color-primary">#BA635C</value>
         <value key="x-appcenter-color-primary-text">#ECF0F1</value>
-        <value key="x-appcenter-suggested-price">1</value>
+        <value key="x-appcenter-suggested-price">0</value>
     </custom>
 </component>
