@@ -12,18 +12,18 @@
     </provides>
     <screenshots>
         <screenshot type="default">
-            <image>https://raw.githubusercontent.com/robertsanseries/template-for-vala-apps/master/data/images/screenshot.png</image>
+            <image></image>
         </screenshot>
     </screenshots>
     <description>
         <p>My application template Vala for elementary OS.</p>
-    </description>   
-    <url type="homepage">https://robertsanseries.github.io/template-for-vala-apps/</url>
-    <url type="bugtracker">https://github.com/robertsanseries/template-for-vala-apps/issues</url>
-    <url type="help">https://github.com/robertsanseries/template-for-vala-apps/issues</url>
-    <update_contact>robertsanseries@gmail.com</update_contact>
+    </description>
+    <url type="homepage">https://github.com/arshubham/cipher</url>
+    <url type="bugtracker">https://github.com/arshubham/cipher/issues</url>
+    <url type="help">shubhamarora.in</url>
+    <update_contact>Shubham Arora</update_contact>
     <custom>
-        <value key="x-appcenter-color-primary">#546A79</value>
+        <value key="x-appcenter-color-primary">#BA635C</value>
         <value key="x-appcenter-color-primary-text">#ECF0F1</value>
         <value key="x-appcenter-suggested-price">1</value>
     </custom>

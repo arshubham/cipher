@@ -22,27 +22,25 @@
 namespace Cipher.Configs {
 
     /**
-     * The {@code Constants} class is responsible for defining all 
+     * The {@code Constants} class is responsible for defining all
      * the constants used in the application.
      *
      * @since 0.1.0
      */
 
     public class Constants {
-    
+
         public abstract const string ID = "com.github.arshubham.cipher";
         public abstract const string VERSION = "0.1.0";
         public abstract const string PROGRAME_NAME = "Cipher";
-        public abstract const string APP_YEARS = "2017";
+        public abstract const string APP_YEARS = "2018";
         public abstract const string APP_ICON = "com.github.arshubham.cipher";
         public abstract const string ABOUT_COMMENTS = "Cipher App";
         public abstract const string TRANSLATOR_CREDITS = "Github Translators";
         public abstract const string MAIN_URL = "https://github.com/arshubham/cipher";
         public abstract const string BUG_URL = "https://github.com/arshubham/cipher/issues";
-        public abstract const string HELP_URL = "https://github.com/arshubham/cipher/wiki";
+        public abstract const string HELP_URL = "shubhamarora.in";
         public abstract const string TRANSLATE_URL = "https://arshubham.github.io/cipher";
-        //  public abstract const string TEXT_FOR_ABOUT_DIALOG_WEBSITE = "Website";
-        //  public abstract const string TEXT_FOR_ABOUT_DIALOG_WEBSITE_URL = "https://robertsanseries.github.io/template-for-vala-apps";
         public abstract const string URL_CSS = "com/github/arshubham/cipher/css/style.css";
         public abstract const string [] ABOUT_UTHORS = { "Shubham Arora <shubhamarora@protonmail.com>" };
         public abstract const Gtk.License ABOUT_LICENSE_TYPE = Gtk.License.GPL_3_0;
