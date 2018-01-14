@@ -6,5 +6,5 @@ Exec=com.github.arshubham.cipher
 Terminal=false
 Type=Application
 StartupNotify=true
-Categories=GNOME;GTK;IDE;Utility;TextEditor;WebDevelopment;
+Categories=Utility;
 Keywords=app;template;vala;
