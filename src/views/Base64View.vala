@@ -69,6 +69,8 @@ public class Base64View : Gtk.Grid  {
         labelPlainText.set_line_wrap (true);
 
         plainTextTextView = new Gtk.TextView ();
+        plainTextTextView.left_margin = 1;
+        plainTextTextView.set_wrap_mode (Gtk.WrapMode.WORD);
         plainTextScrolledWindow = new Gtk.ScrolledWindow (null, null);
         plainTextScrolledWindow.expand = true;
         plainTextScrolledWindow.get_style_context ().add_class (Gtk.STYLE_CLASS_VIEW);
@@ -85,7 +87,8 @@ public class Base64View : Gtk.Grid  {
         labelCipherText.set_line_wrap (true);
 
         cipherTextTextView = new Gtk.TextView ();
-
+        cipherTextTextView.left_margin = 1;
+        cipherTextTextView.set_wrap_mode (Gtk.WrapMode.WORD);
         cipherTextScrolledWindow = new Gtk.ScrolledWindow (null, null);
         cipherTextScrolledWindow.expand = true;
         cipherTextScrolledWindow.get_style_context ().add_class (Gtk.STYLE_CLASS_VIEW);
