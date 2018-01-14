@@ -5,7 +5,7 @@
     <metadata_license>CC0-1.0</metadata_license>
     <project_license>GPL-3.0+</project_license>
     <name>Cipher</name>
-    <summary>Cipher</summary>
+    <summary>An simple app for encoding and decoding text.</summary>
     <developer_name>Shubham Arora</developer_name>
     <provides>
         <binary>com.github.arshubham.cipher</binary>
@@ -20,7 +20,18 @@
         </screenshot>
     </screenshots>
     <description>
-        <p>My application template Vala for elementary OS.</p>
+        <p>An simple app for encoding and decoding text.</p>
+        <p>
+            <ul>
+                <li><b>Supported Ciphers</b></li>
+                <li>Caesar Shift</li>
+                <li>Atbash</li>
+                <li>ROT13</li>
+                <li>Ascii</li>
+                <li>Base64</li>
+                <li>Polybius Square</li>
+            </ul>
+        </p>
     </description>
     <url type="homepage">https://github.com/arshubham/cipher</url>
     <url type="bugtracker">https://github.com/arshubham/cipher/issues</url>
