@@ -1,5 +1,5 @@
 /*-
- * Copyright (c) 2017 Shubham Arora (https://github.com/arshubham/cipher)
+ * Copyright (c) 2018 Shubham Arora (https://github.com/arshubham/cipher)
  *
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU Lesser General Public
