@@ -1,4 +1,10 @@
-con.github.arshubham.cipher (0.1) precise; urgency=low
+com.github.arshubham.cipher (0.1.3) precise; urgency=low
+
+  * Appdata and minor fixes.
+
+ -- Shubham Arora <shubhamarora@protonmail.com>  Sun, 14 Jan 2018 22:00:00 +0530
+ 
+com.github.arshubham.cipher (0.1.0) precise; urgency=low
 
   * Initial Release.
 
