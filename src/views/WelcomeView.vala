@@ -27,7 +27,7 @@ public class WelcomeView : Gtk.Grid  {
 
     construct {
 
-  var welcome = new Granite.Widgets.Welcome ("Cipher", "An simple app for encoding and decoding text.");
+  var welcome = new Granite.Widgets.Welcome ("Cipher", "Encode and decode text");
                 welcome.append ("text-x-source", "Contribute more Ciphers ...", "... and sharpen your coding skills.");
 
     welcome.activated.connect ((index) => {
