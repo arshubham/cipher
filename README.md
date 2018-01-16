@@ -13,7 +13,7 @@
 <img src="https://github.com/arshubham/cipher/blob/master/data/images/Screenshot%20from%202018-01-14%2013.09.47.png" alt="screenshot">
 <h1>Features</h1>
 <br>
-Cipher is a free and open souce encoding and decoding app specially designed for elementary os. The Cipher app can currently encode and decode between six different ciphers namely:<br><br>
+Cipher is a free and open souce text encoding and decoding app specially designed for elementary os. The Cipher app can currently encode and decode between six different ciphers namely:<br><br>
 
 - Caesar Shift Cipher
 - Atbash Cipher
@@ -49,25 +49,27 @@ glib-2.0
 ```
 gee-0.8
 ```
+
+
+```
+meson
+```
+
+
 <h2>Installation</h2>
-To install this app in firstly clone this repository and type the follwing commands in your terminal <br>
+<br>
 
 ```
-sudo apt install elementary-sdk
-sudo apt install meson
-```
-
-```
+git clone https://github.com/arshubham/cipher.git
 cd cipher
-mkdir build
+meson build
 ```
  
 ```
 cd build
-meson ..
 ninja
 sudo ninja install
 ```
 
 <h1>Contribute</h1>
-We welcome user contributions. Any type of help would be fine.
+We welcome all user contributions. Any type of help would be fine.
