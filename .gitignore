@@ -5,3 +5,4 @@ debian/com.github.robertsanseries.template-for-vala-apps.substvars
 debian/com.github.robertsanseries.template-for-vala-apps/
 debian/debhelper-build-stamp
 debian/files
+.buildconfig
