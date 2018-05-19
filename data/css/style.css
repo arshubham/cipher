@@ -17,15 +17,16 @@
 * Boston, MA 02110-1301 USA
 */
 
-@define-color colorPrimary #546A79;
-@define-color textColorPrimary #ECF0F1;
-
-GtkListBoxRow {
-    padding: 13px;
+GtkListBoxRow > GtkLabel {
+    padding: 30px;
 }
 
 GtkListBoxRow:selected {
     color: black;
+}
+
+.textview {
+    border: 0.5px solid #222222;
 }
 
 .welcome_image {

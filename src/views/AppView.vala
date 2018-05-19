@@ -31,8 +31,8 @@ namespace Cipher.Views {
 
 		public AppView (Gtk.ApplicationWindow app) {
             this.app = app;
-            this.app.set_default_size (800, 700);
-            this.app.set_size_request (800, 700);
+            this.app.set_default_size (700, 500);
+            this.app.set_size_request (700, 500);
             this.app.deletable = true;
             this.app.resizable = true;
 

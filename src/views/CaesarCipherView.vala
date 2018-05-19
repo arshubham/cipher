@@ -83,6 +83,7 @@ public class CaesarCipherView : Gtk.Grid  {
         plainTextScrolledWindow = new Gtk.ScrolledWindow (null, null);
         plainTextScrolledWindow.expand = true;
         plainTextScrolledWindow.get_style_context ().add_class (Gtk.STYLE_CLASS_VIEW);
+        plainTextScrolledWindow.get_style_context ().add_class ("textview");
         plainTextScrolledWindow.add (plainTextTextView);
 
         labelShift = new Gtk.Label ("<b>Number of letters to shift to the right: </b>");
@@ -123,7 +124,7 @@ public class CaesarCipherView : Gtk.Grid  {
         cipherTextScrolledWindow = new Gtk.ScrolledWindow (null, null);
         cipherTextScrolledWindow.expand = true;
         cipherTextScrolledWindow.get_style_context ().add_class (Gtk.STYLE_CLASS_VIEW);
-        cipherTextScrolledWindow.add (cipherTextTextView);
+        cipherTextScrolledWindow.get_style_context ().add_class ("textview");        cipherTextScrolledWindow.add (cipherTextTextView);
 
         dechiperButton = new Gtk.Button.with_label ("Dechiper");
         dechiperButton.margin = 6;
@@ -147,10 +148,10 @@ public class CaesarCipherView : Gtk.Grid  {
 
         button.clicked.connect (() => {
          try {
-                        AppInfo.launch_default_for_uri ("https://en.wikipedia.org/wiki/Caesar_cipher", null);
-                    } catch (Error e) {
-                        warning (e.message);
-                    }
+                AppInfo.launch_default_for_uri ("https://en.wikipedia.org/wiki/Caesar_cipher", null);
+            } catch (Error e) {
+                warning (e.message);
+            }
         });
 
         enchiperButton.clicked.connect (() => {

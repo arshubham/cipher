@@ -74,6 +74,7 @@ public class Base64View : Gtk.Grid  {
         plainTextScrolledWindow = new Gtk.ScrolledWindow (null, null);
         plainTextScrolledWindow.expand = true;
         plainTextScrolledWindow.get_style_context ().add_class (Gtk.STYLE_CLASS_VIEW);
+        plainTextScrolledWindow.get_style_context ().add_class ("textview");
         plainTextScrolledWindow.add (plainTextTextView);
 
         enchiperButton = new Gtk.Button.with_label ("Enchiper");
@@ -92,7 +93,7 @@ public class Base64View : Gtk.Grid  {
         cipherTextScrolledWindow = new Gtk.ScrolledWindow (null, null);
         cipherTextScrolledWindow.expand = true;
         cipherTextScrolledWindow.get_style_context ().add_class (Gtk.STYLE_CLASS_VIEW);
-        cipherTextScrolledWindow.add (cipherTextTextView);
+        cipherTextScrolledWindow.get_style_context ().add_class ("textview");        cipherTextScrolledWindow.add (cipherTextTextView);
 
         dechiperButton = new Gtk.Button.with_label ("Dechiper");
         dechiperButton.margin = 6;

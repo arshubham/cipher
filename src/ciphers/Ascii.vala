@@ -42,13 +42,12 @@ namespace Cipher.Ciphers {
             for (int i = 0; cipherText.get_next_char (ref i, out character); ) {
                 temp = temp.concat (character.to_string ());
                 if (character == ' ') {
-                    int asciiNum = temp.to_int ();
+                    int asciiNum = int.parse (temp) ;
                     c = (unichar) asciiNum;
 
                     plainText = plainText.concat (c.to_string ());
                     temp = "";
                 }
-
             }
 
             return plainText;

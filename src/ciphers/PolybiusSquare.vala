@@ -66,8 +66,8 @@ namespace Cipher.Ciphers {
             for (int i = 0; cipherText.get_next_char (ref i, out character); ) {
                 if (character >= '0' && character <= '9') {
                     cipherText.get_next_char (ref i, out character_next);
-                    int c1 = character.to_string ().to_int ();
-                    int c2 = character_next.to_string ().to_int ();
+                    int c1 = int.parse (character.to_string ());
+                    int c2 = int.parse (character_next.to_string ());
                     characterPlain = polybiusArray[c1-1,c2-1];
                 }
                 else {

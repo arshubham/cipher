@@ -22,28 +22,25 @@
 
 namespace Cipher.Views {
 
-private Gtk.Image image;
-public class WelcomeView : Gtk.Grid  {
+    public class WelcomeView : Gtk.Grid  {
 
-    construct {
-
-  var welcome = new Granite.Widgets.Welcome ("Cipher", "Encode and decode text");
+        construct {
+            var welcome = new Granite.Widgets.Welcome ("Cipher", "Encode and decode text");
                 welcome.append ("text-x-source", "Contribute more Ciphers ...", "... and sharpen your coding skills.");
 
-    welcome.activated.connect ((index) => {
-            if (index == 0) {
+            welcome.activated.connect ((index) => {
+                if (index == 0) {
                     try {
                         AppInfo.launch_default_for_uri ("https://github.com/arshubham/cipher", null);
                     } catch (Error e) {
                         warning (e.message);
                     }
-            }
+                }
+            });
 
-        });
+        add (welcome);
 
-       add (welcome);
+        }
 
-}
-
-}
+    }   
 }
