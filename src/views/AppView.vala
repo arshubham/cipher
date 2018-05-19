@@ -24,19 +24,11 @@ using Cipher.Configs;
 
 namespace Cipher.Views {
 
-	/**
-     * The {@code AppView} class.
-     *
-     * @since 0.1.0
-     */
 	public class AppView : Gtk.Grid {
 
         private Gtk.ApplicationWindow app;
         public HeaderBar headerbar;
 
-		/**
-         * Constructs a new {@code AppView} object.
-         */
 		public AppView (Gtk.ApplicationWindow app) {
             this.app = app;
             this.app.set_default_size (800, 700);

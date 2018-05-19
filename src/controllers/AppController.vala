@@ -24,20 +24,11 @@ using Cipher.Views;
 
 namespace Cipher.Controllers {
 
-    /**
-     * The {@code AppController} class.
-     *
-     * @since 0.1.0
-     */
 	public class AppController {
 
         private Gtk.Application     application;
         private AppView             app_view;
-        //  private DialogPreferences   dialog_preferences;
-
-        /**
-         * Constructs a new {@code AppController} object.
-         */
+ 
 		public AppController (Gtk.ApplicationWindow window, Gtk.Application application,  AppView app_view) {
             this.application = application;
             this.app_view = app_view;

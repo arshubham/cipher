@@ -23,21 +23,10 @@ using Cipher.Configs;
 
 namespace Cipher {
 
-    /**
-     * The {@code Application} class is a foundation for all granite-based applications.
-     *
-     * @see Granite.Application
-     * @since 0.1.0
-     */
     public class Application : Granite.Application {
 
         private Window window { get; private set; default = null; }
 
-        /**
-         * Constructs a new {@code Application} object.
-         *
-         * @see Ciano.Configs.Constants
-         */
         public Application () {
             Object (
                 application_id: Constants.ID,
@@ -45,13 +34,6 @@ namespace Cipher {
             );
         }
 
-
-        /**
-         * Create the window of this application through the class {@code Window} and show it. If user clicks
-         * <quit> or press <control + q> the window will be destroyed.
-         * 
-         * @return {@code void}
-         */
         public override void activate () {
             if (window == null) {
                 window = new Window (this);

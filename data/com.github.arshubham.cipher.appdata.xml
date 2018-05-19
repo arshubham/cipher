@@ -19,6 +19,10 @@
     </screenshot>
   </screenshots>
   <releases>
+    <release version="0.1.6" date="2018-05-25">
+      <description>
+      </description>
+    </release>
     <release version="0.1.5" date="2018-01-15">
       <description>
         <p>New Icon</p>
@@ -47,7 +51,6 @@
       <li>Bifid Cipher</li>
       <li>Vigenere Cipher</li>
       <li>Beaufort cipher</li>
-      <li>Gtk 3.22 Compatibility Fixes</li>
     </ul>
   </description>
   <url type="homepage">https://github.com/arshubham/cipher</url>

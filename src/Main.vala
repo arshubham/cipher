@@ -19,13 +19,6 @@
  * Authored by: Shubham Arora <shubhamarora@protonmail.com>
  */
 
-/**
- * Main method. Responsible for starting the {@code Application} class.
- *
- * @see App.Application
- * @return {@code void}
- * @since 0.1.0
- */
 public static void main (string [] args) {
     var app = new Cipher.Application ();
     app.run (args);

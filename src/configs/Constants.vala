@@ -21,17 +21,10 @@
 
 namespace Cipher.Configs {
 
-    /**
-     * The {@code Constants} class is responsible for defining all
-     * the constants used in the application.
-     *
-     * @since 0.1.0
-     */
-
     public class Constants {
 
         public abstract const string ID = "com.github.arshubham.cipher";
-        public abstract const string VERSION = "0.1.5";
+        public abstract const string VERSION = "0.1.6";
         public abstract const string PROGRAME_NAME = "Cipher";
         public abstract const string APP_YEARS = "2018";
         public abstract const string APP_ICON = "com.github.arshubham.cipher";
