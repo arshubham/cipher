@@ -17,11 +17,11 @@
 * Boston, MA 02110-1301 USA
 */
 
-GtkListBoxRow > GtkLabel {
-    padding: 30px;
+GtkListBoxRow > GtkLabel, row > label {
+    padding: 20px;
 }
 
-GtkListBoxRow:selected {
+GtkListBoxRow:selected, list .activatable {
     color: black;
 }
 

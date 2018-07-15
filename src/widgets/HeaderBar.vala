@@ -32,6 +32,7 @@ namespace Cipher.Widgets {
         public HeaderBar () {
             this.set_title (Properties.TITLE_HEADER_BAR);
             this.show_close_button = true;
+            this.has_subtitle = false;
             icon_settings ();
         }
         
