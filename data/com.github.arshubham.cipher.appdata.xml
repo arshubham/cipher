@@ -21,6 +21,8 @@
   <releases>
     <release version="0.1.6" date="2018-05-25">
       <description>
+        <p> Update for Juno </p>
+        <p> Add Hashing Functions </p>
       </description>
     </release>
     <release version="0.1.5" date="2018-01-15">
