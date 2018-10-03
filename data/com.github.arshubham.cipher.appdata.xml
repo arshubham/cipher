@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Copyright 2017 Shubham Arora <shubhamarora@protonmail.com> -->
 <component type="desktop-application">
-  <id>com.github.arshubham.cipher.desktop</id>
+  <id>com.github.arshubham.cipher</id>
   <metadata_license>CC0-1.0</metadata_license>
   <project_license>GPL-3.0+</project_license>
   <name>Cipher</name>
