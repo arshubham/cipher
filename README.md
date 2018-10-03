@@ -21,6 +21,7 @@ Cipher is a free and open souce text encoding and decoding app specially designe
 - Rot13 Cipher
 - Base64 Encoding
 - ASCII Encoding
+- Hashing Functions (md5, SHA1, SHA256)
 
 <br>
 </p>
