@@ -30,13 +30,19 @@ Cipher is a free and open souce text encoding and decoding app specially designe
 <h1>Installation</h1>
 <h2>Requiered Dependencies</h2><br>
 
+```
+granite
 
-`granite`
-`gobject-2.0`
-`gtk+-3.0`
-`glib-2.0`
-`gee-0.8`
-`meson`
+gobject-2.0
+
+gtk+-3.0
+
+glib-2.0
+
+gee-0.8
+
+meson
+```
 
 
 <h2>Installation</h2>
