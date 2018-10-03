@@ -46,6 +46,7 @@ namespace Cipher.Views {
             var ascii = new AsciiView ();
             var rot13 = new ROT13View ();
             var base64 = new Base64View ();
+            var hash = new HashView ();
 
             var main_stack = new Gtk.Stack ();
             main_stack.add_titled (welcome, "welcome", "Welcome");
@@ -55,6 +56,7 @@ namespace Cipher.Views {
             main_stack.add_titled (rot13, "rot13", "ROT13 Cipher");
             main_stack.add_titled (base64, "base64", "Base64 Encoding");
             main_stack.add_titled (ascii, "ascii", "Ascii Encoding");
+            main_stack.add_titled (hash, "hash", "Hashes");
 
 
             var stack_sidebar = new Gtk.StackSidebar ();

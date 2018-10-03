@@ -22,6 +22,7 @@ sources = files(
     'views/AsciiView.vala',
     'views/ROT13View.vala',
     'views/Base64View.vala',
+    'views/HashView.vala',
 
 
     'widgets/HeaderBar.vala',
