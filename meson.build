@@ -5,7 +5,11 @@ project('com.github.arshubham.cipher', ['vala', 'c'],
 
 gnome = import('gnome')
 i18n = import('i18n')
-add_global_arguments('-DGETTEXT_PACKAGE="@0@"'.format (meson.project_name()), language:'c')
+add_project_arguments('-DGETTEXT_PACKAGE="intltest"', language:'c')
+i18n.gettext(meson.project_name(),
+    args: '--directory=' + meson.source_root()
+)
+
 
 gresource = gnome.compile_resources(
     'as-resources', 'data/com.github.arshubham.cipher.gresource.xml',
