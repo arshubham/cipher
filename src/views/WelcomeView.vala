@@ -25,8 +25,8 @@ namespace Cipher.Views {
     public class WelcomeView : Gtk.Grid  {
 
         construct {
-            var welcome = new Granite.Widgets.Welcome ("Cipher", "Encode and decode text");
-                welcome.append ("text-x-source", "Contribute more Ciphers ...", "... and sharpen your coding skills.");
+            var welcome = new Granite.Widgets.Welcome (_("Cipher"), _("Encode and decode text"));
+                welcome.append (_("text-x-source"), _("Contribute more Ciphers ..."), _("... and sharpen your coding skills."));
 
             welcome.activated.connect ((index) => {
                 if (index == 0) {

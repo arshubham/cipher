@@ -68,7 +68,7 @@ public class HashView : Gtk.Grid  {
         topBox.set_center_widget (labelTitle);
         topBox.pack_end (button, false, false, 0);
 
-        labelPlainText = new Gtk.Label ("<b>Plain Text</b>");
+        labelPlainText = new Gtk.Label (_("<b>Plain Text</b>"));
         labelPlainText.set_use_markup (true);
         labelPlainText.margin = 6;
         labelPlainText.halign = Gtk.Align.START;
@@ -83,7 +83,7 @@ public class HashView : Gtk.Grid  {
         plainTextScrolledWindow.get_style_context ().add_class ("textview");
         plainTextScrolledWindow.add (plainTextTextView);
 
-        enchiperButton = new Gtk.Button.with_label ("Generate Hash");
+        enchiperButton = new Gtk.Button.with_label (_("Generate Hash"));
         enchiperButton.margin = 6;
         enchiperButton.halign = Gtk.Align.END;
 
