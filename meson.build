@@ -5,11 +5,9 @@ project('com.github.arshubham.cipher', ['vala', 'c'],
 
 gnome = import('gnome')
 i18n = import('i18n')
-add_project_arguments('-DGETTEXT_PACKAGE="intltest"', language:'c')
-i18n.gettext(meson.project_name(),
-    args: '--directory=' + meson.source_root()
-)
+add_project_arguments(['--vapidir', join_paths(meson.current_source_dir(), 'vapi')], language: 'vala')
 
+add_global_arguments('-DGETTEXT_PACKAGE="@0@"'.format (meson.project_name()), language:'c')
 
 gresource = gnome.compile_resources(
     'as-resources', 'data/com.github.arshubham.cipher.gresource.xml',
@@ -46,24 +44,6 @@ executable('com.github.arshubham.cipher',
 )
 
 meson.add_install_script('post_install.py')
-#Translate and install our .desktop file
-i18n.merge_file(
-    input: join_paths('data', meson.project_name() + '.desktop.in'),
-    output: meson.project_name() + '.desktop',
-    po_dir: join_paths(meson.source_root(), 'po'),
-    type: 'desktop',
-    install: true,
-    install_dir: join_paths(get_option('datadir'), 'applications')
-)
-
-#Translate and install our .appdata file
-i18n.merge_file(
-    input: join_paths('data', meson.project_name() + '.appdata.xml.in'),
-    output: meson.project_name() + '.appdata.xml',
-    po_dir: join_paths(meson.source_root(), 'po'),
-    install: true,
-    install_dir: join_paths(get_option('datadir'), 'metainfo')
-)
 
 subdir('po')
 
