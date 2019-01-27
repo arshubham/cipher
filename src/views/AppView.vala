@@ -49,7 +49,7 @@ namespace Cipher.Views {
             var hash = new HashView ();
 
             var main_stack = new Gtk.Stack ();
-            main_stack.add_titled (welcome, _("welcome"), _("Welcome"));
+            main_stack.add_titled (welcome, "welcome", _("Welcome"));
             main_stack.add_titled (caesar_cipher, "caesar", "Caesar Shift Cipher");
             main_stack.add_titled (atbash_cipher, "atbash", "Atbash Cipher");
             main_stack.add_titled (polybius_cipher, "polybius", "Polybius Square Cipher");
