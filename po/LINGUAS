@@ -1,3 +1,5 @@
+# please keep this list sorted alphabetically
+#
 aa
 ab
 ae
@@ -42,7 +44,6 @@ en_CA
 en_GB
 eo
 es
-es_MX
 et
 eu
 fa
@@ -50,8 +51,8 @@ ff
 fi
 fj
 fo
-fr
 fr_CA
+fr
 fy
 ga
 gd
@@ -116,12 +117,13 @@ ms
 mt
 my
 na
-nb_NO
+nb
 nd
 ne
 ng
 nl
 nn
+no
 nr
 nv
 ny
@@ -134,14 +136,14 @@ pa
 pi
 pl
 ps
-pt
 pt_BR
+pt
 qu
 rm
 rn
 ro
-ru
 rue
+ru
 rw
 sa
 sc
@@ -151,8 +153,8 @@ sg
 si
 sk
 sl
-sm
 sma
+sm
 sn
 so
 sq
@@ -189,7 +191,8 @@ xh
 yi
 yo
 za
-zh
 zh_CN
 zh_HK
-zh_TW zu
+zh
+zh_TW
+zu
