@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.arshubham.cipher\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-01-27 21:55+0530\n"
+"POT-Creation-Date: 2019-01-27 22:57+0530\n"
 "PO-Revision-Date: 2019-01-27 04:48+0000\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -23,7 +23,7 @@ msgstr ""
 #: src/views/Base64View.vala:65 src/views/CaesarCipherView.vala:74
 #: src/views/HashView.vala:71 src/views/PolybiusSquareCipherView.vala:65
 #: src/views/ROT13View.vala:65
-msgid "<b>Plain Text</b>"
+msgid "Plain Text"
 msgstr ""
 
 #: src/views/AsciiView.vala:80 src/views/AtbashCipherView.vala:80
@@ -35,7 +35,7 @@ msgstr ""
 #: src/views/AsciiView.vala:84 src/views/AtbashCipherView.vala:84
 #: src/views/Base64View.vala:84 src/views/CaesarCipherView.vala:115
 #: src/views/PolybiusSquareCipherView.vala:85 src/views/ROT13View.vala:84
-msgid "<b>Cipher Text</b>"
+msgid "Cipher Text"
 msgstr ""
 
 #: src/views/AsciiView.vala:98 src/views/AtbashCipherView.vala:98
