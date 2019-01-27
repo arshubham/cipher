@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.arshubham.cipher\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-01-27 22:57+0530\n"
+"POT-Creation-Date: 2019-01-27 23:05+0530\n"
 "PO-Revision-Date: 2019-01-27 21:22+0530\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -49,7 +49,8 @@ msgid "Dechiper"
 msgstr "Dechiper"
 
 #: src/views/CaesarCipherView.vala:89
-msgid "<b>Number of letters to shift to the right: </b>"
+#, fuzzy
+msgid "Number of letters to shift to the right: "
 msgstr "<b>Number of letters to shift to the right: </b>"
 
 #: src/views/HashView.vala:86
@@ -123,7 +124,8 @@ msgid "Hashing Functions (md5, sha1, sha256)"
 msgstr "Hashing Functions (md5, sha1, sha256)"
 
 #: data/com.github.arshubham.cipher.appdata.xml.in:56
-msgid "Upcoming Features"
+#, fuzzy
+msgid "Upcoming Ciphers"
 msgstr "Upcoming Features"
 
 #: data/com.github.arshubham.cipher.appdata.xml.in:58

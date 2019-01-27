@@ -86,7 +86,7 @@ public class CaesarCipherView : Gtk.Grid  {
         plainTextScrolledWindow.get_style_context ().add_class ("textview");
         plainTextScrolledWindow.add (plainTextTextView);
 
-        labelShift = new Gtk.Label (_("<b>Number of letters to shift to the right: </b>"));
+        labelShift = new Gtk.Label ("<b>%s</b>".printf (_("Number of letters to shift to the right: ")));
         labelShift.set_use_markup (true);
         labelShift.margin = 6;
         labelShift.halign = Gtk.Align.START;
