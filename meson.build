@@ -5,6 +5,9 @@ project('com.github.arshubham.cipher', ['vala', 'c'],
 
 gnome = import('gnome')
 i18n = import('i18n')
+add_project_arguments(['--vapidir', join_paths(meson.current_source_dir(), 'vapi')], language: 'vala')
+
+add_global_arguments('-DGETTEXT_PACKAGE="@0@"'.format (meson.project_name()), language:'c')
 
 gresource = gnome.compile_resources(
     'as-resources', 'data/com.github.arshubham.cipher.gresource.xml',
@@ -23,7 +26,7 @@ c_args = [
 ]
 
 subdir('data')
-# subdir('po')
+
 subdir('src')
 
 executable('com.github.arshubham.cipher',
@@ -41,3 +44,6 @@ executable('com.github.arshubham.cipher',
 )
 
 meson.add_install_script('post_install.py')
+
+subdir('po')
+

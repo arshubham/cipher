@@ -38,9 +38,10 @@
     </release>
   </releases>
   <description>
-    <p>A simple application for encoding and decoding text. Hide your text from prying eyes!
-    <br>
-    <b>Note:</b> This application does not actually encrypt files. This was made just enchipers strings. Have fun!
+    <p>
+      A simple application for encoding and decoding text. Hide your text from prying eyes!
+      <br></br>
+      <b>Note:</b> This application does not actually encrypt files. This was made just enchipers strings. Have fun!
     </p>
     <p>Supported Ciphers</p>
     <ul>
@@ -67,5 +68,5 @@
     <value key="x-appcenter-color-primary">#BA635C</value>
     <value key="x-appcenter-color-primary-text">#ECF0F1</value>
     <value key="x-appcenter-suggested-price">0</value>
-  </custom> 
+  </custom>
 </component>

@@ -62,7 +62,7 @@ public class AtbashCipherView : Gtk.Grid  {
         topBox.set_center_widget (labelTitle);
         topBox.pack_end (button, false, false, 0);
 
-        labelPlainText = new Gtk.Label ("<b>Plain Text</b>");
+        labelPlainText = new Gtk.Label (_("<b>Plain Text</b>"));
         labelPlainText.set_use_markup (true);
         labelPlainText.margin = 6;
         labelPlainText.halign = Gtk.Align.START;
@@ -77,11 +77,11 @@ public class AtbashCipherView : Gtk.Grid  {
         plainTextScrolledWindow.get_style_context ().add_class ("textview");
         plainTextScrolledWindow.add (plainTextTextView);
 
-        enchiperButton = new Gtk.Button.with_label ("Enchiper");
+        enchiperButton = new Gtk.Button.with_label (_("Enchiper"));
         enchiperButton.margin = 6;
         enchiperButton.halign = Gtk.Align.END;
 
-        labelCipherText = new Gtk.Label ("<b>Cipher Text</b>");
+        labelCipherText = new Gtk.Label (_("<b>Cipher Text</b>"));
         labelCipherText.set_use_markup (true);
         labelCipherText.margin = 6;
         labelCipherText.halign = Gtk.Align.START;
@@ -95,7 +95,7 @@ public class AtbashCipherView : Gtk.Grid  {
         cipherTextScrolledWindow.get_style_context ().add_class (Gtk.STYLE_CLASS_VIEW);
         cipherTextScrolledWindow.get_style_context ().add_class ("textview");        cipherTextScrolledWindow.add (cipherTextTextView);
 
-        dechiperButton = new Gtk.Button.with_label ("Dechiper");
+        dechiperButton = new Gtk.Button.with_label (_("Dechiper"));
         dechiperButton.margin = 6;
         dechiperButton.halign = Gtk.Align.END;
 

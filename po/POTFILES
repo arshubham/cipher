@@ -1,0 +1,11 @@
+src/views/AppView.vala
+src/views/AsciiView.vala
+src/views/AtbashCipherView.vala
+src/views/Base64View.vala
+src/views/CaesarCipherView.vala
+src/views/HashView.vala
+src/views/PolybiusSquareCipherView.vala
+src/views/ROT13View.vala
+src/views/WelcomeView.vala
+data/com.github.arshubham.cipher.desktop.in
+data/com.github.arshubham.cipher.appdata.xml.in
