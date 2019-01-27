@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<content_rating type="oars-1.1" />
 <!-- Copyright 2017 Shubham Arora <shubhamarora@protonmail.com> -->
 <component type="desktop-application">
   <id>com.github.arshubham.cipher</id>

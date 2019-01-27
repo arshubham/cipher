@@ -46,7 +46,7 @@ Cipher is a free and open souce text encoding and decoding app specially designe
 ```
 git clone https://github.com/arshubham/cipher.git
 cd cipher
-meson build --orefix=/usr
+meson configure -Dprefix=/usr
 ```
  
 ```
