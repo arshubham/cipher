@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=Cipher
+Comment=Encode and decode text
+Icon=com.github.arshubham.cipher
+Exec=com.github.arshubham.cipher
+Terminal=false
+Type=Application
+StartupNotify=true
+Categories=Utility;
+Keywords=cipher;crypt;cryptography;
