@@ -71,7 +71,7 @@ public class CaesarCipherView : Gtk.Grid  {
         topBox.set_center_widget (labelTitle);
         topBox.pack_end (button, false, false, 0);
 
-        labelPlainText = new Gtk.Label (_("<b>Plain Text</b>"));
+        labelPlainText = new Gtk.Label ("<b>%s</b>".printf (_("Plain Text")));
         labelPlainText.set_use_markup (true);
         labelPlainText.margin = 6;
         labelPlainText.halign = Gtk.Align.START;
@@ -86,7 +86,7 @@ public class CaesarCipherView : Gtk.Grid  {
         plainTextScrolledWindow.get_style_context ().add_class ("textview");
         plainTextScrolledWindow.add (plainTextTextView);
 
-        labelShift = new Gtk.Label (_("<b>Number of letters to shift to the right: </b>"));
+        labelShift = new Gtk.Label ("<b>%s</b>".printf (_("Number of letters to shift to the right: ")));
         labelShift.set_use_markup (true);
         labelShift.margin = 6;
         labelShift.halign = Gtk.Align.START;
@@ -112,7 +112,7 @@ public class CaesarCipherView : Gtk.Grid  {
         enchiperButton.margin = 6;
         enchiperButton.halign = Gtk.Align.END;
 
-        labelCipherText = new Gtk.Label (_("<b>Cipher Text</b>"));
+        labelCipherText = new Gtk.Label ("<b>%s</b>".printf (_("Cipher Text")));
         labelCipherText.set_use_markup (true);
         labelCipherText.margin = 6;
         labelCipherText.halign = Gtk.Align.START;

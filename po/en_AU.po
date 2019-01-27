@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.arshubham.cipher\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-01-27 21:55+0530\n"
+"POT-Creation-Date: 2019-01-27 23:05+0530\n"
 "PO-Revision-Date: 2019-01-27 21:22+0530\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -25,7 +25,8 @@ msgstr "Welcome"
 #: src/views/Base64View.vala:65 src/views/CaesarCipherView.vala:74
 #: src/views/HashView.vala:71 src/views/PolybiusSquareCipherView.vala:65
 #: src/views/ROT13View.vala:65
-msgid "<b>Plain Text</b>"
+#, fuzzy
+msgid "Plain Text"
 msgstr "<b>Plain Text</b>"
 
 #: src/views/AsciiView.vala:80 src/views/AtbashCipherView.vala:80
@@ -37,7 +38,8 @@ msgstr "Enchiper"
 #: src/views/AsciiView.vala:84 src/views/AtbashCipherView.vala:84
 #: src/views/Base64View.vala:84 src/views/CaesarCipherView.vala:115
 #: src/views/PolybiusSquareCipherView.vala:85 src/views/ROT13View.vala:84
-msgid "<b>Cipher Text</b>"
+#, fuzzy
+msgid "Cipher Text"
 msgstr "<b>Cipher Text</b>"
 
 #: src/views/AsciiView.vala:98 src/views/AtbashCipherView.vala:98
@@ -47,7 +49,8 @@ msgid "Dechiper"
 msgstr "Dechiper"
 
 #: src/views/CaesarCipherView.vala:89
-msgid "<b>Number of letters to shift to the right: </b>"
+#, fuzzy
+msgid "Number of letters to shift to the right: "
 msgstr "<b>Number of letters to shift to the right: </b>"
 
 #: src/views/HashView.vala:86
@@ -121,7 +124,8 @@ msgid "Hashing Functions (md5, sha1, sha256)"
 msgstr "Hashing Functions (md5, sha1, sha256)"
 
 #: data/com.github.arshubham.cipher.appdata.xml.in:56
-msgid "Upcoming Features"
+#, fuzzy
+msgid "Upcoming Ciphers"
 msgstr "Upcoming Features"
 
 #: data/com.github.arshubham.cipher.appdata.xml.in:58
