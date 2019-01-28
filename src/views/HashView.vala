@@ -30,28 +30,17 @@ public class HashView : Gtk.Grid  {
 
     private Gtk.Button enchiperButton;
 
-    private Gtk.Label labelPlainText;
-
     private string plainText;
 
-    private Gtk.Label md5Label;
     private Gtk.Entry md5Entry;
-
-    private Gtk.Label sha1Label;
     private Gtk.Entry sha1Entry;
-
-    private Gtk.Label sha256Label;
     private Gtk.Entry sha256Entry;
 
 
 
     construct {
 
-        labelPlainText = new Gtk.Label ("<b>%s</b>".printf (_("Plain Text")));
-        labelPlainText.set_use_markup (true);
-        labelPlainText.margin = 6;
-        labelPlainText.halign = Gtk.Align.START;
-        labelPlainText.set_line_wrap (true);
+        var labelPlainText = new Cipher.Widgets.Label ("Plain Text");
 
         plainTextTextView = new Gtk.TextView ();
         plainTextTextView.left_margin = 1;
@@ -67,10 +56,7 @@ public class HashView : Gtk.Grid  {
         enchiperButton.halign = Gtk.Align.END;
 
         Gtk.Grid md5grid = new Gtk.Grid();
-        md5Label = new Gtk.Label ("<b>MD5</b>");
-        md5Label.set_use_markup (true);
-        md5Label.margin = 6;
-        md5Label.halign = Gtk.Align.START;
+        var md5Label = new Cipher.Widgets.Label ("Cipher Text");
         md5Entry = new Gtk.Entry ();
         md5Entry.editable = false;
         md5Entry.margin = 6;
@@ -79,10 +65,7 @@ public class HashView : Gtk.Grid  {
         md5grid.attach(md5Entry, 1, 0, 4, 1);
 
         Gtk.Grid sha1grid = new Gtk.Grid();
-        sha1Label = new Gtk.Label ("<b>SHA1</b>");
-        sha1Label.set_use_markup (true);
-        sha1Label.margin = 6;
-        sha1Label.halign = Gtk.Align.START;
+        var sha1Label = new Cipher.Widgets.Label ("Cipher Text");
         sha1Entry = new Gtk.Entry ();
         sha1Entry.editable = false;
         sha1Entry.margin = 6;
@@ -91,10 +74,7 @@ public class HashView : Gtk.Grid  {
         sha1grid.attach(sha1Entry, 1, 0, 4, 1);
 
         Gtk.Grid sha256grid = new Gtk.Grid();
-        sha256Label = new Gtk.Label ("<b>SHA256</b>");
-        sha256Label.set_use_markup (true);
-        sha256Label.margin = 6;
-        sha256Label.halign = Gtk.Align.START;
+        var sha256Label = new Cipher.Widgets.Label ("SHA256");
         sha256Entry = new Gtk.Entry ();
         sha256Entry.editable = false;
         sha256Entry.margin = 6;

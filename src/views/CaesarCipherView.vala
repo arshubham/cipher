@@ -37,21 +37,13 @@ public class CaesarCipherView : Gtk.Grid  {
     private Gtk.Button enchiperButton;
     private Gtk.Button dechiperButton;
 
-    private Gtk.Label labelPlainText;
-    private Gtk.Label labelCipherText;
-    private Gtk.Label labelShift;
-
     private int shift;
     private string plainText;
     private string cipherText;
 
     construct {
 
-        labelPlainText = new Gtk.Label ("<b>%s</b>".printf (_("Plain Text")));
-        labelPlainText.set_use_markup (true);
-        labelPlainText.margin = 6;
-        labelPlainText.halign = Gtk.Align.START;
-        labelPlainText.set_line_wrap (true);
+        var labelPlainText = new Cipher.Widgets.Label ("Plain Text");
 
         plainTextTextView = new Gtk.TextView ();
         plainTextTextView.left_margin = 1;
@@ -62,14 +54,10 @@ public class CaesarCipherView : Gtk.Grid  {
         plainTextScrolledWindow.get_style_context ().add_class ("textview");
         plainTextScrolledWindow.add (plainTextTextView);
 
-        labelShift = new Gtk.Label ("<b>%s</b>".printf (_("Number of letters to shift to the right: ")));
-        labelShift.set_use_markup (true);
-        labelShift.margin = 6;
-        labelShift.halign = Gtk.Align.START;
-        labelShift.set_line_wrap (true);
+        var labelShift = new Cipher.Widgets.Label ("Number of letters to shift to the right: ");
+        
 
         shiftComboBox = new Gtk.ComboBoxText ();
-        //  shiftComboBox.halign = Gtk.Align.START;
         shiftComboBox.margin = 6;
 
         for (int i = 1; i <= 26; i++ ) {
@@ -82,11 +70,7 @@ public class CaesarCipherView : Gtk.Grid  {
         enchiperButton.margin = 6;
         enchiperButton.halign = Gtk.Align.END;
 
-        labelCipherText = new Gtk.Label ("<b>%s</b>".printf (_("Cipher Text")));
-        labelCipherText.set_use_markup (true);
-        labelCipherText.margin = 6;
-        labelCipherText.halign = Gtk.Align.START;
-        labelCipherText.set_line_wrap (true);
+        var labelCipherText = new Cipher.Widgets.Label ("Cipher Text");
 
         cipherTextTextView = new Gtk.TextView ();
         cipherTextTextView.left_margin = 1;

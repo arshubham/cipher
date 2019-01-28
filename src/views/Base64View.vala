@@ -33,8 +33,6 @@ public class Base64View : Gtk.Grid  {
     private Gtk.Button enchiperButton;
     private Gtk.Button dechiperButton;
 
-    private Gtk.Label labelPlainText;
-    private Gtk.Label labelCipherText;
 
     private string plainText;
     private string cipherText;
@@ -42,11 +40,7 @@ public class Base64View : Gtk.Grid  {
 
     construct {
 
-        labelPlainText = new Gtk.Label ("<b>%s</b>".printf (_("Plain Text")));
-        labelPlainText.set_use_markup (true);
-        labelPlainText.margin = 6;
-        labelPlainText.halign = Gtk.Align.START;
-        labelPlainText.set_line_wrap (true);
+        var labelPlainText = new Cipher.Widgets.Label ("Plain Text");
 
         plainTextTextView = new Gtk.TextView ();
         plainTextTextView.left_margin = 1;
@@ -61,11 +55,7 @@ public class Base64View : Gtk.Grid  {
         enchiperButton.margin = 6;
         enchiperButton.halign = Gtk.Align.END;
 
-        labelCipherText = new Gtk.Label (("<b>%s</b>".printf (_("Cipher Text"))));
-        labelCipherText.set_use_markup (true);
-        labelCipherText.margin = 6;
-        labelCipherText.halign = Gtk.Align.START;
-        labelCipherText.set_line_wrap (true);
+        var labelCipherText = new Cipher.Widgets.Label ("Cipher Text");
 
         cipherTextTextView = new Gtk.TextView ();
         cipherTextTextView.left_margin = 1;
