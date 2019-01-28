@@ -28,6 +28,9 @@ namespace Cipher.Widgets {
         private Gtk.Image light_icon;
         private Gtk.Image dark_icon;
 
+        private Gtk.EventBox wiki_link;
+        private Gtk.Image wiki_icon;
+
         public signal void go_back (); 
 
         public HeaderBar () {
@@ -79,13 +82,17 @@ namespace Cipher.Widgets {
             dark_icon = new Gtk.Image.from_icon_name ("weather-clear-night-symbolic", Gtk.IconSize.SMALL_TOOLBAR);
             dark_icon.tooltip_text = _("Dark background");
             
-
-            
+            wiki_link = new Gtk.EventBox ();
+            wiki_icon = new Gtk.Image.from_icon_name ("dialog-information-symbolic", Gtk.IconSize.SMALL_TOOLBAR);
+            wiki_link.add (wiki_icon);
+            wiki_link.visible_window = false;
+            wiki_link.button_release_event.connect (on_button_released);
 
             pack_start (back_button);
             pack_end (dark_icon);
             pack_end (dark_switch);
             pack_end (light_icon);
+            pack_end (wiki_link);
 
         }
 
@@ -98,5 +105,28 @@ namespace Cipher.Widgets {
             back_button.set_sensitive (true);
             back_button.set_opacity (1);
         }
+
+        public void disable_wiki_icon () {
+            wiki_icon.set_sensitive (false);
+            wiki_icon.set_opacity (0);
+        }
+
+        public void enable_wiki_icon () {
+            wiki_icon.set_sensitive (true);
+            wiki_icon.set_opacity (1);
+        }
+
+        private bool on_button_released (Gtk.Widget sender, Gdk.EventButton event) {
+            try {
+                AppInfo.launch_default_for_uri ("https://github.com/arshubham/cipher", null);
+            } catch (Error e) {
+                warning (e.message);
+            }
+    
+            return true;
+        }
+    
+
+
     }
 }
