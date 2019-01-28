@@ -19,10 +19,6 @@
  * Authored by: Shubham Arora <shubhamarora@protonmail.com>
  */
 
-using Cipher.Widgets;
-using Cipher.Configs;
-using Cipher.Ciphers;
-
 namespace Cipher.Views {
 
 
@@ -144,7 +140,7 @@ public class CaesarCipherView : Gtk.Grid  {
         attach (cipherTextScrolledWindow, 0, 8, 1, 1);
         attach (dechiperButton, 0, 9, 1, 1);
 
-        Caesar caesar = new Caesar ();
+        var caesar = new Cipher.Ciphers.Caesar ();
 
         button.clicked.connect (() => {
          try {

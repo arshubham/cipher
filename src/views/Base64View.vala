@@ -19,10 +19,6 @@
  * Authored by: Shubham Arora <shubhamarora@protonmail.com>
  */
 
-using Cipher.Widgets;
-using Cipher.Configs;
-using Cipher.Ciphers;
-
 namespace Cipher.Views {
 
 
@@ -110,7 +106,7 @@ public class Base64View : Gtk.Grid  {
         attach (cipherTextScrolledWindow, 0, 8, 1, 1);
         attach (dechiperButton, 0, 9, 1, 1);
 
-        Ciphers.Base64 base64 = new Ciphers.Base64 ();
+        var base64 = new Cipher.Ciphers.Base64 ();
 
         button.clicked.connect (() => {
          try {

@@ -19,10 +19,6 @@
  * Authored by: Shubham Arora <shubhamarora@protonmail.com>
  */
 
-using Cipher.Widgets;
-using Cipher.Configs;
-using Cipher.Ciphers;
-
 namespace Cipher.Views {
 
 
@@ -114,7 +110,7 @@ public class ROT13View : Gtk.Grid  {
         attach (dechiperButton, 0, 9, 1, 1);
 
 
-        Rot13 rot13 = new Rot13 ();
+        var rot13 = new Cipher.Ciphers.Rot13 ();
 
         button.clicked.connect (() => {
          try {

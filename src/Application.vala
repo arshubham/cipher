@@ -19,8 +19,6 @@
  * Authored by: Shubham Arora <shubhamarora@protonmail.com>
  */
 
-using Cipher.Configs;
-
 namespace Cipher {
 
     public class Application : Granite.Application {
@@ -29,7 +27,7 @@ namespace Cipher {
 
         public Application () {
             Object (
-                application_id: Constants.ID,
+                application_id: Cipher.Configs.Constants.ID,
                 flags: ApplicationFlags.FLAGS_NONE
             );
 

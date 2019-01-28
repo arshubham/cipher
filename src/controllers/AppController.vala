@@ -19,14 +19,11 @@
  * Authored by: Shubham Arora <shubhamarora@protonmail.com>
  */
 
-using Cipher.Widgets;
-using Cipher.Views;
-
 namespace Cipher.Controllers {
 
 	public class AppController {
 
-        private Gtk.Application     application;
+        private Gtk.Application application;
         private Gtk.Stack view_stack;
         private Gtk.ApplicationWindow window { get; set; default = null; }
         private Cipher.Widgets.HeaderBar headerbar;
@@ -43,14 +40,14 @@ namespace Cipher.Controllers {
             view_stack.hhomogeneous = true;
             view_stack.vhomogeneous = true;
 
-            var cipher_view = new CipherView();
-            var atbash_cipher_view = new AtbashCipherView ();
-            var caesar_cipher_view = new CaesarCipherView ();
-            var polybius_cipher_view = new PolybiusSquareCipherView ();
-            var ascii_view = new AsciiView ();
-            var rot13_view = new ROT13View ();
-            var base64_view = new Base64View ();
-            var hash_view = new HashView ();
+            var cipher_view = new Cipher.Views.CipherView();
+            var atbash_cipher_view = new Cipher.Views.AtbashCipherView ();
+            var caesar_cipher_view = new Cipher.Views.CaesarCipherView ();
+            var polybius_cipher_view = new Cipher.Views.PolybiusSquareCipherView ();
+            var ascii_view = new Cipher.Views.AsciiView ();
+            var rot13_view = new Cipher.Views.ROT13View ();
+            var base64_view = new Cipher.Views.Base64View ();
+            var hash_view = new Cipher.Views.HashView ();
 
             view_stack.show_all ();
 

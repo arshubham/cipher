@@ -19,10 +19,6 @@
  * Authored by: Shubham Arora <shubhamarora@protonmail.com>
  */
 
-using Cipher.Widgets;
-using Cipher.Configs;
-using Cipher.Ciphers;
-
 namespace Cipher.Views {
 
 
@@ -114,7 +110,7 @@ public class PolybiusSquareCipherView : Gtk.Grid  {
         attach (cipherTextScrolledWindow, 0, 8, 1, 1);
         attach (dechiperButton, 0, 9, 1, 1);
 
-        PolybiusSquare polybiusSquare = new PolybiusSquare ();
+        var polybiusSquare = new Cipher.Ciphers.PolybiusSquare ();
 
         button.clicked.connect (() => {
          try {

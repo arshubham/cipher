@@ -19,10 +19,6 @@
  * Authored by: Shubham Arora <shubhamarora@protonmail.com>
  */
 
-using Cipher.Configs;
-using Cipher.Controllers;
-using Cipher.Views;
-
 namespace Cipher {
 
     public class Window : Gtk.ApplicationWindow {
@@ -30,7 +26,7 @@ namespace Cipher {
         public Window (Gtk.Application app) {
             Object (
                 application: app,
-                icon_name: Constants.APP_ICON,
+                icon_name: Cipher.Configs.Constants.APP_ICON,
                 title: "Cipher",
                 deletable: true,
                 resizable: true
@@ -49,7 +45,7 @@ namespace Cipher {
 
         private void style_provider () {
             var css_provider = new Gtk.CssProvider ();
-            css_provider.load_from_resource (Constants.URL_CSS);
+            css_provider.load_from_resource (Cipher.Configs.Constants.URL_CSS);
             
             Gtk.StyleContext.add_provider_for_screen (
                 Gdk.Screen.get_default (),
