@@ -40,13 +40,25 @@ namespace Cipher.Widgets {
             back_button.clicked.connect (() => {
                 go_back ();
             });
+            var window_settings = Gtk.Settings.get_default ();
+
+            if (Cipher.Configs.Settings.get_instance ().prefer_dark) {
+                dark_switch.active = true;
+                window_settings.gtk_application_prefer_dark_theme = true;
+            } else {
+                dark_switch.active = false;
+                window_settings.gtk_application_prefer_dark_theme = false;
+            }
 
             dark_switch.notify["active"].connect (() => {
-                var window_settings = Gtk.Settings.get_default ();
+                
+                var settings = Cipher.Configs.Settings.get_instance ();
                 if (dark_switch.active) {
                     window_settings.gtk_application_prefer_dark_theme = true;
+                    settings.prefer_dark = true;
                 } else {
                     window_settings.gtk_application_prefer_dark_theme = false;
+                    settings.prefer_dark = false;
                 }
             });
         }
@@ -66,6 +78,7 @@ namespace Cipher.Widgets {
             light_icon.tooltip_text = _("Light background");
             dark_icon = new Gtk.Image.from_icon_name ("weather-clear-night-symbolic", Gtk.IconSize.SMALL_TOOLBAR);
             dark_icon.tooltip_text = _("Dark background");
+            
 
             
 
