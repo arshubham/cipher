@@ -23,6 +23,11 @@ namespace Cipher.Widgets {
 
     public class HeaderBar : Gtk.HeaderBar {
         private Gtk.Button back_button;
+
+        private Gtk.Switch dark_switch;
+        private Gtk.Image light_icon;
+        private Gtk.Image dark_icon;
+
         public signal void go_back (); 
 
         public HeaderBar () {
@@ -41,7 +46,20 @@ namespace Cipher.Widgets {
             back_button = new Gtk.Button.with_label ("Back");
             back_button.get_style_context ().add_class (Granite.STYLE_CLASS_BACK_BUTTON);
             back_button.valign = Gtk.Align.CENTER;
+            
+
+            dark_switch = new Gtk.Switch ();
+            dark_switch.valign = Gtk.Align.CENTER;
+            dark_switch.get_style_context ().add_class (Granite.STYLE_CLASS_MODE_SWITCH);
+            light_icon = new Gtk.Image.from_icon_name ("display-brightness-symbolic", Gtk.IconSize.SMALL_TOOLBAR);
+            light_icon.tooltip_text = _("Light background");
+            dark_icon = new Gtk.Image.from_icon_name ("weather-clear-night-symbolic", Gtk.IconSize.SMALL_TOOLBAR);
+            dark_icon.tooltip_text = _("Dark background");
+
             pack_start (back_button);
+            pack_end (dark_icon);
+            pack_end (dark_switch);
+            pack_end (light_icon);
 
         }
 
