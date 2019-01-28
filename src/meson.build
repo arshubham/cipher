@@ -1,7 +1,6 @@
 sources = files(
 
     'configs/Constants.vala',
-    'configs/Properties.vala',
     'configs/Settings.vala',
 
     'controllers/AppController.vala',
@@ -13,7 +12,6 @@ sources = files(
     'ciphers/Rot13.vala',
     'ciphers/Base64.vala',
     
-    'views/WelcomeView.vala',
     'views/CaesarCipherView.vala',
     'views/AtbashCipherView.vala',
     'views/PolybiusSquareCipherView.vala',
@@ -29,5 +27,5 @@ sources = files(
 
     'Application.vala',
     'Main.vala',
-'Window.vala'
+    'Window.vala'
 )
