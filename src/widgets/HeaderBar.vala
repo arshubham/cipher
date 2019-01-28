@@ -40,6 +40,15 @@ namespace Cipher.Widgets {
             back_button.clicked.connect (() => {
                 go_back ();
             });
+
+            dark_switch.notify["active"].connect (() => {
+                var window_settings = Gtk.Settings.get_default ();
+                if (dark_switch.active) {
+                    window_settings.gtk_application_prefer_dark_theme = true;
+                } else {
+                    window_settings.gtk_application_prefer_dark_theme = false;
+                }
+            });
         }
 
         construct {
@@ -55,6 +64,8 @@ namespace Cipher.Widgets {
             light_icon.tooltip_text = _("Light background");
             dark_icon = new Gtk.Image.from_icon_name ("weather-clear-night-symbolic", Gtk.IconSize.SMALL_TOOLBAR);
             dark_icon.tooltip_text = _("Dark background");
+
+            
 
             pack_start (back_button);
             pack_end (dark_icon);
