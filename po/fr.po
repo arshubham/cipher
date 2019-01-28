@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: com.github.arshubham.cipher\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-01-27 23:05+0530\n"
-"PO-Revision-Date: 2019-01-27 18:50+0100\n"
+"PO-Revision-Date: 2019-01-28 22:10+0100\n"
 "Last-Translator: NathanBnm\n"
 "Language-Team: Français\n"
 "Language: fr\n"
@@ -20,6 +20,34 @@ msgstr ""
 #: src/views/AppView.vala:52
 msgid "Welcome"
 msgstr "Bienvenue"
+
+#: src/views/AppView.vala:53
+msgid "Caesar Shift Cipher"
+msgstr "Chiffre de César"
+
+#: src/views/AppView.vala:54
+msgid "Atbash Cipher"
+msgstr "Atbash"
+
+#: src/views/AppView.vala:55
+msgid "Polybius Square Cipher"
+msgstr "Carré de Polybe"
+
+#: src/views/AppView.vala:56
+msgid "ROT13 Cipher"
+msgstr "ROT13"
+
+#: src/views/AppView.vala:57
+msgid "Base64 Encoding"
+msgstr "Encodage Base64"
+
+#: src/views/AppView.vala:58
+msgid "Ascii Encoding"
+msgstr "Encodage Ascii"
+
+#: src/views/AppView.vala:59
+msgid "Hashes"
+msgstr "Hash"
 
 #: src/views/AsciiView.vala:65 src/views/AtbashCipherView.vala:65
 #: src/views/Base64View.vala:65 src/views/CaesarCipherView.vala:74
@@ -65,11 +93,12 @@ msgid "Encode and decode text"
 msgstr "Encoder et décoder du texte"
 
 #: src/views/WelcomeView.vala:29
-msgid "Contribute more Ciphers ..."
+msgid "Contribute more Ciphers…"
 msgstr "Contribuer pour plus de chiffrements…"
 
 #: src/views/WelcomeView.vala:29
-msgid "... and sharpen your coding skills."
+#, fuzzy
+msgid "…and sharpen your coding skills."
 msgstr "…et affiner vos compétences en codage."
 
 #: data/com.github.arshubham.cipher.desktop.in:5
@@ -94,7 +123,7 @@ msgstr "Chiffrements supportés"
 
 #: data/com.github.arshubham.cipher.appdata.xml.in:48
 msgid "Caesar Shift"
-msgstr "Chiffrement par décalage"
+msgstr "Chiffre de César (chiffrement par décalage)"
 
 #: data/com.github.arshubham.cipher.appdata.xml.in:49
 msgid "Atbash"
@@ -126,7 +155,7 @@ msgstr "Chiffrements à venir"
 
 #: data/com.github.arshubham.cipher.appdata.xml.in:58
 msgid "Bifid Cipher"
-msgstr "Chiffrement Bifid"
+msgstr "Chiffre de Bifid"
 
 #: data/com.github.arshubham.cipher.appdata.xml.in:59
 msgid "Vigenere Cipher"

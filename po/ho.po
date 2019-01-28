@@ -7,17 +7,45 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.arshubham.cipher\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-01-27 23:05+0530\n"
+"POT-Creation-Date: 2019-01-28 14:30+0530\n"
 "PO-Revision-Date: 2019-01-27 21:22+0530\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
 "Language: ho\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=ASCII\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
 #: src/views/AppView.vala:52
 msgid "Welcome"
+msgstr ""
+
+#: src/views/AppView.vala:53
+msgid "Caesar Shift Cipher"
+msgstr ""
+
+#: src/views/AppView.vala:54
+msgid "Atbash Cipher"
+msgstr ""
+
+#: src/views/AppView.vala:55
+msgid "Polybius Square Cipher"
+msgstr ""
+
+#: src/views/AppView.vala:56
+msgid "ROT13 Cipher"
+msgstr ""
+
+#: src/views/AppView.vala:57
+msgid "Base64 Encoding"
+msgstr ""
+
+#: src/views/AppView.vala:58
+msgid "Ascii Encoding"
+msgstr ""
+
+#: src/views/AppView.vala:59
+msgid "Hashes"
 msgstr ""
 
 #: src/views/AsciiView.vala:65 src/views/AtbashCipherView.vala:65
@@ -64,11 +92,11 @@ msgid "Encode and decode text"
 msgstr ""
 
 #: src/views/WelcomeView.vala:29
-msgid "Contribute more Ciphers ..."
+msgid "Contribute more Ciphers…"
 msgstr ""
 
 #: src/views/WelcomeView.vala:29
-msgid "... and sharpen your coding skills."
+msgid "…and sharpen your coding skills."
 msgstr ""
 
 #: data/com.github.arshubham.cipher.desktop.in:5
