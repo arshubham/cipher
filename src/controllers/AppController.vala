@@ -29,16 +29,16 @@ namespace Cipher.Controllers {
         private Gtk.Application     application;
         private Gtk.Stack view_stack;
         private Gtk.ApplicationWindow window { get; set; default = null; }
-        private Gtk.HeaderBar headerbar;
+        private Cipher.Widgets.HeaderBar headerbar;
 
 		public AppController (Gtk.Application application) {
             this.application = application;
             this.window = new Window (this.application);
-            this.headerbar = new Gtk.HeaderBar ();
+            this.headerbar = new Cipher.Widgets.HeaderBar ();
             this.headerbar.show_close_button = true;
 
             view_stack = new Gtk.Stack ();
-            view_stack.transition_type = Gtk.StackTransitionType.NONE;
+            view_stack.transition_type = Gtk.StackTransitionType.SLIDE_LEFT;
             view_stack.transition_duration = 300;
             view_stack.hhomogeneous = true;
             view_stack.vhomogeneous = true;
@@ -63,9 +63,18 @@ namespace Cipher.Controllers {
             view_stack.add_named (base64_view, "base64");
             view_stack.add_named (hash_view, "hash");
             
+            headerbar.disable_back_button ();
             
             cipher_view.switch_view.connect ((view) => {
+                view_stack.transition_type = Gtk.StackTransitionType.SLIDE_LEFT;
                 view_stack.visible_child_name = view;
+                headerbar.enable_back_button ();
+            });
+
+            headerbar.go_back.connect (() => {
+                view_stack.transition_type = Gtk.StackTransitionType.SLIDE_RIGHT;
+                view_stack.visible_child_name = "ciphers_view";
+                headerbar.disable_back_button ();
             });
 
             this.window.add (this.view_stack);

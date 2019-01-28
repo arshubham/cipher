@@ -18,29 +18,41 @@
  *
  * Authored by: Shubham Arora <shubhamarora@protonmail.com>
  */
-using Cipher.Configs;
 
 namespace Cipher.Widgets {
 
     public class HeaderBar : Gtk.HeaderBar {
-
-        public signal void item_selected ();
-        
-        public Gtk.MenuButton app_menu;
-        public Gtk.Menu       menu;   
+        private Gtk.Button back_button;
+        public signal void go_back (); 
 
         public HeaderBar () {
-            this.set_title (Properties.TITLE_HEADER_BAR);
-            this.show_close_button = true;
-            this.has_subtitle = false;
-            icon_settings ();
-        }
-        
-        private void icon_settings () {
-            this.app_menu = new Gtk.MenuButton();
-            this.app_menu.set_image (new Gtk.Image.from_icon_name ("open-menu-symbolic", Gtk.IconSize.LARGE_TOOLBAR));
-            this.app_menu.tooltip_text = ("Settings");
+            Object (
+                title: "Cipher",
+                has_subtitle: false,
+                show_close_button: true
+            );
+
+            back_button.clicked.connect (() => {
+                go_back ();
+            });
         }
 
+        construct {
+            back_button = new Gtk.Button.with_label ("Back");
+            back_button.get_style_context ().add_class (Granite.STYLE_CLASS_BACK_BUTTON);
+            back_button.valign = Gtk.Align.CENTER;
+            pack_start (back_button);
+
+        }
+
+        public void disable_back_button () {
+            back_button.set_sensitive (false);
+            back_button.set_opacity (0);
+        }
+
+        public void enable_back_button () {
+            back_button.set_sensitive (true);
+            back_button.set_opacity (1);
+        }
     }
 }
