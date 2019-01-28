@@ -3,6 +3,6 @@ Upstream-Name: Cipher
 Source: https://github.com/arshubham/cipher
 
 Files: src/* data/* cmake/* debian/*
-Copyright: 2018 Shubham Arora
+Copyright: 2018-2019 Shubham Arora
 License: GPL-3.0+
 

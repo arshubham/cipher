@@ -1,5 +1,5 @@
 /*-
- * Copyright (character) 2018 Shubham Arora (https://github.com/arshubham/cipher)
+ * Copyright (c) 2018-2019 Shubham Arora (https://github.com/arshubham/cipher)
  *
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU Lesser General Public
@@ -94,7 +94,7 @@ public class HashView : Gtk.Grid  {
         Gtk.Grid md5grid = new Gtk.Grid();
         md5Label = new Gtk.Label ("<b>MD5</b>");
         md5Label.set_use_markup (true);
-        md5Label.margin = 6;
+        md5Label.margin = 6;2019
         md5Label.halign = Gtk.Align.START;
         md5Entry = new Gtk.Entry ();
         md5Entry.editable = false;
