@@ -21,6 +21,17 @@
 
 namespace Cipher.Views {
     public class CipherView : Gtk.FlowBox {
+            private Cipher.Widgets.CipherBox caesarCipherBox;
+            private Cipher.Widgets.CipherBox atbashCipherBox;
+            private Cipher.Widgets.CipherBox polybiusSquareCipherBox;
+            private Cipher.Widgets.CipherBox rot13CipherBox;
+            private Cipher.Widgets.CipherBox base64CipherBox;
+            private Cipher.Widgets.CipherBox hashsBox;
+            private Cipher.Widgets.CipherBox asciiBox;
+
+            public signal void switch_view (string view);
+            
+
         public CipherView () {
             Object(
                 min_children_per_line: 2,
@@ -30,42 +41,55 @@ namespace Cipher.Views {
                 margin: 8,
                 homogeneous: true
             );
+
+            
+
+            caesarCipherBox.clicked.connect(() => {
+                switch_view("caesar_cipher");
+            });
+
+            atbashCipherBox.clicked.connect(() => {
+                switch_view("atbash_cipher");
+            });
+
+            polybiusSquareCipherBox.clicked.connect(() => {
+                switch_view("polybius_cipher");
+            });
+
+            rot13CipherBox.clicked.connect(() => {
+                switch_view("rot13");
+            });
+
+            base64CipherBox.clicked.connect(() => {
+                switch_view("base64");
+            });
+
+            hashsBox.clicked.connect(() => {
+                switch_view("hash");
+            });
+
+            asciiBox.clicked.connect(() => {
+                switch_view("ascii");
+            });
         }
 
         construct {
-            var caesarCipher = new Cipher.Widgets.CipherBox("Caesar Cipher", "caesar");
-            var atbashCipher = new Cipher.Widgets.CipherBox("Atbash Cipher", "atbash");
-            var polybiusSquareCipher = new Cipher.Widgets.CipherBox("Polybius Square Cipher", "polybius");
-            var rot13Cipher = new Cipher.Widgets.CipherBox("ROT 13 Cipher", "rot13");
-            var base64Cipher = new Cipher.Widgets.CipherBox("Base 64 Cipher", "base64");
-            var hashs = new Cipher.Widgets.CipherBox("Hashes", "hash");
-            var ascii = new Cipher.Widgets.CipherBox("Ascii", "ascii");
+            caesarCipherBox = new Cipher.Widgets.CipherBox("Caesar Cipher", "caesar");
+            atbashCipherBox = new Cipher.Widgets.CipherBox("Atbash Cipher", "atbash");
+            polybiusSquareCipherBox = new Cipher.Widgets.CipherBox("Polybius Square Cipher", "polybius");
+            rot13CipherBox = new Cipher.Widgets.CipherBox("ROT 13 Cipher", "rot13");
+            base64CipherBox = new Cipher.Widgets.CipherBox("Base 64 Cipher", "base64");
+            hashsBox = new Cipher.Widgets.CipherBox("Hashes", "hash");
+            asciiBox = new Cipher.Widgets.CipherBox("Ascii", "ascii");
 
-            add (caesarCipher);
-            add (atbashCipher);
-            add (polybiusSquareCipher);
-            add (rot13Cipher);
-            add (base64Cipher);
-            add (hashs);
-            add (ascii);
-
-            var atbash_cipher = new AtbashCipherView ();
-            var caesar_cipher = new CaesarCipherView ();
-            var polybius_cipher = new PolybiusSquareCipherView ();
-            var ascii = new AsciiView ();
-            var rot13 = new ROT13View ();
-            var base64 = new Base64View ();
-            var hash = new HashView ();
-
-            var main_stack = new Gtk.Stack ();
-            main_stack.add_titled (welcome, "welcome", _("Welcome"));
-            main_stack.add_titled (caesar_cipher, "caesar", _("Caesar Shift Cipher"));
-            main_stack.add_titled (atbash_cipher, "atbash", _("Atbash Cipher"));
-            main_stack.add_titled (polybius_cipher, "polybius", _("Polybius Square Cipher"));
-            main_stack.add_titled (rot13, "rot13", _("ROT13 Cipher"));
-            main_stack.add_titled (base64, "base64", _("Base64 Encoding"));
-            main_stack.add_titled (ascii, "ascii", _("Ascii Encoding"));
-            main_stack.add_titled (hash, "hash", _("Hashes"));
+            add (caesarCipherBox);
+            add (atbashCipherBox);
+            add (polybiusSquareCipherBox);
+            add (rot13CipherBox);
+            add (base64CipherBox);
+            add (hashsBox);
+            add (asciiBox);
+            
         }
     }
 }

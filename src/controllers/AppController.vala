@@ -27,11 +27,61 @@ namespace Cipher.Controllers {
 	public class AppController {
 
         private Gtk.Application     application;
-        private AppView             app_view;
- 
-		public AppController (Gtk.ApplicationWindow window, Gtk.Application application,  AppView app_view) {
+        private Gtk.Stack view_stack;
+        private Gtk.ApplicationWindow window { get; set; default = null; }
+        private Gtk.HeaderBar headerbar;
+
+		public AppController (Gtk.Application application) {
             this.application = application;
-            this.app_view = app_view;
-	}
+            this.window = new Window (this.application);
+            this.headerbar = new Gtk.HeaderBar ();
+            this.headerbar.show_close_button = true;
+
+            view_stack = new Gtk.Stack ();
+            view_stack.transition_type = Gtk.StackTransitionType.NONE;
+            view_stack.transition_duration = 300;
+            view_stack.hhomogeneous = true;
+            view_stack.vhomogeneous = true;
+
+            var cipher_view = new CipherView();
+            var atbash_cipher_view = new AtbashCipherView ();
+            var caesar_cipher_view = new CaesarCipherView ();
+            var polybius_cipher_view = new PolybiusSquareCipherView ();
+            var ascii_view = new AsciiView ();
+            var rot13_view = new ROT13View ();
+            var base64_view = new Base64View ();
+            var hash_view = new HashView ();
+
+            view_stack.show_all ();
+
+            view_stack.add_named (cipher_view, "ciphers_view");
+            view_stack.add_named (caesar_cipher_view, "caesar_cipher");
+            view_stack.add_named (atbash_cipher_view, "atbash_cipher");
+            view_stack.add_named (polybius_cipher_view, "polybius_cipher");
+            view_stack.add_named (ascii_view, "ascii");
+            view_stack.add_named (rot13_view, "rot13");
+            view_stack.add_named (base64_view, "base64");
+            view_stack.add_named (hash_view, "hash");
+            
+            
+            cipher_view.switch_view.connect ((view) => {
+                view_stack.visible_child_name = view;
+            });
+
+            this.window.add (this.view_stack);
+            this.window.set_default_size (700, 500);
+            this.window.set_size_request (700, 500);
+            this.application.add_window (this.window);
+            this.window.set_titlebar (this.headerbar);
+    }
+        public void activate () {
+            window.show_all ();
+            view_stack.activate ();
+            view_stack.visible_child_name = "ciphers_view";
+        }
+        public void quit () {
+            window.destroy ();
+
+}
 }
 }

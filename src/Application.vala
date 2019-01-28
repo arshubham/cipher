@@ -25,31 +25,30 @@ namespace Cipher {
 
     public class Application : Granite.Application {
 
-        private Window window { get; private set; default = null; }
+        public Cipher.Controllers.AppController controller;
 
         public Application () {
             Object (
                 application_id: Constants.ID,
                 flags: ApplicationFlags.FLAGS_NONE
             );
-        }
-
-        public override void activate () {
-            if (window == null) {
-                window = new Window (this);
-                add_window (window);
-                window.show_all ();
-            }
 
             var quit_action = new SimpleAction ("quit", null);
             quit_action.activate.connect (() => {
-                if (window != null) {
-                    window.destroy ();
-                }
+                controller.quit ();
             });
 
             add_action (quit_action);
             set_accels_for_action ("app.quit", {"<Control>q"});
         }
+
+        public override void activate () {
+            if (controller == null) {
+                controller = new Cipher.Controllers.AppController (this);
+            }
+
+            controller.activate ();
+        }   
+        
     }
 }

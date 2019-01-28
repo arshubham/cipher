@@ -31,6 +31,7 @@ namespace Cipher {
             Object (
                 application: app,
                 icon_name: Constants.APP_ICON,
+                title: "Cipher",
                 deletable: true,
                 resizable: true
             );
@@ -44,8 +45,7 @@ namespace Cipher {
             }
 
             style_provider ();
-            build (app);
-        }
+         }
 
         private void style_provider () {
             var css_provider = new Gtk.CssProvider ();
@@ -56,14 +56,6 @@ namespace Cipher {
                 css_provider,
                 Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION
             );
-        }
-
-        private void build (Gtk.Application app) {
-            var app_view = new AppView (this);
-            new AppController (this, app, app_view);
-
-            this.add (app_view);
-            this.show_all ();
         }
     }
 }
