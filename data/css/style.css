@@ -17,26 +17,8 @@
 * Boston, MA 02110-1301 USA
 */
 
-GtkListBoxRow > GtkLabel, row > label {
-    padding: 20px;
-}
-
-GtkListBoxRow:selected, list .activatable {
-    color: black;
-}
-
 .textview {
     border: 0.5px solid #222222;
-}
-
-.welcome_image {
-    background: white;
-    margin-top: 50px;
-}
-
-.info_button {
-    background: transparent;
-    border: 0px;
 }
 
 .btn-category {
