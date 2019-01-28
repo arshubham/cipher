@@ -102,7 +102,7 @@ public class AtbashCipherView : Gtk.Grid  {
         enchiperButton.clicked.connect (() => {
             plainText = plainTextTextView.buffer.text;
             cipherText = "";
-            cipherTextTextView.buffer.text = atbash.encryptAtbash (plainText);
+            cipherTextTextView.buffer.text = atbash.encrypt (plainText);
         });
 
         dechiperButton.clicked.connect (() => {
@@ -110,7 +110,7 @@ public class AtbashCipherView : Gtk.Grid  {
 
             plainText = "";
 
-            plainTextTextView.buffer.text = atbash.decryptAtbash (cipherText);
+            plainTextTextView.buffer.text = atbash.decrypt (cipherText);
         });
     }
 

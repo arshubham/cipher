@@ -136,7 +136,7 @@ public class CaesarCipherView : Gtk.Grid  {
             shift = caesar.getComboBoxValue (shiftComboBox, list_store);
 
             cipherText = "";
-            cipherTextTextView.buffer.text = caesar.encryptCaeser (plainText, shift);
+            cipherTextTextView.buffer.text = caesar.encrypt (plainText, shift);
         });
 
         dechiperButton.clicked.connect (() => {
@@ -144,7 +144,7 @@ public class CaesarCipherView : Gtk.Grid  {
             shift = caesar.getComboBoxValue (shiftComboBox, list_store);
 
             plainText = "";
-            plainTextTextView.buffer.text = caesar.decryptCaeser (cipherText, shift);
+            plainTextTextView.buffer.text = caesar.decrypt (cipherText, shift);
         });
     }
 

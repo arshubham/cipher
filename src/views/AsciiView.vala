@@ -98,7 +98,7 @@ public class AsciiView : Gtk.Grid  {
         enchiperButton.clicked.connect (() => {
             plainText = plainTextTextView.buffer.text;
             cipherText = "";
-            cipherTextTextView.buffer.text = ascii.encryptAscii (plainText);
+            cipherTextTextView.buffer.text = ascii.encrypt (plainText);
         });
 
         dechiperButton.clicked.connect (() => {
@@ -106,7 +106,7 @@ public class AsciiView : Gtk.Grid  {
 
             plainText = "";
 
-            plainTextTextView.buffer.text = ascii.decryptAscii (cipherText);
+            plainTextTextView.buffer.text = ascii.decrypt (cipherText);
         });
     }
 

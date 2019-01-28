@@ -23,7 +23,7 @@ namespace Cipher.Ciphers {
 
     public class Atbash {
 
-        public string encryptAtbash (string plainText) {
+        public string encrypt (string plainText) {
             string cipherText = "";
             unichar character;
             unichar subtractor;
@@ -41,7 +41,7 @@ namespace Cipher.Ciphers {
             return cipherText;
         }
 
-        public string decryptAtbash (string cipherText) {
+        public string decrypt (string cipherText) {
             string plainText = "";
             unichar character;
             unichar subtractor;

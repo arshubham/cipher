@@ -100,7 +100,7 @@ public class Base64View : Gtk.Grid  {
         enchiperButton.clicked.connect (() => {
             plainText = plainTextTextView.buffer.text;
             cipherText = "";
-            cipherTextTextView.buffer.text = base64.encryptBase64 (plainText);
+            cipherTextTextView.buffer.text = base64.encrypt (plainText);
         });
 
         dechiperButton.clicked.connect (() => {
@@ -108,7 +108,7 @@ public class Base64View : Gtk.Grid  {
 
             plainText = "";
 
-            plainTextTextView.buffer.text = base64.decryptBase64 (cipherText);
+            plainTextTextView.buffer.text = base64.decrypt (cipherText);
         });
     }
 

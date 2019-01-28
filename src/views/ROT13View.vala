@@ -104,7 +104,7 @@ public class ROT13View : Gtk.Grid  {
         enchiperButton.clicked.connect (() => {
             plainText = plainTextTextView.buffer.text;
             cipherText = "";
-            cipherTextTextView.buffer.text = rot13.encryptROT13 (plainText);
+            cipherTextTextView.buffer.text = rot13.encrypt (plainText);
         });
 
         dechiperButton.clicked.connect (() => {
@@ -112,7 +112,7 @@ public class ROT13View : Gtk.Grid  {
 
             plainText = "";
 
-            plainTextTextView.buffer.text = rot13.decryptROT13(cipherText);
+            plainTextTextView.buffer.text = rot13.decrypt (cipherText);
         });
     }
 

@@ -25,7 +25,7 @@ namespace Cipher.Ciphers {
 
         static string hash = "NOPQRSTUVWXYZABCDEFGHIJKLM      nopqrstuvwxyzabcdefghijklm";
 
-        public string encryptROT13 (string plainText) {
+        public string encrypt (string plainText) {
             string cipherText = "";
             unichar character;
             unichar c;
@@ -42,7 +42,7 @@ namespace Cipher.Ciphers {
             return cipherText;
         }
 
-        public string decryptROT13 (string cipherText) {
+        public string decrypt (string cipherText) {
             string plainText = "";
             unichar character;
             unichar c;

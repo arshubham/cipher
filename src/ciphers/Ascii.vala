@@ -22,7 +22,7 @@ namespace Cipher.Ciphers {
 
     public class Ascii {
 
-        public string encryptAscii (string plainText) {
+        public string encrypt (string plainText) {
             string cipherText = "";
             unichar character;
             int asciiNum;
@@ -35,7 +35,7 @@ namespace Cipher.Ciphers {
             return cipherText;
         }
 
-        public string decryptAscii (string cipherText) {
+        public string decrypt (string cipherText) {
             string plainText = "";
             string temp = "";
             unichar character,c;

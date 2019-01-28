@@ -31,7 +31,7 @@ namespace Cipher.Ciphers {
             {'V', 'W', 'X', 'Y','Z'}
         };
 
-        public string encryptPolybiusSquare (string plainText) {
+        public string encrypt (string plainText) {
             string cipherText = "";
             string temp = plainText.up ();
             unichar character;
@@ -57,7 +57,7 @@ namespace Cipher.Ciphers {
             return cipherText;
         }
 
-        public string decryptPolybiusSquare (string cipherText) {
+        public string decrypt (string cipherText) {
             string plainText = "";
             unichar character;
             unichar character_next;

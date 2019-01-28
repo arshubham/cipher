@@ -105,7 +105,7 @@ public class PolybiusSquareCipherView : Gtk.Grid  {
         enchiperButton.clicked.connect (() => {
             plainText = plainTextTextView.buffer.text;
             cipherText = "";
-            cipherTextTextView.buffer.text = polybiusSquare.encryptPolybiusSquare (plainText);
+            cipherTextTextView.buffer.text = polybiusSquare.encrypt (plainText);
         });
 
         dechiperButton.clicked.connect (() => {
@@ -113,7 +113,7 @@ public class PolybiusSquareCipherView : Gtk.Grid  {
 
             plainText = "";
 
-            plainTextTextView.buffer.text = polybiusSquare.decryptPolybiusSquare (cipherText);
+            plainTextTextView.buffer.text = polybiusSquare.decrypt (cipherText);
         });
     }
 

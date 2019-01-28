@@ -31,7 +31,7 @@ namespace Cipher.Ciphers {
             return (int) value;
         }
     
-        public string encryptCaeser (string plainText, int shift) {
+        public string encrypt (string plainText, int shift) {
             string cipherText = "";
             unichar character;
             
@@ -48,7 +48,7 @@ namespace Cipher.Ciphers {
             return cipherText;
         }
     
-        public string decryptCaeser (string cipherText, int shift) {
+        public string decrypt (string cipherText, int shift) {
             string plainText = "";
             unichar character;
             for (int i = 0; cipherText.get_next_char (ref i, out character);) {
