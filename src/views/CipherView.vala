@@ -21,6 +21,7 @@
 
 namespace Cipher.Views {
     public class CipherView : Gtk.FlowBox {
+
             private Cipher.Widgets.CipherBox caesarCipherBox;
             private Cipher.Widgets.CipherBox atbashCipherBox;
             private Cipher.Widgets.CipherBox polybiusSquareCipherBox;
@@ -31,7 +32,6 @@ namespace Cipher.Views {
 
             public signal void switch_view (string view);
             
-
         public CipherView () {
             Object(
                 min_children_per_line: 2,
@@ -79,7 +79,7 @@ namespace Cipher.Views {
             polybiusSquareCipherBox = new Cipher.Widgets.CipherBox("Polybius Square Cipher", "polybius");
             rot13CipherBox = new Cipher.Widgets.CipherBox("ROT 13 Cipher", "rot13");
             base64CipherBox = new Cipher.Widgets.CipherBox("Base 64 Cipher", "base64");
-            hashsBox = new Cipher.Widgets.CipherBox("Hashes", "hash");
+            hashsBox = new Cipher.Widgets.CipherBox("Hash Functions", "hash");
             asciiBox = new Cipher.Widgets.CipherBox("Ascii", "ascii");
 
             add (caesarCipherBox);

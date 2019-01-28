@@ -27,6 +27,8 @@ namespace Cipher.Views {
 
 
 public class PolybiusSquareCipherView : Gtk.Grid  {
+
+
     private Gtk.TextView plainTextTextView;
     private Gtk.TextView cipherTextTextView;
 
@@ -44,6 +46,7 @@ public class PolybiusSquareCipherView : Gtk.Grid  {
 
     private string plainText;
     private string cipherText;
+
 
     construct {
 
@@ -115,7 +118,7 @@ public class PolybiusSquareCipherView : Gtk.Grid  {
 
         button.clicked.connect (() => {
          try {
-                        AppInfo.launch_default_for_uri ("https://en.wikipedia.org/wiki/Polybius_square", null);
+                        AppInfo.launch_default_for_uri ("https://wikipedia.org/wiki/Polybius_square", null);
                     } catch (Error e) {
                         warning (e.message);
                     }

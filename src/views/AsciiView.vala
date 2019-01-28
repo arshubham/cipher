@@ -113,7 +113,7 @@ public class AsciiView : Gtk.Grid  {
 
         button.clicked.connect (() => {
          try {
-                 AppInfo.launch_default_for_uri ("https://en.wikipedia.org/wiki/ASCII", null);
+                 AppInfo.launch_default_for_uri ("https://wikipedia.org/wiki/ASCII", null);
              } catch (Error e) {
                         warning (e.message);
             }

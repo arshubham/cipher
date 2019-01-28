@@ -27,6 +27,7 @@ namespace Cipher.Views {
 
 
 public class HashView : Gtk.Grid  {
+
     private Gtk.TextView plainTextTextView;
 
     private Gtk.ScrolledWindow plainTextScrolledWindow;
@@ -51,8 +52,11 @@ public class HashView : Gtk.Grid  {
     private Gtk.Label sha256Label;
     private Gtk.Entry sha256Entry;
 
+
+
     construct {
 
+        
         labelTitle = new Gtk.Label ("Hash functions");
         labelTitle.halign = Gtk.Align.CENTER;
         labelTitle.margin_top = 6;
@@ -135,7 +139,7 @@ public class HashView : Gtk.Grid  {
 
         button.clicked.connect (() => {
          try {
-                        AppInfo.launch_default_for_uri ("https://en.wikipedia.org/wiki/Hash_function", null);
+                        AppInfo.launch_default_for_uri ("https://wikipedia.org/wiki/Hash_function", null);
                     } catch (Error e) {
                         warning (e.message);
                     }

@@ -27,6 +27,8 @@ namespace Cipher.Views {
 
 
 public class ROT13View : Gtk.Grid  {
+
+
     private Gtk.TextView plainTextTextView;
     private Gtk.TextView cipherTextTextView;
 
@@ -44,6 +46,8 @@ public class ROT13View : Gtk.Grid  {
 
     private string plainText;
     private string cipherText;
+
+
 
     construct {
 
@@ -114,7 +118,7 @@ public class ROT13View : Gtk.Grid  {
 
         button.clicked.connect (() => {
          try {
-                        AppInfo.launch_default_for_uri ("https://en.wikipedia.org/wiki/ROT13", null);
+                        AppInfo.launch_default_for_uri ("https://wikipedia.org/wiki/ROT13", null);
                     } catch (Error e) {
                         warning (e.message);
                     }

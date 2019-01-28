@@ -148,7 +148,7 @@ public class CaesarCipherView : Gtk.Grid  {
 
         button.clicked.connect (() => {
          try {
-                AppInfo.launch_default_for_uri ("https://en.wikipedia.org/wiki/Caesar_cipher", null);
+                AppInfo.launch_default_for_uri ("https://wikipedia.org/wiki/Caesar_cipher", null);
             } catch (Error e) {
                 warning (e.message);
             }

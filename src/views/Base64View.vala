@@ -27,6 +27,7 @@ namespace Cipher.Views {
 
 
 public class Base64View : Gtk.Grid  {
+
     private Gtk.TextView plainTextTextView;
     private Gtk.TextView cipherTextTextView;
 
@@ -45,8 +46,8 @@ public class Base64View : Gtk.Grid  {
     private string plainText;
     private string cipherText;
 
-    construct {
 
+    construct {
         labelTitle = new Gtk.Label ("Base64 Encoding");
         labelTitle.halign = Gtk.Align.CENTER;
         labelTitle.margin_top = 6;
@@ -113,7 +114,7 @@ public class Base64View : Gtk.Grid  {
 
         button.clicked.connect (() => {
          try {
-                        AppInfo.launch_default_for_uri ("https://en.wikipedia.org/wiki/Base64", null);
+                        AppInfo.launch_default_for_uri ("https://wikipedia.org/wiki/Base64", null);
                     } catch (Error e) {
                         warning (e.message);
                     }
