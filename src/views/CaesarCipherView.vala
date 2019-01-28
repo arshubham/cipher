@@ -26,10 +26,7 @@ public class CaesarCipherView : Gtk.Grid  {
     private Gtk.TextView plainTextTextView;
     private Gtk.TextView cipherTextTextView;
 
-    private Gtk.CellRendererText renderer;
-    private Gtk.ComboBox shiftComboBox;
-    private Gtk.TreeIter iter;
-    private Gtk.ListStore list_store;
+    private Gtk.ComboBoxText shiftComboBox;
 
     private Gtk.ScrolledWindow plainTextScrolledWindow;
     private Gtk.ScrolledWindow cipherTextScrolledWindow;
@@ -70,22 +67,16 @@ public class CaesarCipherView : Gtk.Grid  {
         labelShift.margin = 6;
         labelShift.halign = Gtk.Align.START;
         labelShift.set_line_wrap (true);
-        list_store = new Gtk.ListStore (1, typeof (int));
 
-        shiftComboBox = new Gtk.ComboBox.with_model(list_store);
-        shiftComboBox.halign = Gtk.Align.START;
-        shiftComboBox.set_active (0);
+        shiftComboBox = new Gtk.ComboBoxText ();
+        //  shiftComboBox.halign = Gtk.Align.START;
         shiftComboBox.margin = 6;
 
-        renderer = new Gtk.CellRendererText ();
-		shiftComboBox.pack_start (renderer, true);
-		shiftComboBox.add_attribute (renderer, "text", 0);
-
-
-        for (int i = 0; i < 26; i++ ) {
-            list_store.append (out iter);
-            list_store.set (iter, 0, i+1);
+        for (int i = 1; i <= 26; i++ ) {
+            shiftComboBox.append (i.to_string (), i.to_string ());
         }
+        shiftComboBox.active_id = "0";
+        shiftComboBox.active = 0;
 
         enchiperButton = new Gtk.Button.with_label (_("Enchiper"));
         enchiperButton.margin = 6;
@@ -133,7 +124,7 @@ public class CaesarCipherView : Gtk.Grid  {
 
         enchiperButton.clicked.connect (() => {
             plainText = plainTextTextView.buffer.text;
-            shift = caesar.getComboBoxValue (shiftComboBox, list_store);
+            shift = int.parse (shiftComboBox.get_active_text ());
 
             cipherText = "";
             cipherTextTextView.buffer.text = caesar.encrypt (plainText, shift);
@@ -141,7 +132,7 @@ public class CaesarCipherView : Gtk.Grid  {
 
         dechiperButton.clicked.connect (() => {
             cipherText = cipherTextTextView.buffer.text;
-            shift = caesar.getComboBoxValue (shiftComboBox, list_store);
+            shift = int.parse (shiftComboBox.get_active_text ());
 
             plainText = "";
             plainTextTextView.buffer.text = caesar.decrypt (cipherText, shift);

@@ -22,14 +22,6 @@
 namespace Cipher.Ciphers {
 
     public class Caesar {
-
-        public int getComboBoxValue (Gtk.ComboBox comboBox, Gtk.ListStore list_store) {
-            Gtk.TreeIter iterator;
-            Value value;
-            comboBox.get_active_iter (out iterator);
-            list_store.get_value (iterator, 0, out value);
-            return (int) value;
-        }
     
         public string encrypt (string plainText, int shift) {
             string cipherText = "";
