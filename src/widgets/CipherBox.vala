@@ -35,5 +35,9 @@ namespace Cipher.Widgets {
             this.get_style_context ().add_class ("btn-category");
             this.get_style_context ().add_class ("h2");
         }
+
+        public string get_title () {
+            return cipher_label;
+        }
     }
 }

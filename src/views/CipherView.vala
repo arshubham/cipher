@@ -30,7 +30,7 @@ namespace Cipher.Views {
             private Cipher.Widgets.CipherBox hashsBox;
             private Cipher.Widgets.CipherBox asciiBox;
 
-            public signal void switch_view (string view);
+            public signal void switch_view (string view, string title);
             
         public CipherView () {
             Object(
@@ -45,31 +45,31 @@ namespace Cipher.Views {
             
 
             caesarCipherBox.clicked.connect(() => {
-                switch_view("caesar_cipher");
+                switch_view("caesar_cipher", caesarCipherBox.get_title ());
             });
 
             atbashCipherBox.clicked.connect(() => {
-                switch_view("atbash_cipher");
+                switch_view("atbash_cipher", atbashCipherBox.get_title ());
             });
 
             polybiusSquareCipherBox.clicked.connect(() => {
-                switch_view("polybius_cipher");
+                switch_view("polybius_cipher", polybiusSquareCipherBox.get_title ());
             });
 
             rot13CipherBox.clicked.connect(() => {
-                switch_view("rot13");
+                switch_view("rot13", rot13CipherBox.get_title ());
             });
 
             base64CipherBox.clicked.connect(() => {
-                switch_view("base64");
+                switch_view("base64", base64CipherBox.get_title ());
             });
 
             hashsBox.clicked.connect(() => {
-                switch_view("hash");
+                switch_view("hash", hashsBox.get_title ());
             });
 
             asciiBox.clicked.connect(() => {
-                switch_view("ascii");
+                switch_view("ascii", asciiBox.get_title ());
             });
         }
 
@@ -80,7 +80,7 @@ namespace Cipher.Views {
             rot13CipherBox = new Cipher.Widgets.CipherBox("ROT 13 Cipher", "rot13");
             base64CipherBox = new Cipher.Widgets.CipherBox("Base 64 Cipher", "base64");
             hashsBox = new Cipher.Widgets.CipherBox("Hash Functions", "hash");
-            asciiBox = new Cipher.Widgets.CipherBox("Ascii", "ascii");
+            asciiBox = new Cipher.Widgets.CipherBox("ASCII", "ascii");
 
             add (caesarCipherBox);
             add (atbashCipherBox);

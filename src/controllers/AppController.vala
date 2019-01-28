@@ -62,16 +62,18 @@ namespace Cipher.Controllers {
             
             headerbar.disable_back_button ();
             
-            cipher_view.switch_view.connect ((view) => {
+            cipher_view.switch_view.connect ((view, title) => {
                 view_stack.transition_type = Gtk.StackTransitionType.SLIDE_LEFT;
                 view_stack.visible_child_name = view;
-                headerbar.enable_back_button ();                
+                headerbar.enable_back_button ();
+                headerbar.set_title (title);            
             });
 
             headerbar.go_back.connect (() => {
                 view_stack.transition_type = Gtk.StackTransitionType.SLIDE_RIGHT;
                 view_stack.visible_child_name = "ciphers_view";
                 headerbar.disable_back_button ();
+                headerbar.set_title ("Cipher");
             });
 
             this.window.add (this.view_stack);

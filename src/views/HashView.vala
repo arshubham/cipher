@@ -30,10 +30,7 @@ public class HashView : Gtk.Grid  {
 
     private Gtk.Button enchiperButton;
 
-    private Gtk.Box topBox;
-
     private Gtk.Label labelPlainText;
-    private Gtk.Label labelTitle;
 
     private string plainText;
 
@@ -49,22 +46,6 @@ public class HashView : Gtk.Grid  {
 
 
     construct {
-
-        
-        labelTitle = new Gtk.Label ("Hash functions");
-        labelTitle.halign = Gtk.Align.CENTER;
-        labelTitle.margin_top = 6;
-        labelTitle.margin_bottom = 6;
-        labelTitle.margin_start = 24;
-        labelTitle.margin_end = 24;
-        labelTitle.get_style_context ().add_class (Granite.STYLE_CLASS_H1_LABEL);
-
-        Gtk.Button button = new Gtk.Button.from_icon_name ("dialog-information-symbolic");
-        button.get_style_context().add_class("info_button");
-
-        topBox = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0);
-        topBox.set_center_widget (labelTitle);
-        topBox.pack_end (button, false, false, 0);
 
         labelPlainText = new Gtk.Label ("<b>%s</b>".printf (_("Plain Text")));
         labelPlainText.set_use_markup (true);
@@ -121,8 +102,6 @@ public class HashView : Gtk.Grid  {
         sha256grid.attach(sha256Label, 0, 0, 1, 1);
         sha256grid.attach(sha256Entry, 1, 0, 4, 1);
 
-        attach (topBox, 0, 0, 1, 1);
-        attach (new Gtk.Separator (Gtk.Orientation.HORIZONTAL), 0, 1, 1, 1);
         attach (labelPlainText, 0, 2, 1, 1);
         attach (plainTextScrolledWindow, 0, 4, 1, 1);
         attach (enchiperButton, 0, 5, 1, 1);
@@ -131,13 +110,13 @@ public class HashView : Gtk.Grid  {
         attach (sha1grid, 0, 8, 1, 1);
         attach (sha256grid, 0, 9, 1, 1);
 
-        button.clicked.connect (() => {
-         try {
-                        AppInfo.launch_default_for_uri ("https://wikipedia.org/wiki/Hash_function", null);
-                    } catch (Error e) {
-                        warning (e.message);
-                    }
-        });
+        //  button.clicked.connect (() => {
+        //   try {
+        //                  AppInfo.launch_default_for_uri ("https://wikipedia.org/wiki/Hash_function", null);
+        //              } catch (Error e) {
+        //                  warning (e.message);
+        //              }
+        //  });
 
         enchiperButton.clicked.connect (() => {
             plainText = plainTextTextView.buffer.text;
