@@ -67,7 +67,9 @@ namespace Cipher.Views {
             paned.add1 (stack_sidebar);
             paned.add2 (main_stack);
 
-            this.add (paned);
+            var cipherView = new CipherView();
+
+            this.add (cipherView);
 
 		}
 	}

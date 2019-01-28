@@ -23,9 +23,11 @@ sources = files(
     'views/ROT13View.vala',
     'views/Base64View.vala',
     'views/HashView.vala',
+    'views/CipherView.vala',
 
 
     'widgets/HeaderBar.vala',
+    'widgets/CipherBox.vala',
 
     'Application.vala',
     'Main.vala',

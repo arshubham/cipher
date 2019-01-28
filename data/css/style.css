@@ -38,3 +38,40 @@ GtkListBoxRow:selected, list .activatable {
     background: transparent;
     border: 0px;
 }
+
+.btn-category {
+    color: white;
+    font-size: 2em;
+}
+
+.h2 {
+    font-size: 2em;
+}
+
+.caesar {
+    background: linear-gradient(-45deg, #B5AC49, #11998E);
+}
+
+.polybius {
+    background: linear-gradient(-45deg, #9B5F62, #DDA165);
+}
+
+.atbash {
+    background: linear-gradient(-45deg, #FF5858, #F09819);
+}
+
+.base64 {
+    background: linear-gradient(-45deg, #29323C, #483874);
+}
+
+.hash {
+    background: linear-gradient(-45deg, #533D84, #7E2F77);
+}
+
+.ascii {
+    background: linear-gradient(-45deg, #3C171A, #5D293A);
+}
+
+.rot13 {
+    background: linear-gradient(-45deg, #E16145, #FE337C);
+}
