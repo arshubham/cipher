@@ -24,71 +24,46 @@ namespace Cipher.Views {
 
 public class HashView : Gtk.Grid  {
 
-    private Gtk.TextView plainTextTextView;
-
-    private Gtk.ScrolledWindow plainTextScrolledWindow;
+    private Cipher.Widgets.TextView plainTextTextView;
 
     private Gtk.Button enchiperButton;
 
     private string plainText;
 
-    private Gtk.Entry md5Entry;
-    private Gtk.Entry sha1Entry;
-    private Gtk.Entry sha256Entry;
-
-
+    private Cipher.Widgets.Entry md5Entry;
+    private Cipher.Widgets.Entry sha1Entry;
+    private Cipher.Widgets.Entry sha256Entry;
 
     construct {
 
-        var labelPlainText = new Cipher.Widgets.Label ("Plain Text");
-
-        plainTextTextView = new Gtk.TextView ();
-        plainTextTextView.left_margin = 1;
-        plainTextTextView.set_wrap_mode (Gtk.WrapMode.WORD);
-        plainTextScrolledWindow = new Gtk.ScrolledWindow (null, null);
-        plainTextScrolledWindow.expand = true;
-        plainTextScrolledWindow.get_style_context ().add_class (Gtk.STYLE_CLASS_VIEW);
-        plainTextScrolledWindow.get_style_context ().add_class ("textview");
+        plainTextTextView = new Cipher.Widgets.TextView ();
+        var plainTextScrolledWindow = new Cipher.Widgets.ScrolledWindow ();
         plainTextScrolledWindow.add (plainTextTextView);
 
         enchiperButton = new Gtk.Button.with_label (_("Generate Hash"));
         enchiperButton.margin = 6;
         enchiperButton.halign = Gtk.Align.END;
 
-        Gtk.Grid md5grid = new Gtk.Grid();
-        var md5Label = new Cipher.Widgets.Label ("Cipher Text");
-        md5Entry = new Gtk.Entry ();
-        md5Entry.editable = false;
-        md5Entry.margin = 6;
-        md5grid.column_homogeneous = true;
-        md5grid.attach(md5Label, 0, 0, 1, 1);
-        md5grid.attach(md5Entry, 1, 0, 4, 1);
+        
+        md5Entry = new Cipher.Widgets.Entry ();
+        sha1Entry = new Cipher.Widgets.Entry ();
+        sha256Entry = new Cipher.Widgets.Entry ();
 
-        Gtk.Grid sha1grid = new Gtk.Grid();
-        var sha1Label = new Cipher.Widgets.Label ("Cipher Text");
-        sha1Entry = new Gtk.Entry ();
-        sha1Entry.editable = false;
-        sha1Entry.margin = 6;
-        sha1grid.column_homogeneous = true;
-        sha1grid.attach(sha1Label, 0, 0, 1, 1);
-        sha1grid.attach(sha1Entry, 1, 0, 4, 1);
+        var hashgrid = new Gtk.Grid();
+        hashgrid.column_homogeneous = true;
 
-        Gtk.Grid sha256grid = new Gtk.Grid();
-        var sha256Label = new Cipher.Widgets.Label ("SHA256");
-        sha256Entry = new Gtk.Entry ();
-        sha256Entry.editable = false;
-        sha256Entry.margin = 6;
-        sha256grid.column_homogeneous = true;
-        sha256grid.attach(sha256Label, 0, 0, 1, 1);
-        sha256grid.attach(sha256Entry, 1, 0, 4, 1);
+        hashgrid.attach(new Cipher.Widgets.Label ("MD5"), 0, 0, 1, 1);
+        hashgrid.attach(md5Entry, 1, 0, 4, 1);
+        hashgrid.attach(new Cipher.Widgets.Label ("SHA1"), 0, 1, 1, 1);
+        hashgrid.attach(sha1Entry, 1, 1, 4, 1);
+        hashgrid.attach(new Cipher.Widgets.Label ("SHA256"), 0, 2, 1, 1);
+        hashgrid.attach(sha256Entry, 1, 2, 4, 1);
 
-        attach (labelPlainText, 0, 2, 1, 1);
+        attach (new Cipher.Widgets.Label ("Plain Text"), 0, 2, 1, 1);
         attach (plainTextScrolledWindow, 0, 4, 1, 1);
         attach (enchiperButton, 0, 5, 1, 1);
         attach (new Gtk.Separator (Gtk.Orientation.HORIZONTAL), 0, 6, 1, 1);
-        attach (md5grid, 0, 7, 1, 1);
-        attach (sha1grid, 0, 8, 1, 1);
-        attach (sha256grid, 0, 9, 1, 1);
+        attach (hashgrid, 0, 7, 1, 1);
 
         //  button.clicked.connect (() => {
         //   try {

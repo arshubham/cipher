@@ -28,9 +28,6 @@ public class CaesarCipherView : Gtk.Grid  {
 
     private Gtk.ComboBoxText shiftComboBox;
 
-    private Gtk.ScrolledWindow plainTextScrolledWindow;
-    private Gtk.ScrolledWindow cipherTextScrolledWindow;
-
     private Gtk.Box box;
 
 
@@ -45,18 +42,12 @@ public class CaesarCipherView : Gtk.Grid  {
 
         var labelPlainText = new Cipher.Widgets.Label ("Plain Text");
 
-        plainTextTextView = new Gtk.TextView ();
-        plainTextTextView.left_margin = 1;
-        plainTextTextView.set_wrap_mode (Gtk.WrapMode.WORD);
-        plainTextScrolledWindow = new Gtk.ScrolledWindow (null, null);
-        plainTextScrolledWindow.expand = true;
-        plainTextScrolledWindow.get_style_context ().add_class (Gtk.STYLE_CLASS_VIEW);
-        plainTextScrolledWindow.get_style_context ().add_class ("textview");
+        plainTextTextView = new Cipher.Widgets.TextView ();
+        var plainTextScrolledWindow = new Cipher.Widgets.ScrolledWindow ();
         plainTextScrolledWindow.add (plainTextTextView);
 
         var labelShift = new Cipher.Widgets.Label ("Number of letters to shift to the right: ");
         
-
         shiftComboBox = new Gtk.ComboBoxText ();
         shiftComboBox.margin = 6;
 
@@ -72,13 +63,9 @@ public class CaesarCipherView : Gtk.Grid  {
 
         var labelCipherText = new Cipher.Widgets.Label ("Cipher Text");
 
-        cipherTextTextView = new Gtk.TextView ();
-        cipherTextTextView.left_margin = 1;
-        cipherTextTextView.set_wrap_mode (Gtk.WrapMode.WORD);
-        cipherTextScrolledWindow = new Gtk.ScrolledWindow (null, null);
-        cipherTextScrolledWindow.expand = true;
-        cipherTextScrolledWindow.get_style_context ().add_class (Gtk.STYLE_CLASS_VIEW);
-        cipherTextScrolledWindow.get_style_context ().add_class ("textview");        cipherTextScrolledWindow.add (cipherTextTextView);
+        cipherTextTextView = new Cipher.Widgets.TextView ();
+        var cipherTextScrolledWindow = new Cipher.Widgets.ScrolledWindow ();
+        cipherTextScrolledWindow.add (cipherTextTextView);
 
         dechiperButton = new Gtk.Button.with_label (_("Dechiper"));
         dechiperButton.margin = 6;

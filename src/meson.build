@@ -25,6 +25,9 @@ sources = files(
     'widgets/HeaderBar.vala',
     'widgets/CipherBox.vala',
     'widgets/Label.vala',
+    'widgets/Entry.vala',
+    'widgets/TextView.vala',
+    'widgets/ScrolledWindow.vala',
 
     'Application.vala',
     'Main.vala',

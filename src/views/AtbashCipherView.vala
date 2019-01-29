@@ -27,8 +27,6 @@ public class AtbashCipherView : Gtk.Grid  {
     private Gtk.TextView plainTextTextView;
     private Gtk.TextView cipherTextTextView;
 
-    private Gtk.ScrolledWindow plainTextScrolledWindow;
-    private Gtk.ScrolledWindow cipherTextScrolledWindow;
 
     private Gtk.Button enchiperButton;
     private Gtk.Button dechiperButton;
@@ -42,13 +40,8 @@ public class AtbashCipherView : Gtk.Grid  {
 
         var labelPlainText = new Cipher.Widgets.Label ("Plain Text");
 
-        plainTextTextView = new Gtk.TextView ();
-        plainTextTextView.left_margin = 1;
-        plainTextTextView.set_wrap_mode (Gtk.WrapMode.WORD);
-        plainTextScrolledWindow = new Gtk.ScrolledWindow (null, null);
-        plainTextScrolledWindow.expand = true;
-        plainTextScrolledWindow.get_style_context ().add_class (Gtk.STYLE_CLASS_VIEW);
-        plainTextScrolledWindow.get_style_context ().add_class ("textview");
+        plainTextTextView = new Cipher.Widgets.TextView ();
+        var plainTextScrolledWindow = new Cipher.Widgets.ScrolledWindow ();
         plainTextScrolledWindow.add (plainTextTextView);
 
         enchiperButton = new Gtk.Button.with_label (_("Enchiper"));
@@ -57,13 +50,9 @@ public class AtbashCipherView : Gtk.Grid  {
 
         var labelCipherText = new Cipher.Widgets.Label ("Cipher Text");
 
-        cipherTextTextView = new Gtk.TextView ();
-        cipherTextTextView.left_margin = 1;
-        cipherTextTextView.set_wrap_mode (Gtk.WrapMode.WORD);
-        cipherTextScrolledWindow = new Gtk.ScrolledWindow (null, null);
-        cipherTextScrolledWindow.expand = true;
-        cipherTextScrolledWindow.get_style_context ().add_class (Gtk.STYLE_CLASS_VIEW);
-        cipherTextScrolledWindow.get_style_context ().add_class ("textview");        cipherTextScrolledWindow.add (cipherTextTextView);
+        cipherTextTextView = new Cipher.Widgets.TextView ();
+        var cipherTextScrolledWindow = new Cipher.Widgets.ScrolledWindow ();
+        cipherTextScrolledWindow.add (cipherTextTextView);
 
         dechiperButton = new Gtk.Button.with_label (_("Dechiper"));
         dechiperButton.margin = 6;
