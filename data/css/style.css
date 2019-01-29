@@ -34,12 +34,8 @@ flowboxchild:focus {
     border-left: 2px solid #E16145;
 }
 
-.btn-category {
-    color: white;
-    font-size: 2em;
-}
-
 .h2 {
+    color: white;
     font-size: 2em;
 }
 

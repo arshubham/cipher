@@ -32,7 +32,6 @@ namespace Cipher.Widgets {
             this.expand = true;
             this.label = cipher_label;
             this.get_style_context ().add_class (style);
-            this.get_style_context ().add_class ("btn-category");
             this.get_style_context ().add_class ("h2");
         }
 
