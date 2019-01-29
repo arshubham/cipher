@@ -31,7 +31,7 @@ flowboxchild:focus {
 }
 
 .textview {
-    border: 1px solid #222222;
+    border-left: 2px solid #E16145;
 }
 
 .btn-category {
