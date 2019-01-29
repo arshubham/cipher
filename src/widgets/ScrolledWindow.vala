@@ -32,7 +32,7 @@ namespace Cipher.Widgets {
             );
             
             this.get_style_context ().add_class (Gtk.STYLE_CLASS_VIEW);
-            this.get_style_context ().add_class ("textview");
+            this.get_style_context ().add_class (Granite.STYLE_CLASS_CARD);   
         }
     }
 }
