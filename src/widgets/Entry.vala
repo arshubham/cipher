@@ -28,7 +28,7 @@ namespace Cipher.Widgets {
                 editable: false,
                 margin: 6
             );
-            
+            this.get_style_context ().add_class ("entry");
         }
     }
 }

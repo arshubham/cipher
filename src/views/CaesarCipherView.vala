@@ -27,14 +27,13 @@ public class CaesarCipherView : Gtk.Grid  {
     private Gtk.TextView plainTextTextView;
     private Gtk.TextView cipherTextTextView;
 
-    private Gtk.ComboBoxText shiftComboBox;
-
     private Gtk.Box box;
 
     private Gtk.Button enchiperButton;
     private Gtk.Button dechiperButton;
 
-    private int shift;
+    private Gtk.SpinButton spinbutton;
+
     private string plainText;
     private string cipherText;
 
@@ -43,18 +42,14 @@ public class CaesarCipherView : Gtk.Grid  {
 
         enchiperButton.clicked.connect (() => {
             plainText = plainTextTextView.buffer.text;
-            shift = int.parse (shiftComboBox.get_active_text ());
-
             cipherText = "";
-            cipherTextTextView.buffer.text = caesar.encrypt (plainText, shift);
+            cipherTextTextView.buffer.text = caesar.encrypt (plainText, spinbutton.get_value_as_int ());
         });
 
         dechiperButton.clicked.connect (() => {
             cipherText = cipherTextTextView.buffer.text;
-            shift = int.parse (shiftComboBox.get_active_text ());
-
             plainText = "";
-            plainTextTextView.buffer.text = caesar.decrypt (cipherText, shift);
+            plainTextTextView.buffer.text = caesar.decrypt (cipherText, spinbutton.get_value_as_int ());
         });
     }
 
@@ -63,15 +58,8 @@ public class CaesarCipherView : Gtk.Grid  {
         plainTextTextView = new Cipher.Widgets.TextView ();
         var plainTextScrolledWindow = new Cipher.Widgets.ScrolledWindow ();
         plainTextScrolledWindow.add (plainTextTextView);
-        
-        shiftComboBox = new Gtk.ComboBoxText ();
-        shiftComboBox.margin = 6;
 
-        for (int i = 1; i <= 26; i++ ) {
-            shiftComboBox.append (i.to_string (), i.to_string ());
-        }
-        shiftComboBox.active_id = "0";
-        shiftComboBox.active = 0;
+        spinbutton = new Gtk.SpinButton.with_range (1, 26, 1);
 
         enchiperButton = new Cipher.Widgets.Button("Enchiper", Gtk.STYLE_CLASS_SUGGESTED_ACTION);
 
@@ -82,8 +70,9 @@ public class CaesarCipherView : Gtk.Grid  {
         dechiperButton = new Cipher.Widgets.Button("Dechiper", Gtk.STYLE_CLASS_DESTRUCTIVE_ACTION);
 
         box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0);
+        box.margin_top = 12;
         box.pack_start (new Cipher.Widgets.Label ("Number of letters to shift to the right: "), false, false, 0);
-        box.pack_start (shiftComboBox, false, false, 0);
+        box.pack_start (spinbutton, false, true, 0);
 
         attach (new Cipher.Widgets.Label ("Plain Text"), 0, 1, 1, 1);
         attach (plainTextScrolledWindow, 0, 2, 1, 1);

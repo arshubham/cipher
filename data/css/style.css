@@ -17,7 +17,7 @@
 * Boston, MA 02110-1301 USA
 */
 
-entry {
+.entry {
 	border: none;
     background: rgba(0,0,0,0.05);
     border-radius: 2px;
