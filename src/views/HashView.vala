@@ -34,16 +34,27 @@ public class HashView : Gtk.Grid  {
     private Cipher.Widgets.Entry sha1Entry;
     private Cipher.Widgets.Entry sha256Entry;
 
+    public HashView () {
+        enchiperButton.clicked.connect (() => {
+            plainText = plainTextTextView.buffer.text;
+
+            string hashmd5 = GLib.Checksum.compute_for_string (ChecksumType.MD5, plainText, plainText.length);
+            string hashsha1 = GLib.Checksum.compute_for_string (ChecksumType.SHA1, plainText, plainText.length);
+            string hashsha256 = GLib.Checksum.compute_for_string (ChecksumType.SHA256, plainText, plainText.length);
+
+            md5Entry.text = hashmd5;
+            sha1Entry.text = hashsha1;
+            sha256Entry.text = hashsha256;
+        });
+    }
+
     construct {
 
         plainTextTextView = new Cipher.Widgets.TextView ();
         var plainTextScrolledWindow = new Cipher.Widgets.ScrolledWindow ();
         plainTextScrolledWindow.add (plainTextTextView);
 
-        enchiperButton = new Gtk.Button.with_label (_("Generate Hash"));
-        enchiperButton.margin = 6;
-        enchiperButton.halign = Gtk.Align.END;
-
+        enchiperButton = new Cipher.Widgets.Button("Generate Hash", Gtk.STYLE_CLASS_SUGGESTED_ACTION);
         
         md5Entry = new Cipher.Widgets.Entry ();
         sha1Entry = new Cipher.Widgets.Entry ();
@@ -59,36 +70,10 @@ public class HashView : Gtk.Grid  {
         hashgrid.attach(new Cipher.Widgets.Label ("SHA256"), 0, 2, 1, 1);
         hashgrid.attach(sha256Entry, 1, 2, 4, 1);
 
-        attach (new Cipher.Widgets.Label ("Plain Text"), 0, 2, 1, 1);
-        attach (plainTextScrolledWindow, 0, 4, 1, 1);
-        attach (enchiperButton, 0, 5, 1, 1);
-        attach (new Gtk.Separator (Gtk.Orientation.HORIZONTAL), 0, 6, 1, 1);
-        attach (hashgrid, 0, 7, 1, 1);
-
-        //  button.clicked.connect (() => {
-        //   try {
-        //                  AppInfo.launch_default_for_uri ("https://wikipedia.org/wiki/Hash_function", null);
-        //              } catch (Error e) {
-        //                  warning (e.message);
-        //              }
-        //  });
-
-        enchiperButton.clicked.connect (() => {
-            plainText = plainTextTextView.buffer.text;
-
-            string hashmd5 = GLib.Checksum.compute_for_string (ChecksumType.MD5, plainText, plainText.length);
-            string hashsha1 = GLib.Checksum.compute_for_string (ChecksumType.SHA1, plainText, plainText.length);
-            string hashsha256 = GLib.Checksum.compute_for_string (ChecksumType.SHA256, plainText, plainText.length);
-
-
-            md5Entry.text = hashmd5;
-            sha1Entry.text = hashsha1;
-            sha256Entry.text = hashsha256;
-
-        
-        });
-
-
+        attach (new Cipher.Widgets.Label ("Plain Text"), 0, 0, 1, 1);
+        attach (plainTextScrolledWindow, 0, 1, 1, 1);
+        attach (enchiperButton, 0, 2, 1, 1);
+        attach (hashgrid, 0, 3, 1, 1);
 }}
 
 }

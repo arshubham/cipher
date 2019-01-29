@@ -21,7 +21,6 @@
 
 namespace Cipher.Views {
 
-
 public class AsciiView : Gtk.Grid  {
     private Gtk.TextView plainTextTextView;
     private Gtk.TextView cipherTextTextView;
@@ -32,32 +31,7 @@ public class AsciiView : Gtk.Grid  {
     private string plainText;
     private string cipherText;
 
-    construct {
-
-
-        plainTextTextView = new Cipher.Widgets.TextView ();
-        var plainTextScrolledWindow = new Cipher.Widgets.ScrolledWindow ();
-        plainTextScrolledWindow.add (plainTextTextView);
-
-        enchiperButton = new Gtk.Button.with_label (_("Enchiper"));
-        enchiperButton.margin = 6;
-        enchiperButton.halign = Gtk.Align.END;
-
-        cipherTextTextView = new Cipher.Widgets.TextView ();
-        var cipherTextScrolledWindow = new Cipher.Widgets.ScrolledWindow ();
-        cipherTextScrolledWindow.add (cipherTextTextView);
-
-        dechiperButton = new Gtk.Button.with_label (_("Dechiper"));
-        dechiperButton.margin = 6;
-        dechiperButton.halign = Gtk.Align.END;
-
-        attach (new Cipher.Widgets.Label ("Plain Text"), 0, 0, 1, 1);
-        attach (plainTextScrolledWindow, 0, 1, 1, 1);
-        attach (enchiperButton, 0, 2, 1, 1);
-        attach (new Cipher.Widgets.Label ("Cipher Text"), 0, 3, 1, 1);
-        attach (cipherTextScrolledWindow, 0, 4, 1, 1);
-        attach (dechiperButton, 0, 5, 1, 1);
-
+    public AsciiView () {
         var ascii = new Cipher.Ciphers.Ascii ();
 
         enchiperButton.clicked.connect (() => {
@@ -75,6 +49,28 @@ public class AsciiView : Gtk.Grid  {
         });
     }
 
-}
+    construct {
+
+        plainTextTextView = new Cipher.Widgets.TextView ();
+        var plainTextScrolledWindow = new Cipher.Widgets.ScrolledWindow ();
+        plainTextScrolledWindow.add (plainTextTextView);
+
+        enchiperButton = new Cipher.Widgets.Button("Enchiper", Gtk.STYLE_CLASS_SUGGESTED_ACTION);
+
+        cipherTextTextView = new Cipher.Widgets.TextView ();
+        var cipherTextScrolledWindow = new Cipher.Widgets.ScrolledWindow ();
+        cipherTextScrolledWindow.add (cipherTextTextView);
+
+        dechiperButton = new Cipher.Widgets.Button("Dechiper", Gtk.STYLE_CLASS_DESTRUCTIVE_ACTION);
+
+        attach (new Cipher.Widgets.Label ("Plain Text"), 0, 0, 1, 1);
+        attach (plainTextScrolledWindow, 0, 1, 1, 1);
+        attach (enchiperButton, 0, 2, 1, 1);
+        attach (new Cipher.Widgets.Label ("Cipher Text"), 0, 3, 1, 1);
+        attach (cipherTextScrolledWindow, 0, 4, 1, 1);
+        attach (dechiperButton, 0, 5, 1, 1);   
+    }
+
+    }
 
 }

@@ -28,6 +28,7 @@ sources = files(
     'widgets/Entry.vala',
     'widgets/TextView.vala',
     'widgets/ScrolledWindow.vala',
+    'widgets/Button.vala',
 
     'Application.vala',
     'Main.vala',

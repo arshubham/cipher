@@ -10,7 +10,7 @@
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
  * Lesser General Public License for more details.
- *
+ *add_class
  * You should have received a copy of the GNU Lesser General Public
  * License along with this library; if not, write to the
  * Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor,
@@ -21,18 +21,16 @@
 
 namespace Cipher.Widgets {
 
-    public class ScrolledWindow : Gtk.ScrolledWindow {
+    public class Button : Gtk.Button {
+        public Button (string button_label, string style) {
 
-        public ScrolledWindow () {
             Object (
-                hadjustment: null,
-                vadjustment: null,
-                expand: true,
-                margin: 6
+                label: button_label,
+                margin: 6,
+                halign: Gtk.Align.END
             );
-            
-            this.get_style_context ().add_class (Gtk.STYLE_CLASS_VIEW);
-            this.get_style_context ().add_class ("textview");
+
+            this.get_style_context ().add_class (style);
         }
     }
 }
