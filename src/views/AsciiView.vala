@@ -34,7 +34,6 @@ public class AsciiView : Gtk.Grid  {
 
     construct {
 
-        var labelPlainText = new Cipher.Widgets.Label ("Plain Text");
 
         plainTextTextView = new Cipher.Widgets.TextView ();
         var plainTextScrolledWindow = new Cipher.Widgets.ScrolledWindow ();
@@ -44,8 +43,6 @@ public class AsciiView : Gtk.Grid  {
         enchiperButton.margin = 6;
         enchiperButton.halign = Gtk.Align.END;
 
-        var labelCipherText = new Cipher.Widgets.Label ("Cipher Text");
-
         cipherTextTextView = new Cipher.Widgets.TextView ();
         var cipherTextScrolledWindow = new Cipher.Widgets.ScrolledWindow ();
         cipherTextScrolledWindow.add (cipherTextTextView);
@@ -54,23 +51,14 @@ public class AsciiView : Gtk.Grid  {
         dechiperButton.margin = 6;
         dechiperButton.halign = Gtk.Align.END;
 
-        attach (labelPlainText, 0, 2, 1, 1);
-        attach (plainTextScrolledWindow, 0, 4, 1, 1);
-        attach (enchiperButton, 0, 5, 1, 1);
-        attach (new Gtk.Separator (Gtk.Orientation.HORIZONTAL), 0, 6, 1, 1);
-        attach (labelCipherText, 0, 7, 1, 1);
-        attach (cipherTextScrolledWindow, 0, 8, 1, 1);
-        attach (dechiperButton, 0, 9, 1, 1);
+        attach (new Cipher.Widgets.Label ("Plain Text"), 0, 0, 1, 1);
+        attach (plainTextScrolledWindow, 0, 1, 1, 1);
+        attach (enchiperButton, 0, 2, 1, 1);
+        attach (new Cipher.Widgets.Label ("Cipher Text"), 0, 3, 1, 1);
+        attach (cipherTextScrolledWindow, 0, 4, 1, 1);
+        attach (dechiperButton, 0, 5, 1, 1);
 
         var ascii = new Cipher.Ciphers.Ascii ();
-
-        //  button.clicked.connect (() => {
-        //   try {
-        //           AppInfo.launch_default_for_uri ("https://wikipedia.org/wiki/ASCII", null);
-        //       } catch (Error e) {
-        //                  warning (e.message);
-        //      }
-        //  });
 
         enchiperButton.clicked.connect (() => {
             plainText = plainTextTextView.buffer.text;
