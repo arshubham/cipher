@@ -31,7 +31,7 @@ namespace Cipher.Views {
         private Cipher.Widgets.CipherBox hash_functions_box;
         private Cipher.Widgets.CipherBox ascii_encoding_box;
 
-        public signal void switch_view (string view, string title);
+        public signal void switch_view (string view, string title, string uri);
 
         public CipherView () {
             Object (
@@ -44,31 +44,31 @@ namespace Cipher.Views {
             );
 
             caesar_cipher_box.clicked.connect (() => {
-                switch_view ("caesar_cipher", caesar_cipher_box.get_title ());
+                switch_view ("caesar_cipher", caesar_cipher_box.get_title (), "https://wikipedia.org/wiki/Caesar_cipher");
             });
 
             atbash_cipher_box.clicked.connect (() => {
-                switch_view ("atbash_cipher", atbash_cipher_box.get_title ());
+                switch_view ("atbash_cipher", atbash_cipher_box.get_title (), "https://wikipedia.org/wiki/Atbash");
             });
 
             polybius_square_cipher_box.clicked.connect (() => {
-                switch_view ("polybius_cipher", polybius_square_cipher_box.get_title ());
+                switch_view ("polybius_cipher", polybius_square_cipher_box.get_title (), "https://wikipedia.org/wiki/Polybius_square");
             });
 
             rot13_cipher_box.clicked.connect (() => {
-                switch_view ("rot13_cipher", rot13_cipher_box.get_title ());
+                switch_view ("rot13_cipher", rot13_cipher_box.get_title (), "https://wikipedia.org/wiki/ROT13");
             });
 
             base64_encoding_box.clicked.connect (() => {
-                switch_view ("base64_encoding", base64_encoding_box.get_title ());
+                switch_view ("base64_encoding", base64_encoding_box.get_title (), "https://wikipedia.org/wiki/Base64");
             });
 
             hash_functions_box.clicked.connect (() => {
-                switch_view ("hash_functions", hash_functions_box.get_title ());
+                switch_view ("hash_functions", hash_functions_box.get_title (), "https://wikipedia.org/wiki/Hash_function");
             });
 
             ascii_encoding_box.clicked.connect (() => {
-                switch_view ("ascii_encoding", ascii_encoding_box.get_title ());
+                switch_view ("ascii_encoding", ascii_encoding_box.get_title (), "https://wikipedia.org/wiki/ASCII");
             });
         }
 

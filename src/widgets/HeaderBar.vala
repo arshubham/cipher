@@ -32,6 +32,8 @@ namespace Cipher.Widgets {
         private Gtk.EventBox wiki_link;
         private Gtk.Image wiki_icon;
 
+        private string uri;
+
         public signal void go_back ();
 
         public HeaderBar () {
@@ -118,9 +120,17 @@ namespace Cipher.Widgets {
             wiki_icon.set_opacity (1);
         }
 
+        public void set_uri (string uri) {
+            this.uri = uri;
+        }
+
+        public void set_wiki_link_tooltip_text (string title) {
+            wiki_link.tooltip_text = "Click to learn more about "+ title +" on Wikipedia";
+        }
+
         private bool on_button_released (Gtk.Widget sender, Gdk.EventButton event) {
             try {
-                AppInfo.launch_default_for_uri ("https://github.com/arshubham/cipher", null);
+                AppInfo.launch_default_for_uri (uri, null);
             } catch (Error e) {
                 warning (e.message);
             }
