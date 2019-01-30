@@ -35,7 +35,7 @@ namespace Cipher.Configs {
         public abstract const string HELP_URL = "shubhamarora.in";
         public abstract const string TRANSLATE_URL = "https://arshubham.github.io/cipher";
         public abstract const string URL_CSS = "com/github/arshubham/cipher/css/style.css";
-        public abstract const string [] ABOUT_UTHORS = { "Shubham Arora <shubhamarora@protonmail.com>" };
+        public abstract const string [] ABOUT_AUTHORS = { "Shubham Arora <shubhamarora@protonmail.com>" };
         public abstract const Gtk.License ABOUT_LICENSE_TYPE = Gtk.License.GPL_3_0;
     }
 }
