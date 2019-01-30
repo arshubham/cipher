@@ -78,7 +78,7 @@ namespace Cipher.Controllers {
                 view_stack.visible_child_name = "ciphers_view";
                 headerbar.disable_back_button ();
                 headerbar.disable_wiki_icon ();
-                headerbar.set_title (_("Cipher"));
+                headerbar.set_title (Cipher.Configs.APP_NAME);
             });
 
             this.window.add (this.view_stack);
