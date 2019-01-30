@@ -22,14 +22,14 @@
 namespace Cipher {
 
     public class Window : Gtk.ApplicationWindow {
-         
+
         public Window (Gtk.Application app) {
             Object (
                 application: app,
-                icon_name: Cipher.Configs.Constants.APP_ICON,
-                title: "Cipher",
                 deletable: true,
-                resizable: true
+                icon_name: Cipher.Configs.Constants.APP_ICON,
+                resizable: true,
+                title: "Cipher"
             );
 
             var settings = Cipher.Configs.Settings.get_instance ();
@@ -46,7 +46,7 @@ namespace Cipher {
         private void style_provider () {
             var css_provider = new Gtk.CssProvider ();
             css_provider.load_from_resource (Cipher.Configs.Constants.URL_CSS);
-            
+
             Gtk.StyleContext.add_provider_for_screen (
                 Gdk.Screen.get_default (),
                 css_provider,

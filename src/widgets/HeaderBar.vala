@@ -22,6 +22,7 @@
 namespace Cipher.Widgets {
 
     public class HeaderBar : Gtk.HeaderBar {
+
         private Gtk.Button back_button;
 
         private Gtk.Switch dark_switch;
@@ -31,18 +32,19 @@ namespace Cipher.Widgets {
         private Gtk.EventBox wiki_link;
         private Gtk.Image wiki_icon;
 
-        public signal void go_back (); 
+        public signal void go_back ();
 
         public HeaderBar () {
             Object (
-                title: "Cipher",
                 has_subtitle: false,
-                show_close_button: true
+                show_close_button: true,
+                title: "Cipher"
             );
 
             back_button.clicked.connect (() => {
                 go_back ();
             });
+
             var window_settings = Gtk.Settings.get_default ();
 
             if (Cipher.Configs.Settings.get_instance ().prefer_dark) {
@@ -54,8 +56,8 @@ namespace Cipher.Widgets {
             }
 
             dark_switch.notify["active"].connect (() => {
-                
                 var settings = Cipher.Configs.Settings.get_instance ();
+
                 if (dark_switch.active) {
                     window_settings.gtk_application_prefer_dark_theme = true;
                     settings.prefer_dark = true;
@@ -72,16 +74,17 @@ namespace Cipher.Widgets {
             back_button = new Gtk.Button.with_label ("Back");
             back_button.get_style_context ().add_class (Granite.STYLE_CLASS_BACK_BUTTON);
             back_button.valign = Gtk.Align.CENTER;
-            
 
             dark_switch = new Gtk.Switch ();
             dark_switch.valign = Gtk.Align.CENTER;
             dark_switch.get_style_context ().add_class (Granite.STYLE_CLASS_MODE_SWITCH);
+
             light_icon = new Gtk.Image.from_icon_name ("display-brightness-symbolic", Gtk.IconSize.SMALL_TOOLBAR);
             light_icon.tooltip_text = _("Light background");
+
             dark_icon = new Gtk.Image.from_icon_name ("weather-clear-night-symbolic", Gtk.IconSize.SMALL_TOOLBAR);
             dark_icon.tooltip_text = _("Dark background");
-            
+
             wiki_link = new Gtk.EventBox ();
             wiki_icon = new Gtk.Image.from_icon_name ("dialog-information-symbolic", Gtk.IconSize.SMALL_TOOLBAR);
             wiki_link.add (wiki_icon);
@@ -93,7 +96,6 @@ namespace Cipher.Widgets {
             pack_end (dark_switch);
             pack_end (light_icon);
             pack_end (wiki_link);
-
         }
 
         public void disable_back_button () {
@@ -122,11 +124,7 @@ namespace Cipher.Widgets {
             } catch (Error e) {
                 warning (e.message);
             }
-    
             return true;
         }
-    
-
-
     }
 }

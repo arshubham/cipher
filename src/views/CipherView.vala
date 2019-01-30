@@ -20,76 +20,74 @@
  */
 
 namespace Cipher.Views {
+
     public class CipherView : Gtk.FlowBox {
 
-            private Cipher.Widgets.CipherBox caesarCipherBox;
-            private Cipher.Widgets.CipherBox atbashCipherBox;
-            private Cipher.Widgets.CipherBox polybiusSquareCipherBox;
-            private Cipher.Widgets.CipherBox rot13CipherBox;
-            private Cipher.Widgets.CipherBox base64CipherBox;
-            private Cipher.Widgets.CipherBox hashsBox;
-            private Cipher.Widgets.CipherBox asciiBox;
+        private Cipher.Widgets.CipherBox caesar_cipher_box;
+        private Cipher.Widgets.CipherBox atbash_cipher_box;
+        private Cipher.Widgets.CipherBox polybius_square_cipher_box;
+        private Cipher.Widgets.CipherBox rot13_cipher_box;
+        private Cipher.Widgets.CipherBox base64_encoding_box;
+        private Cipher.Widgets.CipherBox hash_functions_box;
+        private Cipher.Widgets.CipherBox ascii_encoding_box;
 
-            public signal void switch_view (string view, string title);
-            
+        public signal void switch_view (string view, string title);
+
         public CipherView () {
-            Object(
-                min_children_per_line: 2,
-                max_children_per_line: 4,
+            Object (
                 column_spacing: 12,
-                row_spacing: 12,
+                homogeneous: true,
                 margin: 8,
-                homogeneous: true
+                max_children_per_line: 4,
+                min_children_per_line: 2,
+                row_spacing: 12
             );
 
-            
-
-            caesarCipherBox.clicked.connect(() => {
-                switch_view("caesar_cipher", caesarCipherBox.get_title ());
+            caesar_cipher_box.clicked.connect (() => {
+                switch_view ("caesar_cipher", caesar_cipher_box.get_title ());
             });
 
-            atbashCipherBox.clicked.connect(() => {
-                switch_view("atbash_cipher", atbashCipherBox.get_title ());
+            atbash_cipher_box.clicked.connect (() => {
+                switch_view ("atbash_cipher", atbash_cipher_box.get_title ());
             });
 
-            polybiusSquareCipherBox.clicked.connect(() => {
-                switch_view("polybius_cipher", polybiusSquareCipherBox.get_title ());
+            polybius_square_cipher_box.clicked.connect (() => {
+                switch_view ("polybius_cipher", polybius_square_cipher_box.get_title ());
             });
 
-            rot13CipherBox.clicked.connect(() => {
-                switch_view("rot13_cipher", rot13CipherBox.get_title ());
+            rot13_cipher_box.clicked.connect (() => {
+                switch_view ("rot13_cipher", rot13_cipher_box.get_title ());
             });
 
-            base64CipherBox.clicked.connect(() => {
-                switch_view("base64_encoding", base64CipherBox.get_title ());
+            base64_encoding_box.clicked.connect (() => {
+                switch_view ("base64_encoding", base64_encoding_box.get_title ());
             });
 
-            hashsBox.clicked.connect(() => {
-                switch_view("hash_functions", hashsBox.get_title ());
+            hash_functions_box.clicked.connect (() => {
+                switch_view ("hash_functions", hash_functions_box.get_title ());
             });
 
-            asciiBox.clicked.connect(() => {
-                switch_view("ascii_encoding", asciiBox.get_title ());
+            ascii_encoding_box.clicked.connect (() => {
+                switch_view ("ascii_encoding", ascii_encoding_box.get_title ());
             });
         }
 
         construct {
-            caesarCipherBox = new Cipher.Widgets.CipherBox("Caesar Cipher", "caesar");
-            atbashCipherBox = new Cipher.Widgets.CipherBox("Atbash Cipher", "atbash");
-            polybiusSquareCipherBox = new Cipher.Widgets.CipherBox("Polybius Square Cipher", "polybius");
-            rot13CipherBox = new Cipher.Widgets.CipherBox("ROT 13 Cipher", "rot13");
-            base64CipherBox = new Cipher.Widgets.CipherBox("Base 64 Cipher", "base64");
-            hashsBox = new Cipher.Widgets.CipherBox("Hash Functions", "hash");
-            asciiBox = new Cipher.Widgets.CipherBox("ASCII", "ascii");
+            caesar_cipher_box = new Cipher.Widgets.CipherBox ("Caesar Cipher", "caesar");
+            atbash_cipher_box = new Cipher.Widgets.CipherBox ("Atbash Cipher", "atbash");
+            polybius_square_cipher_box = new Cipher.Widgets.CipherBox ("Polybius Square Cipher", "polybius");
+            rot13_cipher_box = new Cipher.Widgets.CipherBox ("ROT 13 Cipher", "rot13");
+            base64_encoding_box = new Cipher.Widgets.CipherBox ("Base 64 Encoding", "base64");
+            hash_functions_box = new Cipher.Widgets.CipherBox ("Hash Functions", "hash");
+            ascii_encoding_box = new Cipher.Widgets.CipherBox ("ASCII Encoding", "ascii");
 
-            add (caesarCipherBox);
-            add (atbashCipherBox);
-            add (polybiusSquareCipherBox);
-            add (rot13CipherBox);
-            add (base64CipherBox);
-            add (hashsBox);
-            add (asciiBox);
-            
+            add (caesar_cipher_box);
+            add (atbash_cipher_box);
+            add (polybius_square_cipher_box);
+            add (rot13_cipher_box);
+            add (base64_encoding_box);
+            add (hash_functions_box);
+            add (ascii_encoding_box);
         }
     }
 }

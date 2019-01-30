@@ -25,16 +25,16 @@ namespace Cipher.Widgets {
 
         public ScrolledWindow (Cipher.Widgets.TextView? textview) {
             Object (
-                hadjustment: null,
-                vadjustment: null,
                 expand: true,
-                margin: 6
+                hadjustment: null,
+                margin: 6,
+                vadjustment: null
             );
-            
-            this.get_style_context ().add_class (Gtk.STYLE_CLASS_VIEW);
-            this.get_style_context ().add_class (Granite.STYLE_CLASS_CARD);
-            this.get_style_context ().add_class ("textview");
-            this.add (textview);
+
+            get_style_context ().add_class (Gtk.STYLE_CLASS_VIEW);
+            get_style_context ().add_class (Granite.STYLE_CLASS_CARD);
+            get_style_context ().add_class ("textview");
+            add (textview);
         }
     }
 }

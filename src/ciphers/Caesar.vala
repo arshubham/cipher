@@ -22,37 +22,38 @@
 namespace Cipher.Ciphers {
 
     public class Caesar {
-    
-        public string encrypt (string plainText, int shift) {
-            string cipherText = "";
+
+        public string encrypt (string plain_text, int shift) {
+            string cipher_text = "";
             unichar character;
-            
-            for (int i = 0; plainText.get_next_char (ref i, out character); ) {
+
+            for (int i = 0; plain_text.get_next_char (ref i, out character); ) {
                 if (character >= 'A' && character <= 'Z') {
                     character = (character + shift > 'Z') ? (character + shift) - 26 : (character + shift);
                 } else if (character >= 'a' && character <= 'z') {
                     character = (character + shift > 'z') ? (character + shift) - 26 : (character + shift);
                 }
-        
-            cipherText = cipherText.concat (character.to_string());
+
+                cipher_text = cipher_text.concat (character.to_string ());
             }
 
-            return cipherText;
+            return cipher_text;
         }
-    
-        public string decrypt (string cipherText, int shift) {
-            string plainText = "";
+
+        public string decrypt (string cipher_text, int shift) {
+            string plain_text = "";
             unichar character;
-            for (int i = 0; cipherText.get_next_char (ref i, out character);) {
+
+            for (int i = 0; cipher_text.get_next_char (ref i, out character);) {
                 if (character >= 'A' && character <= 'Z') {
                     character = (character - shift < 'A') ? (character - shift) + 26 : (character - shift);
                 } else if (character >= 'a' && character <= 'z') {
                     character = (character - shift < 'a') ? (character - shift) + 26 : (character - shift);
                 }
-    
-            plainText = plainText.concat (character.to_string());
+
+                plain_text = plain_text.concat (character.to_string ());
             }
-            return plainText;
+            return plain_text;
         }
     }
 }

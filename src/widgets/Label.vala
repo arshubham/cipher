@@ -23,18 +23,16 @@ namespace Cipher.Widgets {
 
     public class Label : Gtk.Label {
 
-
         public Label (string label_text) {
             Object (
-                label: label_text,
+                halign: Gtk.Align.START,
                 justify: Gtk.Justification.LEFT,
-                selectable: false,
+                label: label_text,
                 margin: 6,
-                halign: Gtk.Align.START
+                selectable: false
             );
 
-            this.get_style_context ().add_class (Granite.STYLE_CLASS_H3_LABEL);
-
+            get_style_context ().add_class (Granite.STYLE_CLASS_H3_LABEL);
        }
     }
 }

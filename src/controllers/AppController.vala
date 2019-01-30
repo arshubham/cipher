@@ -21,14 +21,14 @@
 
 namespace Cipher.Controllers {
 
-	public class AppController {
+    public class AppController {
 
         private Gtk.Application application;
         private Gtk.Stack view_stack;
         private Gtk.ApplicationWindow window { get; set; default = null; }
         private Cipher.Widgets.HeaderBar headerbar;
 
-		public AppController (Gtk.Application application) {
+        public AppController (Gtk.Application application) {
             this.application = application;
             this.window = new Window (this.application);
             this.headerbar = new Cipher.Widgets.HeaderBar ();
@@ -40,7 +40,7 @@ namespace Cipher.Controllers {
             view_stack.hhomogeneous = true;
             view_stack.vhomogeneous = true;
 
-            var cipher_view = new Cipher.Views.CipherView();
+            var cipher_view = new Cipher.Views.CipherView ();
             var atbash_cipher_view = new Cipher.Views.AtbashCipherView ();
             var caesar_cipher_view = new Cipher.Views.CaesarCipherView ();
             var polybius_cipher_view = new Cipher.Views.PolybiusSquareCipherView ();
@@ -59,16 +59,16 @@ namespace Cipher.Controllers {
             view_stack.add_named (rot13_cipher_view, "rot13_cipher");
             view_stack.add_named (base64_encoding_view, "base64_encoding");
             view_stack.add_named (hash_functions_view, "hash_functions");
-            
+
             headerbar.disable_back_button ();
             headerbar.disable_wiki_icon ();
-            
+
             cipher_view.switch_view.connect ((view, title) => {
                 view_stack.transition_type = Gtk.StackTransitionType.SLIDE_LEFT;
                 view_stack.visible_child_name = view;
                 headerbar.enable_back_button ();
                 headerbar.enable_wiki_icon ();
-                headerbar.set_title (title);            
+                headerbar.set_title (title);
             });
 
             headerbar.go_back.connect (() => {
@@ -84,15 +84,17 @@ namespace Cipher.Controllers {
             this.window.set_size_request (700, 500);
             this.application.add_window (this.window);
             this.window.set_titlebar (this.headerbar);
-    }
+        }
+
         public void activate () {
             window.show_all ();
             view_stack.activate ();
             view_stack.visible_child_name = "ciphers_view";
         }
+
         public void quit () {
             window.destroy ();
 
-}
-}
+        }
+    }
 }

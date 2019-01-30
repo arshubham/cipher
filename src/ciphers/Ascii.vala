@@ -22,35 +22,38 @@ namespace Cipher.Ciphers {
 
     public class Ascii {
 
-        public string encrypt (string plainText) {
-            string cipherText = "";
+        public string encrypt (string plain_text) {
+            string cipher_text = "";
             unichar character;
             int asciiNum;
-             for (int i = 0; plainText.get_next_char (ref i, out character); ) {
+
+             for (int i = 0; plain_text.get_next_char (ref i, out character); ) {
                 asciiNum = (int) character;
 
-                cipherText = cipherText.concat (asciiNum.to_string (), " ");
+                cipher_text = cipher_text.concat (asciiNum.to_string (), " ");
              }
 
-            return cipherText;
+            return cipher_text;
         }
 
-        public string decrypt (string cipherText) {
-            string plainText = "";
+        public string decrypt (string cipher_text) {
+            string plain_text = "";
             string temp = "";
-            unichar character,c;
-            for (int i = 0; cipherText.get_next_char (ref i, out character); ) {
+            unichar character;
+            unichar c;
+
+            for (int i = 0; cipher_text.get_next_char (ref i, out character); ) {
                 temp = temp.concat (character.to_string ());
+
                 if (character == ' ') {
                     int asciiNum = int.parse (temp) ;
                     c = (unichar) asciiNum;
-
-                    plainText = plainText.concat (c.to_string ());
+                    plain_text = plain_text.concat (c.to_string ());
                     temp = "";
                 }
             }
 
-            return plainText;
+            return plain_text;
         }
 }
 

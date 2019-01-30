@@ -23,17 +23,12 @@ namespace Cipher.Ciphers {
 
     public class Base64 {
 
-        public string encrypt (string plainText) {
-            string cipherText = "";
-                cipherText = cipherText.concat (GLib.Base64.encode (plainText.data));
-
-            return cipherText;
+        public string encrypt (string plain_text) {
+            return GLib.Base64.encode (plain_text.data);
         }
 
-        public string decrypt (string cipherText) {
-            string plainText = "";
-                plainText = plainText.concat ((string) GLib.Base64.decode (cipherText));
-            return plainText;
+        public string decrypt (string cipher_text) {
+            return (string) GLib.Base64.decode (cipher_text);
         }
     }
 }

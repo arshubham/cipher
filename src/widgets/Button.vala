@@ -22,15 +22,15 @@
 namespace Cipher.Widgets {
 
     public class Button : Gtk.Button {
-        public Button (string button_label, string style) {
 
+        public Button (string button_label, string style) {
             Object (
+                halign: Gtk.Align.END,
                 label: button_label,
-                margin: 6,
-                halign: Gtk.Align.END
+                margin: 6
             );
 
-            this.get_style_context ().add_class (style);
+            get_style_context ().add_class (style);
         }
     }
 }

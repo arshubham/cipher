@@ -25,8 +25,8 @@ namespace Cipher.Widgets {
 
         public TextView () {
             Object (
-                wrap_mode: Gtk.WrapMode.WORD,
-                margin_left: 2
+                margin_left: 2,
+                wrap_mode: Gtk.WrapMode.WORD
             );
         }
     }

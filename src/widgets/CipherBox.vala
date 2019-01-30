@@ -22,17 +22,19 @@
 namespace Cipher.Widgets {
 
     public class CipherBox : Gtk.Button {
+
         private string cipher_label;
-        private new string style;
 
         public CipherBox (string cipher_label, string style) {
-            this.cipher_label = cipher_label;
-            this.style = style;
+            Object (
+                expand: true,
+                label: cipher_label
+            );
 
-            this.expand = true;
-            this.label = cipher_label;
-            this.get_style_context ().add_class (style);
-            this.get_style_context ().add_class ("h2");
+            this.cipher_label = cipher_label;
+
+            get_style_context ().add_class (style);
+            get_style_context ().add_class ("h2");
         }
 
         public string get_title () {
