@@ -2,7 +2,6 @@ sources = files(
     'Application.vala',
 
     'configs/Constants.vala',
-    'configs/Settings.vala',
 
     'ciphers/Caesar.vala',
     'ciphers/Atbash.vala',

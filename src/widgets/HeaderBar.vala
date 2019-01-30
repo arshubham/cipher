@@ -49,7 +49,12 @@ namespace Cipher.Widgets {
 
             var window_settings = Gtk.Settings.get_default ();
 
-            if (Cipher.Configs.Settings.get_instance ().prefer_dark) {
+            var settings = new GLib.Settings ("com.github.arshubham.cipher");
+
+            bool prefer_dark;
+            settings.get ("prefer-dark", "b", out prefer_dark );
+
+            if (prefer_dark) {
                 dark_switch.active = true;
                 window_settings.gtk_application_prefer_dark_theme = true;
             } else {
@@ -58,14 +63,12 @@ namespace Cipher.Widgets {
             }
 
             dark_switch.notify["active"].connect (() => {
-                var settings = Cipher.Configs.Settings.get_instance ();
-
                 if (dark_switch.active) {
                     window_settings.gtk_application_prefer_dark_theme = true;
-                    settings.prefer_dark = true;
+                    settings.set ("prefer-dark", "b", true );
                 } else {
                     window_settings.gtk_application_prefer_dark_theme = false;
-                    settings.prefer_dark = false;
+                    settings.set ("prefer-dark", "b", false );
                 }
             });
         }

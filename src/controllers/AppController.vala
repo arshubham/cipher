@@ -82,8 +82,6 @@ namespace Cipher.Controllers {
             });
 
             this.window.add (this.view_stack);
-            //  this.window.set_default_size (700, 500);
-            //  this.window.set_size_request (700, 500);
             this.application.add_window (this.window);
             this.window.set_titlebar (this.headerbar);
         }

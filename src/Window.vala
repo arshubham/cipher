@@ -33,11 +33,11 @@ namespace Cipher {
             );
 
             var settings = new GLib.Settings ("com.github.arshubham.cipher");
-            
+
             int window_x, window_y;
             settings.get ("window-position", "(ii)", out window_x, out window_y);
 
-            if (window_x != -1 ||  window_y != -1) {
+            if (window_x != -1 || window_y != -1) {
                 move (window_x, window_y);
             }
 
