@@ -1,5 +1,5 @@
 /*-
- * Copyright (c) 2018 Shubham Arora (https://github.com/arshubham/cipher)
+ * Copyright (c) 2017-2019 Shubham Arora (https://github.com/arshubham/cipher)
  *
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU Lesser General Public
@@ -10,7 +10,7 @@
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
  * Lesser General Public License for more details.
- *
+ *add_class
  * You should have received a copy of the GNU Lesser General Public
  * License along with this library; if not, write to the
  * Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor,
@@ -19,11 +19,26 @@
  * Authored by: Shubham Arora <shubhamarora@protonmail.com>
  */
 
-namespace Cipher.Configs {
+namespace Cipher.Widgets {
 
-    public class Properties {
-        
-        public abstract const string TITLE_HEADER_BAR = "Cipher";
+    public class CipherBox : Gtk.Button {
 
+        private string cipher_label;
+
+        public CipherBox (string cipher_label, string style) {
+            Object (
+                expand: true,
+                label: cipher_label
+            );
+
+            this.cipher_label = cipher_label;
+
+            get_style_context ().add_class (style);
+            get_style_context ().add_class ("h2");
+        }
+
+        public string get_title () {
+            return cipher_label;
+        }
     }
 }

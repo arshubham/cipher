@@ -1,5 +1,5 @@
 /*-
- * Copyright (c) 2018 Shubham Arora (https://github.com/arshubham/cipher)
+ * Copyright (c) 2017-2019 Shubham Arora (https://github.com/arshubham/cipher)
  *
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU Lesser General Public
@@ -19,24 +19,20 @@
  * Authored by: Shubham Arora <shubhamarora@protonmail.com>
  */
 
-namespace Cipher.Configs {
+namespace Cipher.Widgets {
 
-    public class Settings : Granite.Services.Settings {
+    public class Label : Gtk.Label {
 
-        private static Settings? instance;
-        public int window_x { get; set; }
-        public int window_y { get; set; }
+        public Label (string label_text) {
+            Object (
+                halign: Gtk.Align.START,
+                justify: Gtk.Justification.LEFT,
+                label: label_text,
+                margin: 6,
+                selectable: false
+            );
 
-        private Settings () {
-            base (Constants.ID);
-        }
-
-        public static unowned Settings get_instance () {
-            if (instance == null) {
-                instance = new Settings ();
-            }
-
-            return instance;
-        }
+            get_style_context ().add_class (Granite.STYLE_CLASS_H3_LABEL);
+       }
     }
 }

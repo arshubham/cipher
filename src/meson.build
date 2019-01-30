@@ -1,10 +1,7 @@
 sources = files(
+    'Application.vala',
 
     'configs/Constants.vala',
-    'configs/Properties.vala',
-    'configs/Settings.vala',
-
-    'controllers/AppController.vala',
 
     'ciphers/Caesar.vala',
     'ciphers/Atbash.vala',
@@ -13,21 +10,26 @@ sources = files(
     'ciphers/Rot13.vala',
     'ciphers/Base64.vala',
 
-    'views/AppView.vala',
+    'controllers/AppController.vala',
 
-    'views/WelcomeView.vala',
-    'views/CaesarCipherView.vala',
+    'views/AsciiEncodingView.vala',
     'views/AtbashCipherView.vala',
+    'views/Base64EncodingView.vala',
+    'views/CaesarCipherView.vala',
+    'views/CipherView.vala',
+    'views/HashFunctionsView.vala',
     'views/PolybiusSquareCipherView.vala',
-    'views/AsciiView.vala',
-    'views/ROT13View.vala',
-    'views/Base64View.vala',
-    'views/HashView.vala',
-
-
-    'widgets/HeaderBar.vala',
-
-    'Application.vala',
+    'views/ROT13CipherView.vala',
+    
     'Main.vala',
-'Window.vala'
+    
+    'widgets/Button.vala',
+    'widgets/CipherBox.vala',
+    'widgets/Entry.vala',
+    'widgets/HeaderBar.vala',
+    'widgets/Label.vala',
+    'widgets/ScrolledWindow.vala',
+    'widgets/TextView.vala',
+
+    'Window.vala'
 )
