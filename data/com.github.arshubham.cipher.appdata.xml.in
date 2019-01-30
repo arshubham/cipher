@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Copyright 2017 Shubham Arora <shubhamarora@protonmail.com> -->
+<!-- Copyright 2018-2019 Shubham Arora <shubhamarora@protonmail.com> -->
 <component type="desktop-application">
   <id>com.github.arshubham.cipher</id>
   <metadata_license>CC0-1.0</metadata_license>
@@ -43,21 +43,15 @@
       <br></br>
       <b>Note:</b> This application does not actually encrypt files. This was made just enchipers strings. Have fun!
     </p>
-    <p>Supported Ciphers</p>
+    <p>Available Ciphers</p>
     <ul>
-      <li>Caesar Shift</li>
-      <li>Atbash</li>
-      <li>ROT13</li>
-      <li>Ascii</li>
-      <li>Base64</li>
-      <li>Polybius Square</li>
+      <li>Caesar Shift Cipher</li>
+      <li>Atbash Cipher</li>
+      <li>ROT13 Cipher</li>
+      <li>ASCII Encoding</li>
+      <li>Base64 Encoding</li>
+      <li>Polybius Square Cipher</li>
       <li>Hashing Functions (md5, sha1, sha256)</li>
-    </ul>
-    <p>Upcoming Ciphers</p>
-    <ul>
-      <li>Bifid Cipher</li>
-      <li>Vigenere Cipher</li>
-      <li>Beaufort cipher</li>
     </ul>
   </description>
   <url type="homepage">https://github.com/arshubham/cipher</url>

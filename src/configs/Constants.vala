@@ -1,5 +1,5 @@
 /*-
- * Copyright (c) 2018-2019 Shubham Arora (https://github.com/arshubham/cipher)
+ * Copyright (c) 2017-2019 Shubham Arora (https://github.com/arshubham/cipher)
  *
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU Lesser General Public
@@ -26,7 +26,7 @@ namespace Cipher.Configs {
         public abstract const string ID = "com.github.arshubham.cipher";
         public abstract const string VERSION = "0.1.6";
         public abstract const string PROGRAME_NAME = "Cipher";
-        public abstract const string APP_YEARS = "2018-2019";
+        public abstract const string APP_YEARS = "2017-2019";
         public abstract const string APP_ICON = "com.github.arshubham.cipher";
         public abstract const string ABOUT_COMMENTS = "An simple app for encoding and decoding text";
         public abstract const string TRANSLATOR_CREDITS = "Github Translators";
