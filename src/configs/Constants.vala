@@ -23,12 +23,12 @@ namespace Cipher.Configs {
 
     public class Constants {
 
-        public abstract const string ID = "com.github.arshubham.cipher";
+        public abstract const string ID = _("com.github.arshubham.cipher");
         public abstract const string VERSION = "1.0.0";
-        public abstract const string PROGRAME_NAME = "Cipher";
+        public abstract const string APP_NAME = _("Cipher");
         public abstract const string APP_YEARS = "2017-2019";
         public abstract const string APP_ICON = "com.github.arshubham.cipher";
-        public abstract const string ABOUT_COMMENTS = "An simple app for encoding and decoding text";
+        public abstract const string ABOUT_COMMENTS = _("An simple app for encoding and decoding text");
         public abstract const string TRANSLATOR_CREDITS = "Github Translators";
         public abstract const string MAIN_URL = "https://github.com/arshubham/cipher";
         public abstract const string BUG_URL = "https://github.com/arshubham/cipher/issues";

@@ -40,7 +40,7 @@ namespace Cipher.Widgets {
             Object (
                 has_subtitle: false,
                 show_close_button: true,
-                title: "Cipher"
+                title: Cipher.Configs.Constants.APP_NAME
             );
 
             back_button.clicked.connect (() => {
@@ -128,7 +128,7 @@ namespace Cipher.Widgets {
         }
 
         public void set_wiki_link_tooltip_text (string title) {
-            wiki_link.tooltip_text = "Click to learn more about "+ title +" on Wikipedia";
+            wiki_link.tooltip_text = _("Click to learn more about ") + title + _(" on Wikipedia");
         }
 
         private bool on_button_released (Gtk.Widget sender, Gdk.EventButton event) {

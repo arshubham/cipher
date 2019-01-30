@@ -44,7 +44,7 @@ namespace Cipher.Views {
         construct {
             plaintext_textview = new Cipher.Widgets.TextView ();
 
-            enchiper_button = new Cipher.Widgets.Button ("Generate Hash", Gtk.STYLE_CLASS_SUGGESTED_ACTION);
+            enchiper_button = new Cipher.Widgets.Button (_("Generate Hash"), Gtk.STYLE_CLASS_SUGGESTED_ACTION);
 
             md5_entry = new Cipher.Widgets.Entry ();
             sha1_entry = new Cipher.Widgets.Entry ();
@@ -53,14 +53,14 @@ namespace Cipher.Views {
             var hash_entry_grid = new Gtk.Grid ();
             hash_entry_grid.column_homogeneous = true;
 
-            hash_entry_grid.attach (new Cipher.Widgets.Label ("MD5"), 0, 0, 1, 1);
+            hash_entry_grid.attach (new Cipher.Widgets.Label (_("MD5")), 0, 0, 1, 1);
             hash_entry_grid.attach (md5_entry, 1, 0, 4, 1);
-            hash_entry_grid.attach (new Cipher.Widgets.Label ("SHA1"), 0, 1, 1, 1);
+            hash_entry_grid.attach (new Cipher.Widgets.Label (_("SHA1")), 0, 1, 1, 1);
             hash_entry_grid.attach (sha1_entry, 1, 1, 4, 1);
-            hash_entry_grid.attach (new Cipher.Widgets.Label ("SHA256"), 0, 2, 1, 1);
+            hash_entry_grid.attach (new Cipher.Widgets.Label (_("SHA256")), 0, 2, 1, 1);
             hash_entry_grid.attach (sha256_entry, 1, 2, 4, 1);
 
-            attach (new Cipher.Widgets.Label ("Plain Text"), 0, 0, 1, 1);
+            attach (new Cipher.Widgets.Label (_("Plain Text")), 0, 0, 1, 1);
             attach (new Cipher.Widgets.ScrolledWindow (plaintext_textview), 0, 1, 1, 1);
             attach (enchiper_button, 0, 2, 1, 1);
             attach (hash_entry_grid, 0, 3, 1, 1);

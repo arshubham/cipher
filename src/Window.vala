@@ -29,7 +29,7 @@ namespace Cipher {
                 deletable: true,
                 icon_name: Cipher.Configs.Constants.APP_ICON,
                 resizable: true,
-                title: "Cipher"
+                title: Cipher.Configs.Constants.APP_NAME
             );
 
             var settings = new GLib.Settings ("com.github.arshubham.cipher");
