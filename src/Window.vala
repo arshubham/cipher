@@ -32,13 +32,42 @@ namespace Cipher {
                 title: "Cipher"
             );
 
-            var settings = Cipher.Configs.Settings.get_instance ();
-            int x = settings.window_x;
-            int y = settings.window_y;
+            var settings = new GLib.Settings ("com.github.arshubham.cipher");
+            
+            int window_x, window_y;
+            settings.get ("window-position", "(ii)", out window_x, out window_y);
 
-            if (x != -1 && y != -1) {
-                move (x, y);
+            if (window_x != -1 ||  window_y != -1) {
+                move (window_x, window_y);
             }
+
+            int window_width, window_height;
+            settings.get ("window-size", "(ii)", out window_width, out window_height);
+
+            var rect = Gtk.Allocation ();
+            rect.width = window_width;
+            rect.height = window_height;
+            set_allocation (rect);
+
+            if (settings.get_boolean ("window-maximized")) {
+                this.maximize ();
+            }
+
+            delete_event.connect (() => {
+                if (this.is_maximized) {
+                    settings.set_boolean ("window-maximized", true);
+                } else {
+                    settings.set_boolean ("window-maximized", false);
+
+                    get_allocation (out rect);
+                    settings.set ("window-size", "(ii)", rect.width, rect.height);
+
+                    int root_x, root_y;
+                    get_position (out root_x, out root_y);
+                    settings.set ("window-position", "(ii)", root_x, root_y);
+                }
+                return false;
+            });
 
             style_provider ();
          }
