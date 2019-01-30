@@ -23,7 +23,7 @@ namespace Cipher.Widgets {
 
     public class ScrolledWindow : Gtk.ScrolledWindow {
 
-        public ScrolledWindow () {
+        public ScrolledWindow (Cipher.Widgets.TextView? textview) {
             Object (
                 hadjustment: null,
                 vadjustment: null,
@@ -33,7 +33,8 @@ namespace Cipher.Widgets {
             
             this.get_style_context ().add_class (Gtk.STYLE_CLASS_VIEW);
             this.get_style_context ().add_class (Granite.STYLE_CLASS_CARD);
-            this.get_style_context ().add_class ("textview");     
+            this.get_style_context ().add_class ("textview");
+            this.add (textview);
         }
     }
 }

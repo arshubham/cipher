@@ -24,55 +24,47 @@ namespace Cipher.Views {
 
 public class HashFunctionsView : Gtk.Grid  {
 
-    private Cipher.Widgets.TextView plainTextTextView;
+    private Cipher.Widgets.TextView plaintext_textview;
 
-    private Gtk.Button enchiperButton;
+    private Cipher.Widgets.Button enchiper_button;
 
-    private string plainText;
-
-    private Cipher.Widgets.Entry md5Entry;
-    private Cipher.Widgets.Entry sha1Entry;
-    private Cipher.Widgets.Entry sha256Entry;
+    private Cipher.Widgets.Entry md5_Entry;
+    private Cipher.Widgets.Entry sha1_Entry;
+    private Cipher.Widgets.Entry sha256_Entry;
 
     public HashFunctionsView () {
-        enchiperButton.clicked.connect (() => {
-            plainText = plainTextTextView.buffer.text;
+        enchiper_button.clicked.connect (() => {
+            var plain_text = plaintext_textview.buffer.text;
 
-            string hashmd5 = GLib.Checksum.compute_for_string (ChecksumType.MD5, plainText, plainText.length);
-            string hashsha1 = GLib.Checksum.compute_for_string (ChecksumType.SHA1, plainText, plainText.length);
-            string hashsha256 = GLib.Checksum.compute_for_string (ChecksumType.SHA256, plainText, plainText.length);
-
-            md5Entry.text = hashmd5;
-            sha1Entry.text = hashsha1;
-            sha256Entry.text = hashsha256;
+            md5_Entry.text = GLib.Checksum.compute_for_string (ChecksumType.MD5, plain_text, plain_text.length);
+            sha1_Entry.text = GLib.Checksum.compute_for_string (ChecksumType.SHA1, plain_text, plain_text.length);
+            sha256_Entry.text = GLib.Checksum.compute_for_string (ChecksumType.SHA256, plain_text, plain_text.length);
         });
     }
 
     construct {
 
-        plainTextTextView = new Cipher.Widgets.TextView ();
-        var plainTextScrolledWindow = new Cipher.Widgets.ScrolledWindow ();
-        plainTextScrolledWindow.add (plainTextTextView);
+        plaintext_textview = new Cipher.Widgets.TextView ();
 
-        enchiperButton = new Cipher.Widgets.Button("Generate Hash", Gtk.STYLE_CLASS_SUGGESTED_ACTION);
+        enchiper_button = new Cipher.Widgets.Button("Generate Hash", Gtk.STYLE_CLASS_SUGGESTED_ACTION);
         
-        md5Entry = new Cipher.Widgets.Entry ();
-        sha1Entry = new Cipher.Widgets.Entry ();
-        sha256Entry = new Cipher.Widgets.Entry ();
+        md5_Entry = new Cipher.Widgets.Entry ();
+        sha1_Entry = new Cipher.Widgets.Entry ();
+        sha256_Entry = new Cipher.Widgets.Entry ();
 
         var hashgrid = new Gtk.Grid();
         hashgrid.column_homogeneous = true;
 
         hashgrid.attach(new Cipher.Widgets.Label ("MD5"), 0, 0, 1, 1);
-        hashgrid.attach(md5Entry, 1, 0, 4, 1);
+        hashgrid.attach(md5_Entry, 1, 0, 4, 1);
         hashgrid.attach(new Cipher.Widgets.Label ("SHA1"), 0, 1, 1, 1);
-        hashgrid.attach(sha1Entry, 1, 1, 4, 1);
+        hashgrid.attach(sha1_Entry, 1, 1, 4, 1);
         hashgrid.attach(new Cipher.Widgets.Label ("SHA256"), 0, 2, 1, 1);
-        hashgrid.attach(sha256Entry, 1, 2, 4, 1);
+        hashgrid.attach(sha256_Entry, 1, 2, 4, 1);
 
         attach (new Cipher.Widgets.Label ("Plain Text"), 0, 0, 1, 1);
-        attach (plainTextScrolledWindow, 0, 1, 1, 1);
-        attach (enchiperButton, 0, 2, 1, 1);
+        attach (new Cipher.Widgets.ScrolledWindow (plaintext_textview), 0, 1, 1, 1);
+        attach (enchiper_button, 0, 2, 1, 1);
         attach (hashgrid, 0, 3, 1, 1);
 }}
 
