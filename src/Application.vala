@@ -1,5 +1,5 @@
 /*-
- * Copyright (c) 2018 Shubham Arora (https://github.com/arshubham/cipher)
+ * Copyright (c) 2017-2019 Shubham Arora (https://github.com/arshubham/cipher)
  *
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU Lesser General Public
@@ -19,37 +19,33 @@
  * Authored by: Shubham Arora <shubhamarora@protonmail.com>
  */
 
-using Cipher.Configs;
-
 namespace Cipher {
 
     public class Application : Granite.Application {
 
-        private Window window { get; private set; default = null; }
+        public Cipher.Controllers.AppController controller;
 
         public Application () {
             Object (
-                application_id: Constants.ID,
+                application_id: Cipher.Configs.Constants.ID,
                 flags: ApplicationFlags.FLAGS_NONE
             );
-        }
-
-        public override void activate () {
-            if (window == null) {
-                window = new Window (this);
-                add_window (window);
-                window.show_all ();
-            }
 
             var quit_action = new SimpleAction ("quit", null);
             quit_action.activate.connect (() => {
-                if (window != null) {
-                    window.destroy ();
-                }
+                controller.quit ();
             });
 
             add_action (quit_action);
             set_accels_for_action ("app.quit", {"<Control>q"});
+        }
+
+        public override void activate () {
+            if (controller == null) {
+                controller = new Cipher.Controllers.AppController (this);
+            }
+
+            controller.activate ();
         }
     }
 }

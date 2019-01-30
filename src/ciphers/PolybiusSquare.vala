@@ -1,5 +1,5 @@
 /*-
- * Copyright (c) 2018 Shubham Arora (https://github.com/arshubham/cipher)
+ * Copyright (c) 2017-2019 Shubham Arora (https://github.com/arshubham/cipher)
  *
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU Lesser General Public
@@ -23,7 +23,7 @@ namespace Cipher.Ciphers {
 
     public class PolybiusSquare {
 
-        char[,] polybiusArray = {
+        char[,] polybius_array = {
             {'A', 'B', 'C', 'D','E'},
             {'F', 'G', 'H', 'I','K'},
             {'L', 'M', 'N', 'O','P'},
@@ -31,16 +31,17 @@ namespace Cipher.Ciphers {
             {'V', 'W', 'X', 'Y','Z'}
         };
 
-        public string encryptPolybiusSquare (string plainText) {
-            string cipherText = "";
-            string temp = plainText.up ();
+        public string encrypt (string plain_text) {
+            string cipher_text = "";
+            string temp = plain_text.up ();
             unichar character;
             string val = "";
+
             for (int i = 0; temp.get_next_char (ref i, out character); ) {
 
                 for (int j = 0; j < 5; j++) {
                     for (int k = 0; k < 5; k++) {
-                        if (character == polybiusArray[j,k] && (character >= 'A' && character <= 'Z')) {
+                        if (character == polybius_array[j,k] && (character >= 'A' && character <= 'Z')) {
                             val = ((j+1).to_string ()).concat ((k+1).to_string ());
                         }
                         if (character == 'J') {
@@ -49,34 +50,34 @@ namespace Cipher.Ciphers {
                     }
                 }
                 if (character >= 'A' && character <= 'Z') {
-                    cipherText = cipherText.concat (val);
+                    cipher_text = cipher_text.concat (val);
                 } else {
-                    cipherText = cipherText.concat (character.to_string ());
+                    cipher_text = cipher_text.concat (character.to_string ());
                 }
             }
-            return cipherText;
+            return cipher_text;
         }
 
-        public string decryptPolybiusSquare (string cipherText) {
-            string plainText = "";
+        public string decrypt (string cipher_text) {
+            string plain_text = "";
             unichar character;
             unichar character_next;
             unichar characterPlain;
 
-            for (int i = 0; cipherText.get_next_char (ref i, out character); ) {
+            for (int i = 0; cipher_text.get_next_char (ref i, out character); ) {
                 if (character >= '0' && character <= '9') {
-                    cipherText.get_next_char (ref i, out character_next);
+                    cipher_text.get_next_char (ref i, out character_next);
                     int c1 = int.parse (character.to_string ());
                     int c2 = int.parse (character_next.to_string ());
-                    characterPlain = polybiusArray[c1-1,c2-1];
+                    characterPlain = polybius_array[c1-1,c2-1];
                 }
                 else {
                     characterPlain = character;
                 }
-                plainText = plainText.concat (characterPlain.to_string());
+                plain_text = plain_text.concat (characterPlain.to_string ());
             }
 
-            return plainText.down ();
+            return plain_text.down ();
         }
     }
 }

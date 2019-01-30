@@ -1,5 +1,5 @@
 /*-
- * Copyright (c) 2018 Shubham Arora (https://github.com/arshubham/cipher)
+ * Copyright (c) 2017-2019 Shubham Arora (https://github.com/arshubham/cipher)
  *
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU Lesser General Public
@@ -25,39 +25,39 @@ namespace Cipher.Ciphers {
 
         static string hash = "NOPQRSTUVWXYZABCDEFGHIJKLM      nopqrstuvwxyzabcdefghijklm";
 
-        public string encryptROT13 (string plainText) {
-            string cipherText = "";
+        public string encrypt (string plain_text) {
+            string cipher_text = "";
             unichar character;
             unichar c;
 
-            for (int i = 0; plainText.get_next_char (ref i, out character); ) {
+            for (int i = 0; plain_text.get_next_char (ref i, out character); ) {
                 if (character > 96 && character < 123 || character > 64 && character < 91) {
                      c = character - 'A';
                      c = hash.get_char ((int) c);
                 } else {
                      c = character;
                 }
-                cipherText = cipherText.concat (c.to_string());
+                cipher_text = cipher_text.concat (c.to_string ());
             }
-            return cipherText;
+            return cipher_text;
         }
 
-        public string decryptROT13 (string cipherText) {
-            string plainText = "";
+        public string decrypt (string cipher_text) {
+            string plain_text = "";
             unichar character;
             unichar c;
 
-            for (int i = 0; cipherText.get_next_char (ref i, out character); ) {
-              if (character > 96 && character < 123 || character > 64 && character < 91) {
-                     c = character - 'A';
-                     c = hash.get_char ((int) c);
+            for (int i = 0; cipher_text.get_next_char (ref i, out character); ) {
+                if (character > 96 && character < 123 || character > 64 && character < 91) {
+                    c = character - 'A';
+                    c = hash.get_char ((int) c);
                 } else {
-                     c = character;
+                    c = character;
                 }
-                plainText = plainText.concat (c.to_string());
+                plain_text = plain_text.concat (c.to_string ());
             }
 
-            return plainText;
+            return plain_text;
         }
     }
 }

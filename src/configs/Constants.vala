@@ -1,5 +1,5 @@
 /*-
- * Copyright (c) 2018 Shubham Arora (https://github.com/arshubham/cipher)
+ * Copyright (c) 2017-2019 Shubham Arora (https://github.com/arshubham/cipher)
  *
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU Lesser General Public
@@ -23,19 +23,19 @@ namespace Cipher.Configs {
 
     public class Constants {
 
-        public abstract const string ID = "com.github.arshubham.cipher";
-        public abstract const string VERSION = "0.1.6";
-        public abstract const string PROGRAME_NAME = "Cipher";
-        public abstract const string APP_YEARS = "2018";
+        public abstract const string ID = _("com.github.arshubham.cipher");
+        public abstract const string VERSION = "1.0.0";
+        public abstract const string APP_NAME = _("Cipher");
+        public abstract const string APP_YEARS = "2017-2019";
         public abstract const string APP_ICON = "com.github.arshubham.cipher";
-        public abstract const string ABOUT_COMMENTS = "An simple app for encoding and decoding text";
+        public abstract const string ABOUT_COMMENTS = _("An simple app for encoding and decoding text");
         public abstract const string TRANSLATOR_CREDITS = "Github Translators";
         public abstract const string MAIN_URL = "https://github.com/arshubham/cipher";
         public abstract const string BUG_URL = "https://github.com/arshubham/cipher/issues";
         public abstract const string HELP_URL = "shubhamarora.in";
         public abstract const string TRANSLATE_URL = "https://arshubham.github.io/cipher";
         public abstract const string URL_CSS = "com/github/arshubham/cipher/css/style.css";
-        public abstract const string [] ABOUT_UTHORS = { "Shubham Arora <shubhamarora@protonmail.com>" };
+        public abstract const string [] ABOUT_AUTHORS = { "Shubham Arora <shubhamarora@protonmail.com>" };
         public abstract const Gtk.License ABOUT_LICENSE_TYPE = Gtk.License.GPL_3_0;
     }
 }

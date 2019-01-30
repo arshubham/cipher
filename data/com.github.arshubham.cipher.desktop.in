@@ -1,5 +1,6 @@
 [Desktop Entry]
 Name=Cipher
+GenericName=Cipher
 Comment=Encode and decode text
 Icon=com.github.arshubham.cipher
 Exec=com.github.arshubham.cipher
@@ -8,3 +9,8 @@ Type=Application
 StartupNotify=true
 Categories=Utility;
 Keywords=cipher;crypt;cryptography;
+Actions=About;
+
+[Desktop Action About]
+Exec=xdg-open appstream://com.github.arshubham.cipher
+Name=About Cipher
