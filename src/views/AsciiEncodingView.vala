@@ -21,7 +21,7 @@
 
 namespace Cipher.Views {
 
-public class AsciiView : Gtk.Grid  {
+public class AsciiEncodingView : Gtk.Grid  {
     private Gtk.TextView plainTextTextView;
     private Gtk.TextView cipherTextTextView;
 
@@ -31,7 +31,7 @@ public class AsciiView : Gtk.Grid  {
     private string plainText;
     private string cipherText;
 
-    public AsciiView () {
+    public AsciiEncodingView () {
         var ascii = new Cipher.Ciphers.Ascii ();
 
         enchiperButton.clicked.connect (() => {

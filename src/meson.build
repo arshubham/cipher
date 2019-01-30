@@ -15,10 +15,10 @@ sources = files(
     'views/CaesarCipherView.vala',
     'views/AtbashCipherView.vala',
     'views/PolybiusSquareCipherView.vala',
-    'views/AsciiView.vala',
-    'views/ROT13View.vala',
-    'views/Base64View.vala',
-    'views/HashView.vala',
+    'views/AsciiEncodingView.vala',
+    'views/ROT13CipherView.vala',
+    'views/Base64EncodingView.vala',
+    'views/HashFunctionsView.vala',
     'views/CipherView.vala',
 
 

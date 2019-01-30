@@ -22,8 +22,7 @@
 namespace Cipher.Views {
 
 
-public class ROT13View : Gtk.Grid  {
-
+public class Base64EncodingView : Gtk.Grid  {
 
     private Gtk.TextView plainTextTextView;
     private Gtk.TextView cipherTextTextView;
@@ -34,14 +33,13 @@ public class ROT13View : Gtk.Grid  {
     private string plainText;
     private string cipherText;
 
-    public ROT13View () {
-
-        var rot13 = new Cipher.Ciphers.Rot13 ();
+    public Base64EncodingView () {
+        var base64 = new Cipher.Ciphers.Base64 ();
 
         enchiperButton.clicked.connect (() => {
             plainText = plainTextTextView.buffer.text;
             cipherText = "";
-            cipherTextTextView.buffer.text = rot13.encrypt (plainText);
+            cipherTextTextView.buffer.text = base64.encrypt (plainText);
         });
 
         dechiperButton.clicked.connect (() => {
@@ -49,9 +47,10 @@ public class ROT13View : Gtk.Grid  {
 
             plainText = "";
 
-            plainTextTextView.buffer.text = rot13.decrypt (cipherText);
+            plainTextTextView.buffer.text = base64.decrypt (cipherText);
         });
     }
+
 
     construct {
 

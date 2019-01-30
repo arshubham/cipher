@@ -44,10 +44,10 @@ namespace Cipher.Controllers {
             var atbash_cipher_view = new Cipher.Views.AtbashCipherView ();
             var caesar_cipher_view = new Cipher.Views.CaesarCipherView ();
             var polybius_cipher_view = new Cipher.Views.PolybiusSquareCipherView ();
-            var ascii_view = new Cipher.Views.AsciiView ();
-            var rot13_view = new Cipher.Views.ROT13View ();
-            var base64_view = new Cipher.Views.Base64View ();
-            var hash_view = new Cipher.Views.HashView ();
+            var ascii_encoding_view = new Cipher.Views.AsciiEncodingView ();
+            var rot13_cipher_view = new Cipher.Views.ROT13CipherView ();
+            var base64_encoding_view = new Cipher.Views.Base64EncodingView ();
+            var hash_functions_view = new Cipher.Views.HashFunctionsView ();
 
             view_stack.show_all ();
 
@@ -55,10 +55,10 @@ namespace Cipher.Controllers {
             view_stack.add_named (caesar_cipher_view, "caesar_cipher");
             view_stack.add_named (atbash_cipher_view, "atbash_cipher");
             view_stack.add_named (polybius_cipher_view, "polybius_cipher");
-            view_stack.add_named (ascii_view, "ascii");
-            view_stack.add_named (rot13_view, "rot13");
-            view_stack.add_named (base64_view, "base64");
-            view_stack.add_named (hash_view, "hash");
+            view_stack.add_named (ascii_encoding_view, "ascii_encoding");
+            view_stack.add_named (rot13_cipher_view, "rot13_cipher");
+            view_stack.add_named (base64_encoding_view, "base64_encoding");
+            view_stack.add_named (hash_functions_view, "hash_functions");
             
             headerbar.disable_back_button ();
             headerbar.disable_wiki_icon ();

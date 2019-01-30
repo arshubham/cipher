@@ -22,29 +22,34 @@
 namespace Cipher.Views {
 
 
-public class HashView : Gtk.Grid  {
+public class ROT13CipherView : Gtk.Grid  {
 
-    private Cipher.Widgets.TextView plainTextTextView;
+
+    private Gtk.TextView plainTextTextView;
+    private Gtk.TextView cipherTextTextView;
 
     private Gtk.Button enchiperButton;
+    private Gtk.Button dechiperButton;
 
     private string plainText;
+    private string cipherText;
 
-    private Cipher.Widgets.Entry md5Entry;
-    private Cipher.Widgets.Entry sha1Entry;
-    private Cipher.Widgets.Entry sha256Entry;
+    public ROT13CipherView () {
 
-    public HashView () {
+        var rot13 = new Cipher.Ciphers.Rot13 ();
+
         enchiperButton.clicked.connect (() => {
             plainText = plainTextTextView.buffer.text;
+            cipherText = "";
+            cipherTextTextView.buffer.text = rot13.encrypt (plainText);
+        });
 
-            string hashmd5 = GLib.Checksum.compute_for_string (ChecksumType.MD5, plainText, plainText.length);
-            string hashsha1 = GLib.Checksum.compute_for_string (ChecksumType.SHA1, plainText, plainText.length);
-            string hashsha256 = GLib.Checksum.compute_for_string (ChecksumType.SHA256, plainText, plainText.length);
+        dechiperButton.clicked.connect (() => {
+            cipherText = cipherTextTextView.buffer.text;
 
-            md5Entry.text = hashmd5;
-            sha1Entry.text = hashsha1;
-            sha256Entry.text = hashsha256;
+            plainText = "";
+
+            plainTextTextView.buffer.text = rot13.decrypt (cipherText);
         });
     }
 
@@ -54,26 +59,23 @@ public class HashView : Gtk.Grid  {
         var plainTextScrolledWindow = new Cipher.Widgets.ScrolledWindow ();
         plainTextScrolledWindow.add (plainTextTextView);
 
-        enchiperButton = new Cipher.Widgets.Button("Generate Hash", Gtk.STYLE_CLASS_SUGGESTED_ACTION);
-        
-        md5Entry = new Cipher.Widgets.Entry ();
-        sha1Entry = new Cipher.Widgets.Entry ();
-        sha256Entry = new Cipher.Widgets.Entry ();
+        enchiperButton = new Cipher.Widgets.Button("Enchiper", Gtk.STYLE_CLASS_SUGGESTED_ACTION);
 
-        var hashgrid = new Gtk.Grid();
-        hashgrid.column_homogeneous = true;
+        cipherTextTextView = new Cipher.Widgets.TextView ();
+        var cipherTextScrolledWindow = new Cipher.Widgets.ScrolledWindow ();
+        cipherTextScrolledWindow.add (cipherTextTextView);
 
-        hashgrid.attach(new Cipher.Widgets.Label ("MD5"), 0, 0, 1, 1);
-        hashgrid.attach(md5Entry, 1, 0, 4, 1);
-        hashgrid.attach(new Cipher.Widgets.Label ("SHA1"), 0, 1, 1, 1);
-        hashgrid.attach(sha1Entry, 1, 1, 4, 1);
-        hashgrid.attach(new Cipher.Widgets.Label ("SHA256"), 0, 2, 1, 1);
-        hashgrid.attach(sha256Entry, 1, 2, 4, 1);
+        dechiperButton = new Cipher.Widgets.Button("Dechiper", Gtk.STYLE_CLASS_DESTRUCTIVE_ACTION);
 
         attach (new Cipher.Widgets.Label ("Plain Text"), 0, 0, 1, 1);
         attach (plainTextScrolledWindow, 0, 1, 1, 1);
         attach (enchiperButton, 0, 2, 1, 1);
-        attach (hashgrid, 0, 3, 1, 1);
-}}
+        attach (new Cipher.Widgets.Label ("Cipher Text"), 0, 3, 1, 1);
+        attach (cipherTextScrolledWindow, 0, 4, 1, 1);
+        attach (dechiperButton, 0, 5, 1, 1);
+
+    }
+
+}
 
 }

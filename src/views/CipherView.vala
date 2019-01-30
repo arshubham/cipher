@@ -57,19 +57,19 @@ namespace Cipher.Views {
             });
 
             rot13CipherBox.clicked.connect(() => {
-                switch_view("rot13", rot13CipherBox.get_title ());
+                switch_view("rot13_cipher", rot13CipherBox.get_title ());
             });
 
             base64CipherBox.clicked.connect(() => {
-                switch_view("base64", base64CipherBox.get_title ());
+                switch_view("base64_encoding", base64CipherBox.get_title ());
             });
 
             hashsBox.clicked.connect(() => {
-                switch_view("hash", hashsBox.get_title ());
+                switch_view("hash_functions", hashsBox.get_title ());
             });
 
             asciiBox.clicked.connect(() => {
-                switch_view("ascii", asciiBox.get_title ());
+                switch_view("ascii_encoding", asciiBox.get_title ());
             });
         }
 
