@@ -19,6 +19,13 @@
     </screenshot>
   </screenshots>
   <releases>
+    <release version="1.0.0" date="2018-02-06">
+      <description>
+        <p> Complete UI/UX Redesign! </p>
+        <p> Added i18n Capability </p>
+        <p> Added French Tranlations. Thanks @NathanBnm (https://github.com/NathanBnm) </p>
+      </description>
+    </release>
     <release version="0.1.6" date="2018-05-25">
       <description>
         <p> Update for Juno </p>

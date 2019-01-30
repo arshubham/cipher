@@ -1,5 +1,5 @@
 project('com.github.arshubham.cipher', ['vala', 'c'],
-    version : '0.1.6',
+    version : '1.0.0',
     license: 'GPL-3.0'
 )
 
