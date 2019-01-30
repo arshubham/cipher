@@ -48,6 +48,7 @@ namespace Cipher {
             rect.width = window_width;
             rect.height = window_height;
             set_allocation (rect);
+            set_default_size (window_width, window_height);
 
             if (settings.get_boolean ("window-maximized")) {
                 this.maximize ();
