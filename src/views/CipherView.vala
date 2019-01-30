@@ -73,11 +73,11 @@ namespace Cipher.Views {
         }
 
         construct {
-            caesar_cipher_box = new Cipher.Widgets.CipherBox (_("Caesar Cipher"), "caesar");
+            caesar_cipher_box = new Cipher.Widgets.CipherBox (_("Caesar Shift Cipher"), "caesar");
             atbash_cipher_box = new Cipher.Widgets.CipherBox (_("Atbash Cipher"), "atbash");
             polybius_square_cipher_box = new Cipher.Widgets.CipherBox (_("Polybius Square Cipher"), "polybius");
-            rot13_cipher_box = new Cipher.Widgets.CipherBox (_("ROT 13 Cipher"), "rot13");
-            base64_encoding_box = new Cipher.Widgets.CipherBox (_("Base 64 Encoding"), "base64");
+            rot13_cipher_box = new Cipher.Widgets.CipherBox (_("ROT13 Cipher"), "rot13");
+            base64_encoding_box = new Cipher.Widgets.CipherBox (_("Base64 Encoding"), "base64");
             hash_functions_box = new Cipher.Widgets.CipherBox (_("Hash Functions"), "hash");
             ascii_encoding_box = new Cipher.Widgets.CipherBox (_("ASCII Encoding"), "ascii");
 

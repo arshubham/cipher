@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.arshubham.cipher\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-01-30 23:41+0530\n"
+"POT-Creation-Date: 2019-01-30 23:51+0530\n"
 "PO-Revision-Date: 2019-01-30 23:41+0530\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -46,21 +46,10 @@ msgstr "Cipher Text"
 msgid "Generate Hash"
 msgstr "Generate Hash"
 
-#: src/views/HashFunctionsView.vala:56
-msgid "MD5"
-msgstr "MD5"
-
-#: src/views/HashFunctionsView.vala:58
-msgid "SHA1"
-msgstr "SHA1"
-
-#: src/views/HashFunctionsView.vala:60
-msgid "SHA256"
-msgstr "SHA256"
-
 #: src/views/CipherView.vala:76
-msgid "Caesar Cipher"
-msgstr "Caesar Cipher"
+#: data/com.github.arshubham.cipher.appdata.xml.in:55
+msgid "Caesar Shift Cipher"
+msgstr "Caesar Shift Cipher"
 
 #: src/views/CipherView.vala:77
 #: data/com.github.arshubham.cipher.appdata.xml.in:56
@@ -73,12 +62,14 @@ msgid "Polybius Square Cipher"
 msgstr "Polybius Square Cipher"
 
 #: src/views/CipherView.vala:79
-msgid "ROT 13 Cipher"
-msgstr "ROT 13 Cipher"
+#: data/com.github.arshubham.cipher.appdata.xml.in:57
+msgid "ROT13 Cipher"
+msgstr "ROT13 Cipher"
 
 #: src/views/CipherView.vala:80
-msgid "Base 64 Encoding"
-msgstr "Base 64 Encoding"
+#: data/com.github.arshubham.cipher.appdata.xml.in:59
+msgid "Base64 Encoding"
+msgstr "Base64 Encoding"
 
 #: src/views/CipherView.vala:81
 msgid "Hash Functions"
@@ -182,18 +173,25 @@ msgstr "Note:"
 msgid "Available Ciphers"
 msgstr "Available Ciphers"
 
-#: data/com.github.arshubham.cipher.appdata.xml.in:55
-msgid "Caesar Shift Cipher"
-msgstr "Caesar Shift Cipher"
-
-#: data/com.github.arshubham.cipher.appdata.xml.in:57
-msgid "ROT13 Cipher"
-msgstr "ROT13 Cipher"
-
-#: data/com.github.arshubham.cipher.appdata.xml.in:59
-msgid "Base64 Encoding"
-msgstr "Base64 Encoding"
-
 #: data/com.github.arshubham.cipher.appdata.xml.in:61
-msgid "Hashing Functions (md5, sha1, sha256)"
+#, fuzzy
+msgid "Hashing Functions (MD5, SHA1, SHA256)"
 msgstr "Hashing Functions (md5, sha1, sha256)"
+
+#~ msgid "MD5"
+#~ msgstr "MD5"
+
+#~ msgid "SHA1"
+#~ msgstr "SHA1"
+
+#~ msgid "SHA256"
+#~ msgstr "SHA256"
+
+#~ msgid "ROT 13 Cipher"
+#~ msgstr "ROT 13 Cipher"
+
+#~ msgid "Base 64 Encoding"
+#~ msgstr "Base 64 Encoding"
+
+#~ msgid "Caesar Cipher"
+#~ msgstr "Caesar Cipher"

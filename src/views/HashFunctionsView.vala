@@ -53,11 +53,11 @@ namespace Cipher.Views {
             var hash_entry_grid = new Gtk.Grid ();
             hash_entry_grid.column_homogeneous = true;
 
-            hash_entry_grid.attach (new Cipher.Widgets.Label (_("MD5")), 0, 0, 1, 1);
+            hash_entry_grid.attach (new Cipher.Widgets.Label ("MD5"), 0, 0, 1, 1);
             hash_entry_grid.attach (md5_entry, 1, 0, 4, 1);
-            hash_entry_grid.attach (new Cipher.Widgets.Label (_("SHA1")), 0, 1, 1, 1);
+            hash_entry_grid.attach (new Cipher.Widgets.Label ("SHA1"), 0, 1, 1, 1);
             hash_entry_grid.attach (sha1_entry, 1, 1, 4, 1);
-            hash_entry_grid.attach (new Cipher.Widgets.Label (_("SHA256")), 0, 2, 1, 1);
+            hash_entry_grid.attach (new Cipher.Widgets.Label ("SHA256"), 0, 2, 1, 1);
             hash_entry_grid.attach (sha256_entry, 1, 2, 4, 1);
 
             attach (new Cipher.Widgets.Label (_("Plain Text")), 0, 0, 1, 1);

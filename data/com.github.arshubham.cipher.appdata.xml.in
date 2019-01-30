@@ -58,7 +58,7 @@
       <li>ASCII Encoding</li>
       <li>Base64 Encoding</li>
       <li>Polybius Square Cipher</li>
-      <li>Hashing Functions (md5, sha1, sha256)</li>
+      <li>Hashing Functions (MD5, SHA1, SHA256)</li>
     </ul>
   </description>
   <url type="homepage">https://github.com/arshubham/cipher</url>

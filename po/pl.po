@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.arshubham.cipher\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-01-30 23:41+0530\n"
+"POT-Creation-Date: 2019-01-30 23:51+0530\n"
 "PO-Revision-Date: 2019-01-30 23:41+0530\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -47,20 +47,9 @@ msgstr ""
 msgid "Generate Hash"
 msgstr ""
 
-#: src/views/HashFunctionsView.vala:56
-msgid "MD5"
-msgstr ""
-
-#: src/views/HashFunctionsView.vala:58
-msgid "SHA1"
-msgstr ""
-
-#: src/views/HashFunctionsView.vala:60
-msgid "SHA256"
-msgstr ""
-
 #: src/views/CipherView.vala:76
-msgid "Caesar Cipher"
+#: data/com.github.arshubham.cipher.appdata.xml.in:55
+msgid "Caesar Shift Cipher"
 msgstr ""
 
 #: src/views/CipherView.vala:77
@@ -74,11 +63,13 @@ msgid "Polybius Square Cipher"
 msgstr ""
 
 #: src/views/CipherView.vala:79
-msgid "ROT 13 Cipher"
+#: data/com.github.arshubham.cipher.appdata.xml.in:57
+msgid "ROT13 Cipher"
 msgstr ""
 
 #: src/views/CipherView.vala:80
-msgid "Base 64 Encoding"
+#: data/com.github.arshubham.cipher.appdata.xml.in:59
+msgid "Base64 Encoding"
 msgstr ""
 
 #: src/views/CipherView.vala:81
@@ -182,18 +173,6 @@ msgstr ""
 msgid "Available Ciphers"
 msgstr ""
 
-#: data/com.github.arshubham.cipher.appdata.xml.in:55
-msgid "Caesar Shift Cipher"
-msgstr ""
-
-#: data/com.github.arshubham.cipher.appdata.xml.in:57
-msgid "ROT13 Cipher"
-msgstr ""
-
-#: data/com.github.arshubham.cipher.appdata.xml.in:59
-msgid "Base64 Encoding"
-msgstr ""
-
 #: data/com.github.arshubham.cipher.appdata.xml.in:61
-msgid "Hashing Functions (md5, sha1, sha256)"
+msgid "Hashing Functions (MD5, SHA1, SHA256)"
 msgstr ""
