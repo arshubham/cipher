@@ -48,9 +48,12 @@ namespace Cipher.Views {
             ciphertext_textview = new Cipher.Widgets.TextView ();
 
             spinbutton = new Gtk.SpinButton.with_range (1, 26, 1);
+            spinbutton.valign = Gtk.Align.CENTER;
 
             enchiper_button = new Cipher.Widgets.Button ("Enchiper", Gtk.STYLE_CLASS_SUGGESTED_ACTION);
             dechiper_button = new Cipher.Widgets.Button ("Dechiper", Gtk.STYLE_CLASS_DESTRUCTIVE_ACTION);
+
+            enchiper_button.valign = Gtk.Align.CENTER;
 
             var box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0);
             box.margin_top = 12;
