@@ -44,10 +44,6 @@ namespace Cipher {
             int window_width, window_height;
             settings.get ("window-size", "(ii)", out window_width, out window_height);
 
-            var rect = Gtk.Allocation ();
-            rect.width = window_width;
-            rect.height = window_height;
-            //set_allocation (rect);
             set_default_size (window_width, window_height);
 
             if (settings.get_boolean ("window-maximized")) {
@@ -60,8 +56,10 @@ namespace Cipher {
                 } else {
                     settings.set_boolean ("window-maximized", false);
 
-                    get_allocation (out rect);
-                    settings.set ("window-size", "(ii)", rect.width, rect.height);
+                    int width, height;
+                    get_size (out width, out height);
+                    debug (width.to_string ());
+                    settings.set ("window-size", "(ii)", width, height);
 
                     int root_x, root_y;
                     get_position (out root_x, out root_y);
