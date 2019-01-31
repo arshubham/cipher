@@ -1,8 +1,8 @@
 build/*
 debian/build/*
-debian/com.github.robertsanseries.template-for-vala-apps.debhelper.log
-debian/com.github.robertsanseries.template-for-vala-apps.substvars
-debian/com.github.robertsanseries.template-for-vala-apps/
+debian/com.github.arshubham.cipher.debhelper.log
+debian/com.github.arshubham.cipher.substvars
+debian/com.github.arshubham.cipher/
 debian/debhelper-build-stamp
 debian/files
 .buildconfig

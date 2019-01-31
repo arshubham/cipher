@@ -5,7 +5,7 @@
 		<file alias="style.css" compressed="true">css/style.css</file>
 	</gresource>
 
-	<gresource prefix="/com/github/robertsanseries/template-for-vala-apps/images">
+	<gresource prefix="/com/github/arshubham/cipher/images">
 		<file alias="com.github.arshubham.cipher.svg" compressed="true" preprocess="xml-stripblanks">images/com.github.arshubham.cipher.svg</file>
 
 		<file alias="16-com.github.arshubham.cipher.svg" compressed="true" preprocess="xml-stripblanks">images/icons/16/com.github.arshubham.cipher.svg</file>
