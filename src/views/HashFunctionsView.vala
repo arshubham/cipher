@@ -25,14 +25,14 @@ namespace Cipher.Views {
 
         private Cipher.Widgets.TextView plaintext_textview;
 
-        private Cipher.Widgets.Button enchiper_button;
+        private Cipher.Widgets.Button encipher_button;
 
         private Cipher.Widgets.Entry md5_entry;
         private Cipher.Widgets.Entry sha1_entry;
         private Cipher.Widgets.Entry sha256_entry;
 
         public HashFunctionsView () {
-            enchiper_button.clicked.connect (() => {
+            encipher_button.clicked.connect (() => {
                 var plain_text = plaintext_textview.buffer.text;
 
                 md5_entry.text = GLib.Checksum.compute_for_string (ChecksumType.MD5, plain_text, plain_text.length);
@@ -44,7 +44,7 @@ namespace Cipher.Views {
         construct {
             plaintext_textview = new Cipher.Widgets.TextView ();
 
-            enchiper_button = new Cipher.Widgets.Button (_("Generate Hash"), Gtk.STYLE_CLASS_SUGGESTED_ACTION);
+            encipher_button = new Cipher.Widgets.Button (_("Generate Hash"), Gtk.STYLE_CLASS_SUGGESTED_ACTION);
 
             md5_entry = new Cipher.Widgets.Entry ();
             sha1_entry = new Cipher.Widgets.Entry ();
@@ -62,7 +62,7 @@ namespace Cipher.Views {
 
             attach (new Cipher.Widgets.Label (_("Plain Text")), 0, 0, 1, 1);
             attach (new Cipher.Widgets.ScrolledWindow (plaintext_textview), 0, 1, 1, 1);
-            attach (enchiper_button, 0, 2, 1, 1);
+            attach (encipher_button, 0, 2, 1, 1);
             attach (hash_entry_grid, 0, 3, 1, 1);
         }
     }
