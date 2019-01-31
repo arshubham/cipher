@@ -128,7 +128,7 @@ namespace Cipher.Widgets {
         }
 
         public void set_wiki_link_tooltip_text (string title) {
-            wiki_link.tooltip_text = _("Click to learn more about ") + title + _(" on Wikipedia");
+            wiki_link.tooltip_text = _("Click to learn more about %s on Wikipedia").printf (title);
         }
 
         private bool on_button_released (Gtk.Widget sender, Gdk.EventButton event) {
