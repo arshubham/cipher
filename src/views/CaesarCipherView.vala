@@ -26,19 +26,19 @@ namespace Cipher.Views {
         private Cipher.Widgets.TextView plaintext_textview;
         private Cipher.Widgets.TextView ciphertext_textview;
 
-        private Cipher.Widgets.Button enchiper_button;
-        private Cipher.Widgets.Button dechiper_button;
+        private Cipher.Widgets.Button encipher_button;
+        private Cipher.Widgets.Button decipher_button;
 
         private Gtk.SpinButton spinbutton;
 
         public CaesarCipherView () {
             var caesar = new Cipher.Ciphers.Caesar ();
 
-            enchiper_button.clicked.connect (() => {
+            encipher_button.clicked.connect (() => {
                 ciphertext_textview.buffer.text = caesar.encrypt (plaintext_textview.buffer.text, spinbutton.get_value_as_int ());
             });
 
-            dechiper_button.clicked.connect (() => {
+            decipher_button.clicked.connect (() => {
                 plaintext_textview.buffer.text = caesar.decrypt (ciphertext_textview.buffer.text, spinbutton.get_value_as_int ());
             });
         }
@@ -50,10 +50,10 @@ namespace Cipher.Views {
             spinbutton = new Gtk.SpinButton.with_range (1, 26, 1);
             spinbutton.valign = Gtk.Align.CENTER;
 
-            enchiper_button = new Cipher.Widgets.Button (_("Enchiper"), Gtk.STYLE_CLASS_SUGGESTED_ACTION);
-            dechiper_button = new Cipher.Widgets.Button (_("Dechiper"), Gtk.STYLE_CLASS_DESTRUCTIVE_ACTION);
+            encipher_button = new Cipher.Widgets.Button (_("Encipher"), Gtk.STYLE_CLASS_SUGGESTED_ACTION);
+            decipher_button = new Cipher.Widgets.Button (_("Decipher"), Gtk.STYLE_CLASS_DESTRUCTIVE_ACTION);
 
-            enchiper_button.valign = Gtk.Align.CENTER;
+            encipher_button.valign = Gtk.Align.CENTER;
 
             var box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0);
             box.margin_top = 12;
@@ -64,10 +64,10 @@ namespace Cipher.Views {
             attach (new Cipher.Widgets.Label (_("Plain Text")), 0, 1, 1, 1);
             attach (new Cipher.Widgets.ScrolledWindow (plaintext_textview), 0, 2, 1, 1);
             attach (box, 0, 3, 1, 1);
-            attach (enchiper_button, 0, 3, 1, 1);
+            attach (encipher_button, 0, 3, 1, 1);
             attach (new Cipher.Widgets.Label (_("Cipher Text")), 0, 4, 1, 1);
             attach (new Cipher.Widgets.ScrolledWindow (ciphertext_textview), 0, 5, 1, 1);
-            attach (dechiper_button, 0, 6, 1, 1);
+            attach (decipher_button, 0, 6, 1, 1);
         }
     }
 }

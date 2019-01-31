@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.arshubham.cipher\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-01-30 23:54+0530\n"
+"POT-Creation-Date: 2019-01-31 09:23+0530\n"
 "PO-Revision-Date: 2019-01-30 23:41+0530\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -21,13 +21,13 @@ msgstr ""
 #: src/views/ROT13CipherView.vala:48 src/views/PolybiusSquareCipherView.vala:48
 #: src/views/CaesarCipherView.vala:53 src/views/Base64EncodingView.vala:48
 #: src/views/AtbashCipherView.vala:48 src/views/AsciiEncodingView.vala:48
-msgid "Enchiper"
+msgid "Encipher"
 msgstr ""
 
 #: src/views/ROT13CipherView.vala:49 src/views/PolybiusSquareCipherView.vala:49
 #: src/views/CaesarCipherView.vala:54 src/views/Base64EncodingView.vala:49
 #: src/views/AtbashCipherView.vala:49 src/views/AsciiEncodingView.vala:49
-msgid "Dechiper"
+msgid "Decipher"
 msgstr ""
 
 #: src/views/ROT13CipherView.vala:51 src/views/PolybiusSquareCipherView.vala:51
