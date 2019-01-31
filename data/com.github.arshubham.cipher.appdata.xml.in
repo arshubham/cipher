@@ -12,10 +12,19 @@
   </provides>
   <screenshots>
     <screenshot type="default">
-      <image>https://raw.githubusercontent.com/arshubham/cipher/master/data/images/Screenshot%20from%202018-01-14%2013.09.47.png</image>
+      <image>https://raw.githubusercontent.com/arshubham/cipher/master/data/images/Screenshot1.png</image>
     </screenshot>
     <screenshot>
-      <image>https://raw.githubusercontent.com/arshubham/cipher/master/data/images/Screenshot%20from%202018-01-14%2013.10.14.png</image>
+      <image>https://raw.githubusercontent.com/arshubham/cipher/master/data/images/Screenshot2.png</image>
+    </screenshot>
+    <screenshot>
+      <image>https://raw.githubusercontent.com/arshubham/cipher/master/data/images/Screenshot3.png</image>
+    </screenshot>
+    <screenshot>
+      <image>https://raw.githubusercontent.com/arshubham/cipher/master/data/images/Screenshot4.png</image>
+    </screenshot>
+    <screenshot>
+      <image>https://raw.githubusercontent.com/arshubham/cipher/master/data/images/Screenshot5.png</image>
     </screenshot>
   </screenshots>
   <releases>

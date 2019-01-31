@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.arshubham.cipher\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-01-31 09:23+0530\n"
+"POT-Creation-Date: 2019-01-31 18:39+0530\n"
 "PO-Revision-Date: 2019-01-30 23:41+0530\n"
 "Last-Translator: NathanBnm\n"
 "Language-Team: Français\n"
@@ -107,12 +107,9 @@ msgid "Dark background"
 msgstr "Thème sombre"
 
 #: src/widgets/HeaderBar.vala:131
-msgid "Click to learn more about "
-msgstr "Cliquez pour en savoir plus sur "
-
-#: src/widgets/HeaderBar.vala:131
-msgid " on Wikipedia"
-msgstr " sur Wikipédia"
+#, c-format
+msgid "Click to learn more about %s on Wikipedia"
+msgstr "Cliquez pour en savoir plus sur  %s sur Wikipédia"
 
 #: data/com.github.arshubham.cipher.desktop.in:5
 #: data/com.github.arshubham.cipher.appdata.xml.in:8
