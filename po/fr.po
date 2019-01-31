@@ -108,7 +108,7 @@ msgstr "Thème sombre"
 
 #: src/widgets/HeaderBar.vala:131
 msgid "Click to learn more about "
-msgstr "Cliquez pour en savoir plus"
+msgstr "Cliquez pour en savoir plus sur "
 
 #: src/widgets/HeaderBar.vala:131
 msgid " on Wikipedia"
