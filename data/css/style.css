@@ -66,3 +66,7 @@ flowboxchild:focus {
 .rot13 {
     background: linear-gradient(-45deg, #E16145, #FE337C);
 }
+
+.vigenere {
+    background: linear-gradient(-45deg, #29323C, #483874);
+}

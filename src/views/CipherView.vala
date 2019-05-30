@@ -30,7 +30,7 @@ namespace Cipher.Views {
         private Cipher.Widgets.CipherBox base64_encoding_box;
         private Cipher.Widgets.CipherBox hash_functions_box;
         private Cipher.Widgets.CipherBox ascii_encoding_box;
-
+        private Cipher.Widgets.CipherBox vigenere_cipher_box;
         public signal void switch_view (string view, string title, string uri);
 
         public CipherView () {
@@ -70,6 +70,11 @@ namespace Cipher.Views {
             ascii_encoding_box.clicked.connect (() => {
                 switch_view ("ascii_encoding", ascii_encoding_box.get_title (), "https://wikipedia.org/wiki/ASCII");
             });
+
+            vigenere_cipher_box.clicked.connect (() => {
+                switch_view ("vigenere_cipher", vigenere_cipher_box.get_title (), "https://en.wikipedia.org/wiki/Vigen%C3%A8re_cipher");
+            });
+
         }
 
         construct {
@@ -80,6 +85,7 @@ namespace Cipher.Views {
             base64_encoding_box = new Cipher.Widgets.CipherBox (_("Base64 Encoding"), "base64");
             hash_functions_box = new Cipher.Widgets.CipherBox (_("Hash Functions"), "hash");
             ascii_encoding_box = new Cipher.Widgets.CipherBox (_("ASCII Encoding"), "ascii");
+            vigenere_cipher_box = new Cipher.Widgets.CipherBox (_("Vigenere Cipher"), "vigenere");
 
             add (caesar_cipher_box);
             add (atbash_cipher_box);
@@ -88,6 +94,7 @@ namespace Cipher.Views {
             add (base64_encoding_box);
             add (hash_functions_box);
             add (ascii_encoding_box);
+            add (vigenere_cipher_box);
         }
     }
 }
