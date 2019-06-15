@@ -22,82 +22,76 @@
 namespace Cipher.Ciphers {
 
     public class Vigenere {
-   
 
         public string encrypt (string plain_text, string key) {
-            int msgLen = plain_text.char_count();
-            int keyLen = key.char_count();
-            string cipher_text="";
-            string newKey="";
-            string texttemp =  plain_text.up();
-            string keytemp = key.up();
+            int msgLen = plain_text.char_count ();
+            int keyLen = key.char_count ();
+            string cipher_text = "";
+            string newKey = "";
 
-    
-            
-            
-            texttemp.to_utf8();
-            keytemp.to_utf8();
+            string texttemp = plain_text.up ();
+            string keytemp = key.up ();
+
+            //converting to utf format for accesibility
+            texttemp.to_utf8 ();
+            keytemp.to_utf8 ();
             unichar character;
-          
 
-         
             //generating new key
-                 int j=0;
-               int i =0;
-                 for(i=0; i < msgLen; ++i, ++j){
-                     if(j == keyLen){
-                        j = 0;
-                    }
-                newKey = newKey.concat(keytemp[j].to_string());
-                 }
-               newKey = newKey.concat(' '.to_string());
-            
-            for(i = 0; i < msgLen; ++i){
-                character  = ((texttemp[i] + newKey[i]) % 26) + 'A';
-                if(texttemp[i].isalpha())
+            int j = 0;
+            int i = 0;
+            for (i = 0; i < msgLen; ++i, ++j) {
+                if (j == keyLen) {
+                    j = 0;
+                }
+                newKey = newKey.concat (keytemp[j].to_string ());
+            }
+            newKey = newKey.concat (' '.to_string ());
+
+            for (i = 0; i < msgLen; ++i) {
+                character = ((texttemp[i] + newKey[i]) % 26) + 'A';
+                if (texttemp[i].isalpha ())
                     cipher_text = cipher_text.concat (character.to_string ());
                 else
-                    cipher_text = cipher_text.concat (texttemp[i].to_string());
+                    cipher_text = cipher_text.concat (texttemp[i].to_string ());
             }
-             
 
             return cipher_text;
         }
 
-
         public string decrypt (string cipher_text, string key) {
+            int msgLen = cipher_text.char_count ();
+            int keyLen = key.char_count ();
             string plain_text = "";
-            int msgLen = cipher_text.char_count();
-            int keyLen = key.char_count();
-            string newKey="";
-            string texttemp =  cipher_text.up();
-            string keytemp = key.up();
+            string newKey = "";
 
-            texttemp.to_utf8();
-            keytemp.to_utf8();
+            string texttemp = cipher_text.up ();
+            string keytemp = key.up ();
+            //converting to utf format for accesibility
+            texttemp.to_utf8 ();
+            keytemp.to_utf8 ();
             unichar character;
 
             //generating new key
-            int j=0;
-            int i =0;
-              for(i=0; i < msgLen; ++i, ++j){
-                  if(j == keyLen)
-                     j = 0;
-                 
-             newKey = newKey.concat(keytemp[j].to_string());
-              }
-            newKey = newKey.concat('\0'.to_string());
-         
-         for(i = 0; i < msgLen; ++i){
-             character  = (((texttemp[i] - newKey[i]) + 26) % 26) + 'A';
-             if(texttemp[i].isalpha()){
-             plain_text = plain_text.concat (character.to_string ());
-             }
-             else{
-                 plain_text = plain_text.concat (texttemp[i].to_string());
-             }
-         }
-         
+            int j = 0;
+            int i = 0;
+            for (i = 0; i < msgLen; ++i, ++j) {
+                if (j == keyLen)
+                    j = 0;
+
+                newKey = newKey.concat (keytemp[j].to_string ());
+            }
+            newKey = newKey.concat ('\0'.to_string ());
+
+            for (i = 0; i < msgLen; ++i) {
+                character = (((texttemp[i] - newKey[i]) + 26) % 26) + 'A';
+                if (texttemp[i].isalpha ()) {
+                    plain_text = plain_text.concat (character.to_string ());
+                } else {
+                    plain_text = plain_text.concat (texttemp[i].to_string ());
+                }
+            }
+
             return plain_text;
         }
     }

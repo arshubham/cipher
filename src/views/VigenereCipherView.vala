@@ -25,7 +25,7 @@ namespace Cipher.Views {
 
         private Cipher.Widgets.TextView plaintext_textview;
         private Cipher.Widgets.TextView ciphertext_textview;
-        private Cipher.Widgets.KeyEntry key_entry;
+        private Cipher.Widgets.Entry key_entry;
 
         private Cipher.Widgets.Button encipher_button;
         private Cipher.Widgets.Button decipher_button;
@@ -46,7 +46,8 @@ namespace Cipher.Views {
         construct {
             plaintext_textview = new Cipher.Widgets.TextView ();
             ciphertext_textview = new Cipher.Widgets.TextView ();
-            key_entry = new Cipher.Widgets.KeyEntry();
+            key_entry = new Cipher.Widgets.Entry ();
+            key_entry.editable = true;
             key_entry.valign = Gtk.Align.CENTER;
 
             
@@ -57,7 +58,7 @@ namespace Cipher.Views {
             encipher_button.valign = Gtk.Align.CENTER;
 
             var box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0);
-            box.margin_top = 10;
+            box.margin_top = 8;
             box.valign = Gtk.Align.CENTER;
             box.pack_start (new Cipher.Widgets.Label (_("Key: ")), false, false, 0);
             box.pack_start (key_entry, false, true, 0);

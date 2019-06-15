@@ -49,7 +49,7 @@ namespace Cipher.Ciphers {
                         }
                     }
                 }
-                if (character >= 'A' && character <= 'Z') {
+                if(character >= 'A' && character <= 'Z') {
                     cipher_text = cipher_text.concat (val);
                 } else {
                     cipher_text = cipher_text.concat (character.to_string ());
@@ -70,6 +70,7 @@ namespace Cipher.Ciphers {
                     int c1 = int.parse (character.to_string ());
                     int c2 = int.parse (character_next.to_string ());
                     characterPlain = polybius_array[c1-1,c2-1];
+                    
                 }
                 else {
                     characterPlain = character;
