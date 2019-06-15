@@ -56,8 +56,8 @@
   <description>
     <p>
       A simple application for encoding and decoding text. Hide your text from prying eyes!
-      <br></br>
-      <b>Note:</b> This application does not actually encrypt files. This was made just enchipers strings. Have fun!
+      <br>
+      <b>Note:</b> This application does not actually encrypt files. This was made just to encipher strings. Have fun!
     </p>
     <p>Available Ciphers</p>
     <ul>
