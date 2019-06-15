@@ -1,12 +1,12 @@
-  {
-  "app-id": "com.github.arshubham.cipher",
-  "base" : "io.elementary.BaseApp",
-  "base-version" : "juno",
-  "runtime": "org.gnome.Platform",
-  "runtime-version": "3.28",
-  "sdk": "org.gnome.Sdk",
-  "command": "com.github.arshubham.cipher",
-  "cleanup": [
+{
+  "app-id":"com.github.arshubham.cipher",
+  "base":"io.elementary.BaseApp",
+  "base-version":"juno",
+  "runtime":"org.gnome.Platform",
+  "runtime-version":"3.28",
+  "sdk":"org.gnome.Sdk",
+  "command":"com.github.arshubham.cipher",
+  "cleanup":[
     "/bin/granite-demo",
     "/share/applications/granite-demo.desktop",
     "/include",
@@ -16,60 +16,65 @@
     "/man",
     "*.a",
     "*.la"
-    ],
-  "finish-args": [
+  ],
+  "finish-args":[
     /* X11 + XShm */
-    "--share=ipc", "--socket=x11",
+    "--share=ipc",
+    "--socket=x11",
     /* Wayland */
     "--socket=wayland",
     /* dconf */
-    "--filesystem=xdg-run/dconf", "--filesystem=~/.config/dconf:ro",
-    "--talk-name=ca.desrt.dconf", "--env=DCONF_USER_CONFIG_DIR=.config/dconf"
+    "--filesystem=xdg-run/dconf",
+    "--filesystem=~/.config/dconf:ro",
+    "--talk-name=ca.desrt.dconf",
+    "--env=DCONF_USER_CONFIG_DIR=.config/dconf"
   ],
-
-  "modules": [
-		{
-			"name": "libgee",
-			"config-opts": [
-				"--disable-static"
-			],
-			"sources": [
-				{
-					"type": "archive",
-					"url": "https://download.gnome.org/sources/libgee/0.20/libgee-0.20.0.tar.xz",
-					"sha256": "21308ba3ed77646dda2e724c0e8d5a2f8d101fb05e078975a532d7887223c2bb"
-				}
-			]
-		},
-		{
-			"name": "granite",
-			"buildsystem": "cmake-ninja",
-			"config-opts": [
-				"-DCMAKE_BUILD_TYPE=Release",
-				"-DCMAKE_INSTALL_LIBDIR=/app/lib"
-			],
-			"cleanup": [
-				"/bin",
-				"/share/applications"
-			],
-			"sources": [
-				{
-					"type":"archive",
-					"url": "https://github.com/elementary/granite/archive/5.2.2.tar.gz",
-					"sha256": "a2bfb717570b2b7ffef8715fae0dcabe7e3de21f6cb9392f1184a57ae6436f6c"
-				}
-			]
-		},
-{
-"name": "cipher",
-"buildsystem": "meson",
-"config-opts": ["--buildtype=release"],
-"sources": [{
-   "sha256": "d33673a07199fe34fa7ae86f4e4e8c850b0c4ff350a980fdf26a9da9665bb2bf",
-   "type": "archive",
-   "url" : "https://github.com/arshubham/cipher/archive/1.0.0.tar.gz"
-}]
-}
-]
-
+  "modules":[
+    {
+      "name":"libgee",
+      "config-opts":[
+        "--disable-static"
+      ],
+      "sources":[
+        {
+          "type":"archive",
+          "url":"https://download.gnome.org/sources/libgee/0.20/libgee-0.20.0.tar.xz",
+          "sha256":"21308ba3ed77646dda2e724c0e8d5a2f8d101fb05e078975a532d7887223c2bb"
+        }
+      ]
+    },
+    {
+      "name":"granite",
+      "buildsystem":"cmake-ninja",
+      "config-opts":[
+        "-DCMAKE_BUILD_TYPE=Release",
+        "-DCMAKE_INSTALL_LIBDIR=/app/lib"
+      ],
+      "cleanup":[
+        "/bin",
+        "/share/applications"
+      ],
+      "sources":[
+        {
+          "type":"archive",
+          "url":"https://github.com/elementary/granite/archive/5.2.2.tar.gz",
+          "sha256":"a2bfb717570b2b7ffef8715fae0dcabe7e3de21f6cb9392f1184a57ae6436f6c"
+        }
+      ]
+    },
+    {
+      "name":"cipher",
+      "buildsystem":"meson",
+      "config-opts":[
+        "--buildtype=release"
+      ],
+      "sources":[
+        {
+          "sha256":"d33673a07199fe34fa7ae86f4e4e8c850b0c4ff350a980fdf26a9da9665bb2bf",
+          "type":"archive",
+          "url":"https://github.com/arshubham/cipher/archive/1.0.0.tar.gz"
+        }
+      ]
+    }
+  ]
 }
