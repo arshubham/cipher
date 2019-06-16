@@ -16,10 +16,12 @@ addons:
       - ubuntu-toolchain-r-test
     packages:
       - libstdc++-5-dev
+      - ninja-build
+      - meson
 
 install:
   - npm i -g @elementaryos/houston
-
+ 
 script:
   - houston ci
   - meson build --prefix=/AppDir/usr/ && cd build && ninja && sudo ninja install
