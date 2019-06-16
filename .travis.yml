@@ -18,12 +18,12 @@ addons:
       - libstdc++-5-dev
 
 install:
-  - meson build --prefix=/AppDir/usr
-  - cd build
-  - ninja
-  - sudo ninja install
+  - npm i -g elementary@houston
 
 script:
+  - houston-ci
+  - git clone https://github.com/arshubham/cipher
+  - cd cipher && meson build --prefix=/AppDir/usr/ && cd build && ninja && sudo ninja install
   - wget -c -nv "https://github.com/probonopd/linuxdeployqt/releases/download/continuous/linuxdeployqt-continuous-x86_64.AppImage"
   - chmod a+x linuxdeployqt-continuous-x86_64.AppImage
   - sudo cp /AppDir/usr/share/applications/* /Appdir/
