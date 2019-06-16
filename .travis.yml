@@ -22,4 +22,5 @@ install:
 
 script:
   - houston ci
+  - ls
   - sudo ./appimage.sh
