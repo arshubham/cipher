@@ -18,9 +18,14 @@ addons:
       - libstdc++-5-dev
 
 install:
-  - npm i -g @elementaryos/houston
+  - meson build --prefix=/AppDir/usr
+  - cd build
+  - ninja
+  - sudo ninja install
 
 script:
-  - houston ci
-  - chmod +x /appimage.sh
-  - sudo ./appimage.sh
+  - wget -c -nv "https://github.com/probonopd/linuxdeployqt/releases/download/continuous/linuxdeployqt-continuous-x86_64.AppImage"
+  - chmod a+x linuxdeployqt-continuous-x86_64.AppImage
+  - sudo cp /AppDir/usr/share/applications/* /Appdir/
+  - unset QTDIR; unset QT_PLUGIN_PATH ; unset LD_LIBRARY_PATH
+  - ./linuxdeployqt-continuous-x86_64.AppImage /AppDir/usr/share/applications/com.github.arshubham.cipher.desktop -appimage -unsupported-allow-new-glibc -unsupported-bundle-everything
