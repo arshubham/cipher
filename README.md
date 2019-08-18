@@ -12,6 +12,14 @@
 <p align="center">
 <img src="https://raw.githubusercontent.com/arshubham/cipher/master/data/images/Screenshot1.png" alt="screenshot-light">
 <img src="https://raw.githubusercontent.com/arshubham/cipher/master/data/images/Screenshot2.png" alt="screenshot-dark">
+
+# :closed_book: Contents
+[Features]()
+[Prerequisites]()
+[Installation]()
+[Contributing Workflow]()
+[Special Thanks]()
+
 <h1>Features</h1>
 <br>
 Cipher is a free and open souce text encoding and decoding app specially designed for elementary os. The Cipher app can currently encode and decode between six different ciphers namely:<br><br>
@@ -29,8 +37,8 @@ Cipher is a free and open souce text encoding and decoding app specially designe
 <p align="center">
   <img src="https://github.com/arshubham/cipher/blob/master/data/images/icons/128/com.github.arshubham.cipher.svg" alt="preview"/>
 </p>
-<h1>Installation</h1>
-<h2>Requiered Dependencies</h2>
+
+<h1>Prerequisites</h1>
 
 - `valac`
 - `granite`
@@ -41,7 +49,7 @@ Cipher is a free and open souce text encoding and decoding app specially designe
 - `meson`
 
 
-<h2>Installation</h2>
+<h1>Installation</h1>
 <br>
 
 ```
@@ -56,5 +64,7 @@ ninja
 sudo ninja install
 ```
 
-<h1>Contribute</h1>
+<h1>Contributing Workflow</h1>
 We welcome all user contributions. Any type of help would be great.
+
+
