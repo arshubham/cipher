@@ -19,6 +19,7 @@
 - [Installation](https://github.com/manavbabber/cipher/blob/master/README.md#link-installation)
 - [Contributing Workflow](https://github.com/manavbabber/cipher/blob/master/README.md#computer-contributing-workflow)
 - [Special Thanks](https://github.com/manavbabber/cipher/blob/master/README.md#tada-special-thanks)
+- [License](https://github.com/manavbabber/cipher#page_facing_up-license)
 
 # :sparkles: Features
 <br>
