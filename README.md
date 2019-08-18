@@ -70,4 +70,7 @@ We welcome all user contributions. Any type of help would be great.
 # :tada: Special Thanks 
 [Sahil Arora](https://github.com/sahilarora3117) for icon
 
+# :page_facing_up: License 
+This project is distributed under the terms of the GNU General Public License, version 3 - see the [LICENSE.md](LICENSE.md) file for details.
+
 
