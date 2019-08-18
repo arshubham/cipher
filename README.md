@@ -18,7 +18,7 @@
 - [Prerequisites](https://github.com/manavbabber/cipher/blob/master/README.md#prerequisites)
 - [Installation](https://github.com/manavbabber/cipher/blob/master/README.md#installation)
 - [Contributing Workflow](https://github.com/manavbabber/cipher/blob/master/README.md#contributing-workflow)
-- [Special Thanks]()
+- [Special Thanks](https://github.com/manavbabber/cipher/blob/master/README.md#tada-special-thanks)
 
 # :sparkles: Features
 <br>
