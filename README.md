@@ -1,3 +1,6 @@
+<p align="center">
+  <img src="https://github.com/arshubham/cipher/blob/master/data/images/icons/128/com.github.arshubham.cipher.svg" alt="preview"/>
+</p>
 <div>
   <h1 align="center">CIPHER</h1>
   <h2 align="center">Encode and decode text</h2>
@@ -35,9 +38,7 @@ Cipher is a free and open souce text encoding and decoding app specially designe
 
 <br>
 </p>
-<p align="center">
-  <img src="https://github.com/arshubham/cipher/blob/master/data/images/icons/128/com.github.arshubham.cipher.svg" alt="preview"/>
-</p>
+
 
 # :hammer_and_wrench: Prerequisites
 
