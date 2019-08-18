@@ -15,7 +15,7 @@
 
 # :closed_book: Contents
 - [Features](https://github.com/manavbabber/cipher/blob/master/README.md#sparkles-features)      
-- [Prerequisites](https://github.com/manavbabber/cipher/blob/master/README.md#prerequisites)
+- [Prerequisites](https://github.com/manavbabber/cipher#hammer_and_wrench-prerequisites)
 - [Installation](https://github.com/manavbabber/cipher/blob/master/README.md#link-installation)
 - [Contributing Workflow](https://github.com/manavbabber/cipher/blob/master/README.md#computer-contributing-workflow)
 - [Special Thanks](https://github.com/manavbabber/cipher/blob/master/README.md#tada-special-thanks)
