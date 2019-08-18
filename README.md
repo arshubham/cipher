@@ -14,10 +14,10 @@
 <img src="https://raw.githubusercontent.com/arshubham/cipher/master/data/images/Screenshot2.png" alt="screenshot-dark">
 
 # :closed_book: Contents
-[Features]()
-[Prerequisites]()
-[Installation]()
-[Contributing Workflow]()
+[Features](https://github.com/manavbabber/cipher/blob/master/README.md#features)
+[Prerequisites](https://github.com/manavbabber/cipher/blob/master/README.md#prerequisites)
+[Installation](https://github.com/manavbabber/cipher/blob/master/README.md#installation)
+[Contributing Workflow](https://github.com/manavbabber/cipher/blob/master/README.md#contributing-workflow)
 [Special Thanks]()
 
 <h1>Features</h1>
