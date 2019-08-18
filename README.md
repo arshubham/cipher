@@ -38,7 +38,7 @@ Cipher is a free and open souce text encoding and decoding app specially designe
   <img src="https://github.com/arshubham/cipher/blob/master/data/images/icons/128/com.github.arshubham.cipher.svg" alt="preview"/>
 </p>
 
-<h1>Prerequisites</h1>
+# :hammer_and_wrench: Prerequisites
 
 - `valac`
 - `granite`
@@ -49,7 +49,7 @@ Cipher is a free and open souce text encoding and decoding app specially designe
 - `meson`
 
 
-<h1>Installation</h1>
+# :link: Installation
 <br>
 
 ```
@@ -63,8 +63,11 @@ cd build
 ninja
 sudo ninja install
 ```
-
-<h1>Contributing Workflow</h1>
+# :computer: Contributing workflow
 We welcome all user contributions. Any type of help would be great.
+
+
+# :tada: Special Thanks 
+[Sahil Arora](https://github.com/sahilarora3117) for icon
 
 
