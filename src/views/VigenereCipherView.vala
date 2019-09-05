@@ -29,6 +29,7 @@ namespace Cipher.Views {
 
         private Cipher.Widgets.Button encipher_button;
         private Cipher.Widgets.Button decipher_button;
+        private Granite.Widgets.Toast keynull_toast;
 
 
         public VigenereCipherView () {
@@ -37,11 +38,17 @@ namespace Cipher.Views {
             encipher_button.clicked.connect (() => {
                 ciphertext_textview.buffer.text =
                 vigenere.encrypt (plaintext_textview.buffer.text, key_entry.buffer.text);
+                if (key_entry.buffer.text == "") {
+                    keynull_toast.send_notification ();
+                }
             });
 
             decipher_button.clicked.connect (() => {
                 plaintext_textview.buffer.text =
                 vigenere.decrypt (ciphertext_textview.buffer.text, key_entry.buffer.text);
+                if (key_entry.buffer.text == "") {
+                    keynull_toast.send_notification ();
+                }
             });
         }
 
@@ -51,7 +58,7 @@ namespace Cipher.Views {
             key_entry = new Cipher.Widgets.Entry ();
             key_entry.editable = true;
             key_entry.valign = Gtk.Align.CENTER;
-
+            keynull_toast = new Granite.Widgets.Toast (_("Key Entry is empty    "));
 
             encipher_button = new Cipher.Widgets.Button (_("Encipher"), Gtk.STYLE_CLASS_SUGGESTED_ACTION);
             decipher_button = new Cipher.Widgets.Button (_("Decipher"), Gtk.STYLE_CLASS_DESTRUCTIVE_ACTION);
@@ -71,6 +78,7 @@ namespace Cipher.Views {
             attach (new Cipher.Widgets.Label (_("Cipher Text")), 0, 4, 1, 1);
             attach (new Cipher.Widgets.ScrolledWindow (ciphertext_textview), 0, 5, 1, 1);
             attach (decipher_button, 0, 6, 1, 1);
+            attach (keynull_toast, 0, 0, 1, 1);
         }
     }
 }
