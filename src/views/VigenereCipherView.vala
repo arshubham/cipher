@@ -36,17 +36,21 @@ namespace Cipher.Views {
             var vigenere = new Cipher.Ciphers.Vigenere ();
 
             encipher_button.clicked.connect (() => {
-                ciphertext_textview.buffer.text =
-                vigenere.encrypt (plaintext_textview.buffer.text, key_entry.buffer.text);
-                if (key_entry.buffer.text == "") {
+                if (key_entry.buffer.text != "") {
+                    ciphertext_textview.buffer.text =
+                    vigenere.encrypt (plaintext_textview.buffer.text, key_entry.buffer.text);
+                }
+                else {
                     keynull_toast.send_notification ();
                 }
             });
 
             decipher_button.clicked.connect (() => {
-                plaintext_textview.buffer.text =
-                vigenere.decrypt (ciphertext_textview.buffer.text, key_entry.buffer.text);
-                if (key_entry.buffer.text == "") {
+                if (key_entry.buffer.text != "") {
+                    plaintext_textview.buffer.text =
+                    vigenere.decrypt (ciphertext_textview.buffer.text, key_entry.buffer.text);
+                }
+                else {
                     keynull_toast.send_notification ();
                 }
             });
@@ -71,13 +75,15 @@ namespace Cipher.Views {
             box.pack_start (new Cipher.Widgets.Label (_("Key: ")), false, false, 0);
             box.pack_start (key_entry, false, true, 0);
 
-            attach (new Cipher.Widgets.Label (_("Plain Text")), 0, 1, 1, 1);
-            attach (new Cipher.Widgets.ScrolledWindow (plaintext_textview), 0, 2, 1, 1);
-            attach (box, 0, 3, 1, 1);
-            attach (encipher_button, 0, 3, 1, 1);
-            attach (new Cipher.Widgets.Label (_("Cipher Text")), 0, 4, 1, 1);
-            attach (new Cipher.Widgets.ScrolledWindow (ciphertext_textview), 0, 5, 1, 1);
-            attach (decipher_button, 0, 6, 1, 1);
+            var grid = new Gtk.Grid ();
+            grid.attach (new Cipher.Widgets.Label (_("Plain Text")), 0, 1, 1, 1);
+            grid.attach (new Cipher.Widgets.ScrolledWindow (plaintext_textview), 0, 2, 1, 1);
+            grid.attach (box, 0, 3, 1, 1);
+            grid.attach (encipher_button, 0, 3, 1, 1);
+            grid.attach (new Cipher.Widgets.Label (_("Cipher Text")), 0, 4, 1, 1);
+            grid.attach (new Cipher.Widgets.ScrolledWindow (ciphertext_textview), 0, 5, 1, 1);
+            grid.attach (decipher_button, 0, 6, 1, 1);
+            attach (grid, 0, 0, 1, 1);
             attach (keynull_toast, 0, 0, 1, 1);
         }
     }

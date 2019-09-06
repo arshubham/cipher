@@ -56,10 +56,6 @@ namespace Cipher.Ciphers {
                     cipher_text = cipher_text.concat (texttemp[i].to_string ());
             }
 
-            if (key == "") {
-                cipher_text = texttemp;
-            }
-
             return cipher_text;
         }
 
@@ -94,10 +90,6 @@ namespace Cipher.Ciphers {
                 } else {
                     plain_text = plain_text.concat (texttemp[i].to_string ());
                 }
-            }
-
-            if (key == "") {
-                plain_text = texttemp;
             }
 
             return plain_text;
