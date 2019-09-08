@@ -36,23 +36,23 @@ namespace Cipher.Views {
             var vigenere = new Cipher.Ciphers.Vigenere ();
 
             encipher_button.clicked.connect (() => {
-                if (key_entry.buffer.text != "") {
-                    ciphertext_textview.buffer.text =
-                    vigenere.encrypt (plaintext_textview.buffer.text, key_entry.buffer.text);
-                }
-                else {
+                if (key_entry.buffer.text == "") {
                     keynull_toast.send_notification ();
+                    return;
                 }
+                ciphertext_textview.buffer.text =
+                vigenere.encrypt (plaintext_textview.buffer.text, key_entry.buffer.text);
+
             });
 
             decipher_button.clicked.connect (() => {
-                if (key_entry.buffer.text != "") {
-                    plaintext_textview.buffer.text =
-                    vigenere.decrypt (ciphertext_textview.buffer.text, key_entry.buffer.text);
-                }
-                else {
+                if (key_entry.buffer.text == "") {
                     keynull_toast.send_notification ();
+                    return;
                 }
+                plaintext_textview.buffer.text =
+                vigenere.decrypt (ciphertext_textview.buffer.text, key_entry.buffer.text);
+
             });
         }
 
