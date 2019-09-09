@@ -30,6 +30,8 @@ namespace Cipher.Views {
         private Cipher.Widgets.Entry md5_entry;
         private Cipher.Widgets.Entry sha1_entry;
         private Cipher.Widgets.Entry sha256_entry;
+        private Cipher.Widgets.Entry sha384_entry;
+        private Cipher.Widgets.Entry sha512_entry;
 
         public HashFunctionsView () {
             encipher_button.clicked.connect (() => {
@@ -38,6 +40,8 @@ namespace Cipher.Views {
                 md5_entry.text = GLib.Checksum.compute_for_string (ChecksumType.MD5, plain_text, plain_text.length);
                 sha1_entry.text = GLib.Checksum.compute_for_string (ChecksumType.SHA1, plain_text, plain_text.length);
                 sha256_entry.text = GLib.Checksum.compute_for_string (ChecksumType.SHA256, plain_text, plain_text.length);
+                sha384_entry.text = GLib.Checksum.compute_for_string (ChecksumType.SHA384, plain_text, plain_text.length);
+                sha512_entry.text = GLib.Checksum.compute_for_string (ChecksumType.SHA512, plain_text, plain_text.length);
             });
         }
 
@@ -49,6 +53,8 @@ namespace Cipher.Views {
             md5_entry = new Cipher.Widgets.Entry ();
             sha1_entry = new Cipher.Widgets.Entry ();
             sha256_entry = new Cipher.Widgets.Entry ();
+            sha384_entry = new Cipher.Widgets.Entry ();
+            sha512_entry = new Cipher.Widgets.Entry ();
 
             var hash_entry_grid = new Gtk.Grid ();
             hash_entry_grid.column_homogeneous = true;
@@ -59,6 +65,10 @@ namespace Cipher.Views {
             hash_entry_grid.attach (sha1_entry, 1, 1, 4, 1);
             hash_entry_grid.attach (new Cipher.Widgets.Label ("SHA256"), 0, 2, 1, 1);
             hash_entry_grid.attach (sha256_entry, 1, 2, 4, 1);
+            hash_entry_grid.attach (new Cipher.Widgets.Label ("SHA384"), 0, 3, 1, 1);
+            hash_entry_grid.attach (sha384_entry, 1, 3, 4, 1);
+            hash_entry_grid.attach (new Cipher.Widgets.Label ("SHA512"), 0, 4, 1, 1);
+            hash_entry_grid.attach (sha512_entry, 1, 4, 4, 1);
 
             attach (new Cipher.Widgets.Label (_("Plain Text")), 0, 0, 1, 1);
             attach (new Cipher.Widgets.ScrolledWindow (plaintext_textview), 0, 1, 1, 1);
