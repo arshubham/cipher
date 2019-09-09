@@ -79,6 +79,10 @@ Here’s how we suggest you go about proposing a change to this project:
 [pr]: https://help.github.com/articles/using-pull-requests/
 
 
+:collision: [Contributors](https://github.com/arshubham/cipher/blob/master/AUTHORS.md)
+
+
+
 # :page_facing_up: License 
 This project is distributed under the terms of the GNU General Public License, version 3 - see the [LICENSE.md](LICENSE.md) file for details.
 
