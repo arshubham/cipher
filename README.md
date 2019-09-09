@@ -78,8 +78,6 @@ Here’s how we suggest you go about proposing a change to this project:
 [branch]: https://help.github.com/articles/creating-and-deleting-branches-within-your-repository
 [pr]: https://help.github.com/articles/using-pull-requests/
 
-# :tada: Special Thanks 
-[Sahil Arora](https://github.com/sahilarora3117) for icon
 
 # :page_facing_up: License 
 This project is distributed under the terms of the GNU General Public License, version 3 - see the [LICENSE.md](LICENSE.md) file for details.
