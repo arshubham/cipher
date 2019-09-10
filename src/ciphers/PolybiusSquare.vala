@@ -24,11 +24,11 @@ namespace Cipher.Ciphers {
     public class PolybiusSquare {
 
         char[,] polybius_array = {
-            {'A', 'B', 'C', 'D','E'},
-            {'F', 'G', 'H', 'I','K'},
-            {'L', 'M', 'N', 'O','P'},
-            {'Q', 'R', 'S', 'T','U'},
-            {'V', 'W', 'X', 'Y','Z'}
+            { 'A', 'B', 'C', 'D', 'E'},
+            { 'F', 'G', 'H', 'I', 'K'},
+            { 'L', 'M', 'N', 'O', 'P'},
+            { 'Q', 'R', 'S', 'T', 'U'},
+            { 'V', 'W', 'X', 'Y', 'Z'}
         };
 
         public string encrypt (string plain_text) {
@@ -42,7 +42,7 @@ namespace Cipher.Ciphers {
                 for (int j = 0; j < 5; j++) {
                     for (int k = 0; k < 5; k++) {
                         if (character == polybius_array[j,k] && (character >= 'A' && character <= 'Z')) {
-                            val = ((j+1).to_string ()).concat ((k+1).to_string ());
+                            val = ((j + 1).to_string ()).concat ((k + 1).to_string ());
                         }
                         if (character == 'J') {
                             val = "24";
@@ -69,7 +69,7 @@ namespace Cipher.Ciphers {
                     cipher_text.get_next_char (ref i, out character_next);
                     int c1 = int.parse (character.to_string ());
                     int c2 = int.parse (character_next.to_string ());
-                    characterPlain = polybius_array[c1-1,c2-1];
+                    characterPlain = polybius_array [c1 - 1 , c2 - 1];
                 }
                 else {
                     characterPlain = character;
