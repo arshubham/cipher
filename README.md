@@ -34,7 +34,8 @@ Cipher is a free and open souce text encoding and decoding app specially designe
 - Rot13 Cipher
 - Base64 Encoding
 - ASCII Encoding
-- Hashing Functions (MD5, SHA1, SHA256)
+- Vigenere Cipher
+- Hashing Functions (MD5, SHA1, SHA256, SHA384, SHA512)
 
 <br>
 </p>
