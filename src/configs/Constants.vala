@@ -24,7 +24,7 @@ namespace Cipher.Configs {
     public class Constants {
 
         public abstract const string ID = _("com.github.arshubham.cipher");
-        public abstract const string VERSION = "1.0.0";
+        public abstract const string VERSION = "2.0.0";
         public abstract const string APP_NAME = _("Cipher");
         public abstract const string APP_YEARS = "2017-2019";
         public abstract const string APP_ICON = "com.github.arshubham.cipher";

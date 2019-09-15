@@ -1,3 +1,11 @@
+com.github.arshubham.cipher (2.0.0) precise; urgency=low
+
+  * New Icon! Thanks @Fatih20 (https://github.com/Fatih20)
+  * Added Vigenere Cipher
+  * Added SHA384 and SHA512 Hash Functions
+
+ -- Shubham Arora <shubhamarora@protonmail.com>  Wed, 15 Sep 2019 16:30:00 +0530
+
 com.github.arshubham.cipher (1.0.0) precise; urgency=low
 
   * Complete UI/UX Redesign!
