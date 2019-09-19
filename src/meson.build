@@ -32,6 +32,7 @@ sources = files(
     'widgets/Label.vala',
     'widgets/ScrolledWindow.vala',
     'widgets/TextView.vala',
+    'widgets/Switch.vala',
 
     'Window.vala'
 )

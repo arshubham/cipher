@@ -30,6 +30,7 @@ namespace Cipher.Views {
         private Cipher.Widgets.Button encipher_button;
         private Cipher.Widgets.Button decipher_button;
         private Granite.Widgets.Toast keynull_toast;
+        private Cipher.Widgets.Switch switcher;
 
 
         public VigenereCipherView () {
@@ -41,7 +42,7 @@ namespace Cipher.Views {
                     return;
                 }
                 ciphertext_textview.buffer.text =
-                vigenere.encrypt (plaintext_textview.buffer.text, key_entry.buffer.text);
+                vigenere.encrypt (plaintext_textview.buffer.text, key_entry.buffer.text, switcher.active);
 
             });
 
@@ -51,7 +52,7 @@ namespace Cipher.Views {
                     return;
                 }
                 plaintext_textview.buffer.text =
-                vigenere.decrypt (ciphertext_textview.buffer.text, key_entry.buffer.text);
+                vigenere.decrypt (ciphertext_textview.buffer.text, key_entry.buffer.text, switcher.active);
 
             });
         }
@@ -63,6 +64,7 @@ namespace Cipher.Views {
             key_entry.editable = true;
             key_entry.valign = Gtk.Align.CENTER;
             keynull_toast = new Granite.Widgets.Toast (_("Key must be at least 1 character long"));
+            switcher = new Cipher.Widgets.Switch ();
 
             encipher_button = new Cipher.Widgets.Button (_("Encipher"), Gtk.STYLE_CLASS_SUGGESTED_ACTION);
             decipher_button = new Cipher.Widgets.Button (_("Decipher"), Gtk.STYLE_CLASS_DESTRUCTIVE_ACTION);
@@ -74,6 +76,8 @@ namespace Cipher.Views {
             box.valign = Gtk.Align.CENTER;
             box.pack_start (new Cipher.Widgets.Label (_("Key: ")), false, false, 0);
             box.pack_start (key_entry, false, true, 0);
+            box.pack_start (new Cipher.Widgets.Label (_("Preserve Case: ")), false, false, 0);
+            box.pack_start (switcher, false, true, 0);
 
             var grid = new Gtk.Grid ();
             grid.attach (new Cipher.Widgets.Label (_("Plain Text")), 0, 1, 1, 1);
