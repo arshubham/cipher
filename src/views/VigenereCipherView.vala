@@ -30,7 +30,7 @@ namespace Cipher.Views {
         private Cipher.Widgets.Button encipher_button;
         private Cipher.Widgets.Button decipher_button;
         private Granite.Widgets.Toast keynull_toast;
-        private Cipher.Widgets.Switch switcher;
+        private Gtk.Switch switcher;
 
 
         public VigenereCipherView () {
@@ -64,7 +64,8 @@ namespace Cipher.Views {
             key_entry.editable = true;
             key_entry.valign = Gtk.Align.CENTER;
             keynull_toast = new Granite.Widgets.Toast (_("Key must be at least 1 character long"));
-            switcher = new Cipher.Widgets.Switch ();
+            switcher = new Gtk.Switch ();
+
 
             encipher_button = new Cipher.Widgets.Button (_("Encipher"), Gtk.STYLE_CLASS_SUGGESTED_ACTION);
             decipher_button = new Cipher.Widgets.Button (_("Decipher"), Gtk.STYLE_CLASS_DESTRUCTIVE_ACTION);

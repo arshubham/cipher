@@ -52,7 +52,7 @@ namespace Cipher.Ciphers {
             for (i = 0; i < msgLen; ++i) {
                 character = ((texttemp[i] + newKey[i]) % 26) + 'A';
                 if (texttemp[i].isalpha ())
-                    if (switcher == false){
+                    if (switcher == false) {
                     cipher_text = cipher_text.concat (character.to_string ());
                     }
                     else {
@@ -63,7 +63,6 @@ namespace Cipher.Ciphers {
                         else if (plain_text[i].islower () == true) {
                             temp = character.tolower ();
                             cipher_text = cipher_text.concat (temp.to_string ());
-                            
                         }
                     }
                 else
@@ -100,7 +99,7 @@ namespace Cipher.Ciphers {
             for (i = 0; i < msgLen; ++i) {
                 character = (((texttemp[i] - newKey[i]) + 26) % 26) + 'A';
                 if (texttemp[i].isalpha ()) {
-                    if (switcher == false){
+                    if (switcher == false) {
                     plain_text = plain_text.concat (character.to_string ());
                     }
                     else {
@@ -111,14 +110,12 @@ namespace Cipher.Ciphers {
                         else if (cipher_text[i].islower () == true) {
                             temp = character.tolower ();
                             plain_text = plain_text.concat (temp.to_string ());
-                            
                         }
                     }
                 } else {
                     plain_text = plain_text.concat (texttemp[i].to_string ());
                 }
             }
-            
             return plain_text;
         }
     }
