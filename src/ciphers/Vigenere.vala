@@ -23,7 +23,7 @@ namespace Cipher.Ciphers {
 
     public class Vigenere {
 
-        public string encrypt (string plain_text, string key) {
+        public string encrypt (string plain_text, string key, bool preserve_case) {
             int msgLen = plain_text.char_count ();
             int keyLen = key.char_count ();
             string cipher_text = "";
@@ -36,6 +36,7 @@ namespace Cipher.Ciphers {
             texttemp.to_utf8 ();
             keytemp.to_utf8 ();
             unichar character;
+            unichar temp;
 
             //generating new key
             int j = 0;
@@ -51,15 +52,26 @@ namespace Cipher.Ciphers {
             for (i = 0; i < msgLen; ++i) {
                 character = ((texttemp[i] + newKey[i]) % 26) + 'A';
                 if (texttemp[i].isalpha ())
+                    if (preserve_case == false) {
                     cipher_text = cipher_text.concat (character.to_string ());
+                    }
+                    else {
+                        if (plain_text[i].isupper () == true) {
+                            temp = character.toupper ();
+                            cipher_text = cipher_text.concat (temp.to_string ());
+                        }
+                        else if (plain_text[i].islower () == true) {
+                            temp = character.tolower ();
+                            cipher_text = cipher_text.concat (temp.to_string ());
+                        }
+                    }
                 else
                     cipher_text = cipher_text.concat (texttemp[i].to_string ());
             }
-
             return cipher_text;
         }
 
-        public string decrypt (string cipher_text, string key) {
+        public string decrypt (string cipher_text, string key, bool preserve_case) {
             int msgLen = cipher_text.char_count ();
             int keyLen = key.char_count ();
             string plain_text = "";
@@ -71,6 +83,7 @@ namespace Cipher.Ciphers {
             texttemp.to_utf8 ();
             keytemp.to_utf8 ();
             unichar character;
+            unichar temp;
 
             //generating new key
             int j = 0;
@@ -86,12 +99,23 @@ namespace Cipher.Ciphers {
             for (i = 0; i < msgLen; ++i) {
                 character = (((texttemp[i] - newKey[i]) + 26) % 26) + 'A';
                 if (texttemp[i].isalpha ()) {
+                    if (preserve_case == false) {
                     plain_text = plain_text.concat (character.to_string ());
+                    }
+                    else {
+                        if (cipher_text[i].isupper () == true) {
+                            temp = character.toupper ();
+                            plain_text = plain_text.concat (temp.to_string ());
+                        }
+                        else if (cipher_text[i].islower () == true) {
+                            temp = character.tolower ();
+                            plain_text = plain_text.concat (temp.to_string ());
+                        }
+                    }
                 } else {
                     plain_text = plain_text.concat (texttemp[i].to_string ());
                 }
             }
-
             return plain_text;
         }
     }
