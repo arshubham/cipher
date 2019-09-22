@@ -65,7 +65,7 @@ namespace Cipher.Views {
             key_entry.valign = Gtk.Align.CENTER;
             keynull_toast = new Granite.Widgets.Toast (_("Key must be at least 1 character long"));
             preserve_case_switcher = new Gtk.Switch ();
-
+            preserve_case_switcher.valign = Gtk.Align.CENTER;
 
             encipher_button = new Cipher.Widgets.Button (_("Encipher"), Gtk.STYLE_CLASS_SUGGESTED_ACTION);
             decipher_button = new Cipher.Widgets.Button (_("Decipher"), Gtk.STYLE_CLASS_DESTRUCTIVE_ACTION);
