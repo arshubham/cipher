@@ -23,7 +23,7 @@ namespace Cipher.Ciphers {
 
     public class Vigenere {
 
-        public string encrypt (string plain_text, string key, bool switcher) {
+        public string encrypt (string plain_text, string key, bool preserve_case) {
             int msgLen = plain_text.char_count ();
             int keyLen = key.char_count ();
             string cipher_text = "";
@@ -52,7 +52,7 @@ namespace Cipher.Ciphers {
             for (i = 0; i < msgLen; ++i) {
                 character = ((texttemp[i] + newKey[i]) % 26) + 'A';
                 if (texttemp[i].isalpha ())
-                    if (switcher == false) {
+                    if (preserve_case == false) {
                     cipher_text = cipher_text.concat (character.to_string ());
                     }
                     else {
@@ -71,7 +71,7 @@ namespace Cipher.Ciphers {
             return cipher_text;
         }
 
-        public string decrypt (string cipher_text, string key, bool switcher) {
+        public string decrypt (string cipher_text, string key, bool preserve_case) {
             int msgLen = cipher_text.char_count ();
             int keyLen = key.char_count ();
             string plain_text = "";
@@ -99,7 +99,7 @@ namespace Cipher.Ciphers {
             for (i = 0; i < msgLen; ++i) {
                 character = (((texttemp[i] - newKey[i]) + 26) % 26) + 'A';
                 if (texttemp[i].isalpha ()) {
-                    if (switcher == false) {
+                    if (preserve_case == false) {
                     plain_text = plain_text.concat (character.to_string ());
                     }
                     else {
