@@ -12,5 +12,5 @@ Keywords=cipher;crypt;cryptography;
 Actions=About;
 
 [Desktop Action About]
-Exec=xdg-open appstream://com.github.arshubham.cipher
+Exec=gio open appstream://com.github.arshubham.cipher
 Name=About Cipher
