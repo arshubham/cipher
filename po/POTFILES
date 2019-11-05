@@ -6,6 +6,7 @@ src/views/CaesarCipherView.vala
 src/views/Base64EncodingView.vala
 src/views/AtbashCipherView.vala
 src/views/AsciiEncodingView.vala
+src/views/VigenereCipherView.vala
 src/configs/Constants.vala
 src/widgets/HeaderBar.vala
 data/com.github.arshubham.cipher.desktop.in

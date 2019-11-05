@@ -7,6 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.arshubham.cipher\n"
 "Report-Msgid-Bugs-To: \n"
+
 "POT-Creation-Date: 2019-01-31 18:39+0530\n"
 "PO-Revision-Date: 2019-10-26 14:37+0200\n"
 "Last-Translator: Daniel R. <riesp@pm.me>\n"
@@ -21,69 +22,89 @@ msgstr ""
 #: src/views/ROT13CipherView.vala:48 src/views/PolybiusSquareCipherView.vala:48
 #: src/views/CaesarCipherView.vala:53 src/views/Base64EncodingView.vala:48
 #: src/views/AtbashCipherView.vala:48 src/views/AsciiEncodingView.vala:48
+#: src/views/VigenereCipherView.vala:70
 msgid "Encipher"
 msgstr "Cifrar"
 
 #: src/views/ROT13CipherView.vala:49 src/views/PolybiusSquareCipherView.vala:49
 #: src/views/CaesarCipherView.vala:54 src/views/Base64EncodingView.vala:49
 #: src/views/AtbashCipherView.vala:49 src/views/AsciiEncodingView.vala:49
+#: src/views/VigenereCipherView.vala:71
 msgid "Decipher"
 msgstr "Descifrar"
 
 #: src/views/ROT13CipherView.vala:51 src/views/PolybiusSquareCipherView.vala:51
-#: src/views/HashFunctionsView.vala:63 src/views/CaesarCipherView.vala:64
+#: src/views/HashFunctionsView.vala:73 src/views/CaesarCipherView.vala:64
 #: src/views/Base64EncodingView.vala:51 src/views/AtbashCipherView.vala:51
-#: src/views/AsciiEncodingView.vala:51
+#: src/views/AsciiEncodingView.vala:51 src/views/VigenereCipherView.vala:84
 msgid "Plain Text"
 msgstr "Texto plano"
 
 #: src/views/ROT13CipherView.vala:54 src/views/PolybiusSquareCipherView.vala:54
 #: src/views/CaesarCipherView.vala:68 src/views/Base64EncodingView.vala:54
 #: src/views/AtbashCipherView.vala:54 src/views/AsciiEncodingView.vala:54
+#: src/views/VigenereCipherView.vala:88
 msgid "Cipher Text"
 msgstr "Texto cifrado"
 
-#: src/views/HashFunctionsView.vala:47
+#: src/views/HashFunctionsView.vala:51
 msgid "Generate Hash"
 msgstr "Generar Hash"
 
-#: src/views/CipherView.vala:76
-#: data/com.github.arshubham.cipher.appdata.xml.in:55
+#: src/views/CipherView.vala:81
+#: data/com.github.arshubham.cipher.appdata.xml.in:78
 msgid "Caesar Shift Cipher"
 msgstr "Cifrado César"
 
-#: src/views/CipherView.vala:77
-#: data/com.github.arshubham.cipher.appdata.xml.in:56
+#: src/views/CipherView.vala:82
+#: data/com.github.arshubham.cipher.appdata.xml.in:79
 msgid "Atbash Cipher"
 msgstr "Atbash"
 
-#: src/views/CipherView.vala:78
-#: data/com.github.arshubham.cipher.appdata.xml.in:60
+#: src/views/CipherView.vala:83
+#: data/com.github.arshubham.cipher.appdata.xml.in:83
 msgid "Polybius Square Cipher"
 msgstr "Cuadrado de Polibio"
 
-#: src/views/CipherView.vala:79
-#: data/com.github.arshubham.cipher.appdata.xml.in:57
+#: src/views/CipherView.vala:84
+#: data/com.github.arshubham.cipher.appdata.xml.in:80
 msgid "ROT13 Cipher"
 msgstr "ROT13"
 
-#: src/views/CipherView.vala:80
-#: data/com.github.arshubham.cipher.appdata.xml.in:59
+#: src/views/CipherView.vala:85
+#: data/com.github.arshubham.cipher.appdata.xml.in:82
 msgid "Base64 Encoding"
 msgstr "Codificación Base64"
 
-#: src/views/CipherView.vala:81
+#: src/views/CipherView.vala:86
 msgid "Hash Functions"
 msgstr "Funciones Hash"
 
-#: src/views/CipherView.vala:82
-#: data/com.github.arshubham.cipher.appdata.xml.in:58
+#: src/views/CipherView.vala:87
+#: data/com.github.arshubham.cipher.appdata.xml.in:81
 msgid "ASCII Encoding"
 msgstr "Codificación ASCII"
+
+#: src/views/CipherView.vala:88
+#: data/com.github.arshubham.cipher.appdata.xml.in:84
+msgid "Vigenere Cipher"
+msgstr ""
 
 #: src/views/CaesarCipherView.vala:61
 msgid "Number of letters to shift to the right: "
 msgstr "Número de letras para desplazar a la derecha: "
+
+#: src/views/VigenereCipherView.vala:66
+msgid "Key must be at least 1 character long"
+msgstr ""
+
+#: src/views/VigenereCipherView.vala:78
+msgid "Key: "
+msgstr ""
+
+#: src/views/VigenereCipherView.vala:80
+msgid "Preserve Case: "
+msgstr ""
 
 #: src/configs/Constants.vala:26 data/com.github.arshubham.cipher.desktop.in:6
 msgid "com.github.arshubham.cipher"
@@ -129,46 +150,67 @@ msgstr "Sobre Cipher"
 msgid "Shubham Arora"
 msgstr "Shubham Arora"
 
-#: data/com.github.arshubham.cipher.appdata.xml.in:24
+#: data/com.github.arshubham.cipher.appdata.xml.in:34
+msgid "New Icon! Thanks @Fatih20 (https://github.com/Fatih20)"
+msgstr ""
+
+#: data/com.github.arshubham.cipher.appdata.xml.in:35
+msgid "Added Vigenere Cipher"
+msgstr ""
+
+#: data/com.github.arshubham.cipher.appdata.xml.in:36
+msgid "Added SHA384 and SHA512 Hash Functions"
+msgstr ""
+
+#: data/com.github.arshubham.cipher.appdata.xml.in:43
 msgid "Complete UI/UX Redesign!"
 msgstr "¡Rediseño completo de UI/UX!"
 
-#: data/com.github.arshubham.cipher.appdata.xml.in:25
+#: data/com.github.arshubham.cipher.appdata.xml.in:44
 msgid "Added i18n Capability"
 msgstr "Capacidad i18n agregada"
 
-#: data/com.github.arshubham.cipher.appdata.xml.in:26
-msgid "Added French Tranlations. Thanks @NathanBnm (https://github.com/NathanBnm)"
-msgstr "Traducción al francés añadida. Gracias @NathanBnm (https://github.com/NathanBnm)"
+#: data/com.github.arshubham.cipher.appdata.xml.in:45
+msgid ""
+"Added French Tranlations. Thanks @NathanBnm (https://github.com/NathanBnm)"
+msgstr ""
+"Añadida la traducción al francés. Gracias @NathanBnm (https://github.com/"
+"NathanBnm)"
 
-#: data/com.github.arshubham.cipher.appdata.xml.in:31
+#: data/com.github.arshubham.cipher.appdata.xml.in:52
 msgid "Update for Juno"
 msgstr "Actualización para Juno"
 
-#: data/com.github.arshubham.cipher.appdata.xml.in:32
+#: data/com.github.arshubham.cipher.appdata.xml.in:53
 msgid "Add Hashing Functions"
 msgstr "Agregar funciones de hash"
 
-#: data/com.github.arshubham.cipher.appdata.xml.in:37
+#: data/com.github.arshubham.cipher.appdata.xml.in:60
 msgid "New Icon"
 msgstr "Nuevo icono"
 
-#: data/com.github.arshubham.cipher.appdata.xml.in:38
+#: data/com.github.arshubham.cipher.appdata.xml.in:61
 msgid "Fixes in .desktop file"
 msgstr "Correcciones en el fichero .desktop"
 
-#: data/com.github.arshubham.cipher.appdata.xml.in:43
+#: data/com.Fusión automática falló; arregle los conflictos y luego realice un commit con el resultado.github.arshubham.cipher.appdata.xml.in:67
 msgid "Appdata and minor language fixes"
 msgstr "Appdata y correcciones menores de idioma"
 
-#: data/com.github.arshubham.cipher.appdata.xml.in:51
+#: data/com.github.arshubham.cipher.appdata.xml.in:72
+msgid ""
+"A simple application for encoding and decoding text. Hide your text from "
+"prying eyes!"
+msgstr ""
+
+#: data/com.github.arshubham.cipher.appdata.xml.in:74
 msgid "Note:"
 msgstr "Nota:"
 
-#: data/com.github.arshubham.cipher.appdata.xml.in:53
+#: data/com.github.arshubham.cipher.appdata.xml.in:76
 msgid "Available Ciphers"
 msgstr "Cifrados disponibles"
 
-#: data/com.github.arshubham.cipher.appdata.xml.in:61
-msgid "Hashing Functions (MD5, SHA1, SHA256)"
-msgstr "Funciones de hash (MD5, SHA1, SHA256)"
+#: data/com.github.arshubham.cipher.appdata.xml.in:85
+msgid "Hashing Functions (MD5, SHA1, SHA256, SHA384, SHA512)"
+msgstr "Funciones de «hash» (MD5, SHA1, SHA256, SHA384, SHA512)"
