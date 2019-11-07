@@ -30,14 +30,14 @@ namespace Cipher.Views {
         private Cipher.Widgets.Button decipher_button;
 
         public PolybiusSquareCipherView () {
-            var polybiusSquare = new Cipher.Ciphers.PolybiusSquare ();
+            var polybius_square = new Cipher.Ciphers.PolybiusSquare ();
 
             encipher_button.clicked.connect (() => {
-                ciphertext_textview.buffer.text = polybiusSquare.encrypt (plaintext_textview.buffer.text);
+                ciphertext_textview.buffer.text = polybius_square.encrypt (plaintext_textview.buffer.text);
             });
 
             decipher_button.clicked.connect (() => {
-                plaintext_textview.buffer.text = polybiusSquare.decrypt (ciphertext_textview.buffer.text);
+                plaintext_textview.buffer.text = polybius_square.decrypt (ciphertext_textview.buffer.text);
             });
         }
 

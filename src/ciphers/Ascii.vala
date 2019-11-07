@@ -25,12 +25,12 @@ namespace Cipher.Ciphers {
         public string encrypt (string plain_text) {
             string cipher_text = "";
             unichar character;
-            int asciiNum;
+            int ascii_num;
 
              for (int i = 0; plain_text.get_next_char (ref i, out character); ) {
-                asciiNum = (int) character;
+                ascii_num = (int) character;
 
-                cipher_text = cipher_text.concat (asciiNum.to_string (), " ");
+                cipher_text = cipher_text.concat (ascii_num.to_string (), " ");
              }
 
             return cipher_text;
@@ -46,8 +46,8 @@ namespace Cipher.Ciphers {
                 temp = temp.concat (character.to_string ());
 
                 if (character == ' ') {
-                    int asciiNum = int.parse (temp) ;
-                    c = (unichar) asciiNum;
+                    int ascii_num = int.parse (temp) ;
+                    c = (unichar) ascii_num;
                     plain_text = plain_text.concat (c.to_string ());
                     temp = "";
                 }

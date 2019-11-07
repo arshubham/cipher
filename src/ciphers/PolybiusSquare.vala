@@ -62,19 +62,19 @@ namespace Cipher.Ciphers {
             string plain_text = "";
             unichar character;
             unichar character_next;
-            unichar characterPlain;
+            unichar character_plain;
 
             for (int i = 0; cipher_text.get_next_char (ref i, out character); ) {
                 if (character >= '0' && character <= '9') {
                     cipher_text.get_next_char (ref i, out character_next);
                     int c1 = int.parse (character.to_string ());
                     int c2 = int.parse (character_next.to_string ());
-                    characterPlain = polybius_array [c1 - 1 , c2 - 1];
+                    character_plain = polybius_array [c1 - 1 , c2 - 1];
                 }
                 else {
-                    characterPlain = character;
+                    character_plain = character;
                 }
-                plain_text = plain_text.concat (characterPlain.to_string ());
+                plain_text = plain_text.concat (character_plain.to_string ());
             }
 
             return plain_text.down ();
