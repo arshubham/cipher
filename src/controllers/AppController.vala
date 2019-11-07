@@ -49,7 +49,7 @@ namespace Cipher.Controllers {
             var base64_encoding_view = new Cipher.Views.Base64EncodingView ();
             var hash_functions_view = new Cipher.Views.HashFunctionsView ();
             var vigenere_cipher_view = new Cipher.Views.VigenereCipherView ();
-            
+
             view_stack.show_all ();
 
             view_stack.add_named (cipher_view, "ciphers_view");

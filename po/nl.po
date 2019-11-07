@@ -86,11 +86,6 @@ msgstr "ASCII-versleuteling"
 msgid "Vigenere Cipher"
 msgstr "Vigenere-vercijfering"
 
-#: src/views/CipherView.vala:88
-#: data/com.github.arshubham.cipher.appdata.xml.in:84
-msgid "Vigenere Cipher"
-msgstr ""
-
 #: src/views/CaesarCipherView.vala:61
 msgid "Number of letters to shift to the right: "
 msgstr "Aantal naar rechts te verschuiven letters: "
@@ -106,18 +101,6 @@ msgstr "Sleutel:"
 #: src/views/VigenereCipherView.vala:80
 msgid "Preserve Case: "
 msgstr "Hoofdlettergevoeligheid behouden: "
-
-#: src/views/VigenereCipherView.vala:66
-msgid "Key must be at least 1 character long"
-msgstr ""
-
-#: src/views/VigenereCipherView.vala:78
-msgid "Key: "
-msgstr ""
-
-#: src/views/VigenereCipherView.vala:80
-msgid "Preserve Case: "
-msgstr ""
 
 #: src/configs/Constants.vala:26 data/com.github.arshubham.cipher.desktop.in:6
 msgid "com.github.arshubham.cipher"

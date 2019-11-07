@@ -24,34 +24,34 @@ namespace Cipher.Ciphers {
     public class Vigenere {
 
         public string encrypt (string plain_text, string key, bool preserve_case) {
-            int msgLen = plain_text.char_count ();
-            int keyLen = key.char_count ();
+            int msg_len = plain_text.char_count ();
+            int key_len = key.char_count ();
             string cipher_text = "";
-            string newKey = "";
+            string new_key = "";
 
-            string texttemp = plain_text.up ();
-            string keytemp = key.up ();
+            string text_temp = plain_text.up ();
+            string key_temp = key.up ();
 
             //converting to utf format for accesibility
-            texttemp.to_utf8 ();
-            keytemp.to_utf8 ();
+            text_temp.to_utf8 ();
+            key_temp.to_utf8 ();
             unichar character;
             unichar temp;
 
             //generating new key
             int j = 0;
             int i = 0;
-            for (i = 0; i < msgLen; ++i, ++j) {
-                if (j == keyLen) {
+            for (i = 0; i < msg_len; ++i, ++j) {
+                if (j == key_len) {
                     j = 0;
                 }
-                newKey = newKey.concat (keytemp[j].to_string ());
+                new_key = new_key.concat (key_temp[j].to_string ());
             }
-            newKey = newKey.concat (' '.to_string ());
+            new_key = new_key.concat (' '.to_string ());
 
-            for (i = 0; i < msgLen; ++i) {
-                character = ((texttemp[i] + newKey[i]) % 26) + 'A';
-                if (texttemp[i].isalpha ())
+            for (i = 0; i < msg_len; ++i) {
+                character = ((text_temp[i] + new_key[i]) % 26) + 'A';
+                if (text_temp[i].isalpha ())
                     if (preserve_case == false) {
                     cipher_text = cipher_text.concat (character.to_string ());
                     }
@@ -66,39 +66,39 @@ namespace Cipher.Ciphers {
                         }
                     }
                 else
-                    cipher_text = cipher_text.concat (texttemp[i].to_string ());
+                    cipher_text = cipher_text.concat (text_temp[i].to_string ());
             }
             return cipher_text;
         }
 
         public string decrypt (string cipher_text, string key, bool preserve_case) {
-            int msgLen = cipher_text.char_count ();
-            int keyLen = key.char_count ();
+            int msg_len = cipher_text.char_count ();
+            int key_len = key.char_count ();
             string plain_text = "";
-            string newKey = "";
+            string new_key = "";
 
-            string texttemp = cipher_text.up ();
-            string keytemp = key.up ();
+            string text_temp = cipher_text.up ();
+            string key_temp = key.up ();
             //converting to utf format for accesibility
-            texttemp.to_utf8 ();
-            keytemp.to_utf8 ();
+            text_temp.to_utf8 ();
+            key_temp.to_utf8 ();
             unichar character;
             unichar temp;
 
             //generating new key
             int j = 0;
             int i = 0;
-            for (i = 0; i < msgLen; ++i, ++j) {
-                if (j == keyLen)
+            for (i = 0; i < msg_len; ++i, ++j) {
+                if (j == key_len)
                     j = 0;
 
-                newKey = newKey.concat (keytemp[j].to_string ());
+                new_key = new_key.concat (key_temp[j].to_string ());
             }
-            newKey = newKey.concat ('\0'.to_string ());
+            new_key = new_key.concat ('\0'.to_string ());
 
-            for (i = 0; i < msgLen; ++i) {
-                character = (((texttemp[i] - newKey[i]) + 26) % 26) + 'A';
-                if (texttemp[i].isalpha ()) {
+            for (i = 0; i < msg_len; ++i) {
+                character = (((text_temp[i] - new_key[i]) + 26) % 26) + 'A';
+                if (text_temp[i].isalpha ()) {
                     if (preserve_case == false) {
                     plain_text = plain_text.concat (character.to_string ());
                     }
@@ -113,7 +113,7 @@ namespace Cipher.Ciphers {
                         }
                     }
                 } else {
-                    plain_text = plain_text.concat (texttemp[i].to_string ());
+                    plain_text = plain_text.concat (text_temp[i].to_string ());
                 }
             }
             return plain_text;
