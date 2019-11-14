@@ -49,7 +49,7 @@ namespace Cipher.Widgets {
 
             var window_settings = Gtk.Settings.get_default ();
 
-            var settings = new GLib.Settings ("com.github.arshubham.cipher");
+            var settings = new GLib.Settings (Cipher.Configs.Constants.ID);
 
             bool prefer_dark;
             settings.get ("prefer-dark", "b", out prefer_dark );
