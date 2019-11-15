@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.arshubham.cipher\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-14 19:46+0100\n"
+"POT-Creation-Date: 2019-11-15 15:20+0100\n"
 "PO-Revision-Date: 2019-11-14 19:41+0100\n"
 "Last-Translator: Daniel R. <riesp@pm.me>\n"
 "Language-Team: none\n"
@@ -97,17 +97,9 @@ msgstr "Clave: "
 msgid "Preserve Case: "
 msgstr "Conservar mayúsculas y minúsculas: "
 
-#: src/Configs/Constants.vala:26
-msgid "com.github.arshubham.cipher"
-msgstr "com.github.arshubham.cipher"
-
-#: src/Configs/Constants.vala:28
+#: src/Configs/Constants.vala:25
 msgid "Cipher"
 msgstr "Cipher"
-
-#: src/Configs/Constants.vala:31
-msgid "An simple app for encoding and decoding text"
-msgstr "Una aplicación simple para codificar y decodificar texto"
 
 #: src/Widgets/HeaderBar.vala:88
 msgid "Light background"
@@ -121,3 +113,9 @@ msgstr "Tema oscuro"
 #, c-format
 msgid "Click to learn more about %s on Wikipedia"
 msgstr "Haga clic para obtener más información sobre %s en Wikipedia"
+
+#~ msgid "com.github.arshubham.cipher"
+#~ msgstr "com.github.arshubham.cipher"
+
+#~ msgid "An simple app for encoding and decoding text"
+#~ msgstr "Una aplicación simple para codificar y decodificar texto"

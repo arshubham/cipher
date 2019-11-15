@@ -1,0 +1,114 @@
+# Aragonese translations for com.github.arshubham.cipher package.
+# Copyright (C) 2019 THE com.github.arshubham.cipher'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the com.github.arshubham.cipher package.
+# Automatically generated, 2019.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: com.github.arshubham.cipher\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-11-15 15:20+0100\n"
+"PO-Revision-Date: 2019-11-15 15:20+0100\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: an\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=ASCII\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: src/Views/ROT13CipherView.vala:48 src/Views/PolybiusSquareCipherView.vala:48
+#: src/Views/CaesarCipherView.vala:53 src/Views/Base64EncodingView.vala:48
+#: src/Views/AtbashCipherView.vala:48 src/Views/AsciiEncodingView.vala:48
+#: src/Views/VigenereCipherView.vala:70
+msgid "Encipher"
+msgstr ""
+
+#: src/Views/ROT13CipherView.vala:49 src/Views/PolybiusSquareCipherView.vala:49
+#: src/Views/CaesarCipherView.vala:54 src/Views/Base64EncodingView.vala:49
+#: src/Views/AtbashCipherView.vala:49 src/Views/AsciiEncodingView.vala:49
+#: src/Views/VigenereCipherView.vala:71
+msgid "Decipher"
+msgstr ""
+
+#: src/Views/ROT13CipherView.vala:51 src/Views/PolybiusSquareCipherView.vala:51
+#: src/Views/HashFunctionsView.vala:73 src/Views/CaesarCipherView.vala:64
+#: src/Views/Base64EncodingView.vala:51 src/Views/AtbashCipherView.vala:51
+#: src/Views/AsciiEncodingView.vala:51 src/Views/VigenereCipherView.vala:84
+msgid "Plain Text"
+msgstr ""
+
+#: src/Views/ROT13CipherView.vala:54 src/Views/PolybiusSquareCipherView.vala:54
+#: src/Views/CaesarCipherView.vala:68 src/Views/Base64EncodingView.vala:54
+#: src/Views/AtbashCipherView.vala:54 src/Views/AsciiEncodingView.vala:54
+#: src/Views/VigenereCipherView.vala:88
+msgid "Cipher Text"
+msgstr ""
+
+#: src/Views/HashFunctionsView.vala:51
+msgid "Generate Hash"
+msgstr ""
+
+#: src/Views/CipherView.vala:81
+msgid "Caesar Shift Cipher"
+msgstr ""
+
+#: src/Views/CipherView.vala:82
+msgid "Atbash Cipher"
+msgstr ""
+
+#: src/Views/CipherView.vala:83
+msgid "Polybius Square Cipher"
+msgstr ""
+
+#: src/Views/CipherView.vala:84
+msgid "ROT13 Cipher"
+msgstr ""
+
+#: src/Views/CipherView.vala:85
+msgid "Base64 Encoding"
+msgstr ""
+
+#: src/Views/CipherView.vala:86
+msgid "Hash Functions"
+msgstr ""
+
+#: src/Views/CipherView.vala:87
+msgid "ASCII Encoding"
+msgstr ""
+
+#: src/Views/CipherView.vala:88
+msgid "Vigenere Cipher"
+msgstr ""
+
+#: src/Views/CaesarCipherView.vala:61
+msgid "Number of letters to shift to the right: "
+msgstr ""
+
+#: src/Views/VigenereCipherView.vala:66
+msgid "Key must be at least 1 character long"
+msgstr ""
+
+#: src/Views/VigenereCipherView.vala:78
+msgid "Key: "
+msgstr ""
+
+#: src/Views/VigenereCipherView.vala:80
+msgid "Preserve Case: "
+msgstr ""
+
+#: src/Configs/Constants.vala:25
+msgid "Cipher"
+msgstr ""
+
+#: src/Widgets/HeaderBar.vala:88
+msgid "Light background"
+msgstr ""
+
+#: src/Widgets/HeaderBar.vala:91
+msgid "Dark background"
+msgstr ""
+
+#: src/Widgets/HeaderBar.vala:131
+#, c-format
+msgid "Click to learn more about %s on Wikipedia"
+msgstr ""

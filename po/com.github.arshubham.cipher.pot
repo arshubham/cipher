@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.arshubham.cipher\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-14 19:46+0100\n"
+"POT-Creation-Date: 2019-11-15 15:20+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -97,16 +97,8 @@ msgstr ""
 msgid "Preserve Case: "
 msgstr ""
 
-#: src/Configs/Constants.vala:26
-msgid "com.github.arshubham.cipher"
-msgstr ""
-
-#: src/Configs/Constants.vala:28
+#: src/Configs/Constants.vala:25
 msgid "Cipher"
-msgstr ""
-
-#: src/Configs/Constants.vala:31
-msgid "An simple app for encoding and decoding text"
 msgstr ""
 
 #: src/Widgets/HeaderBar.vala:88
