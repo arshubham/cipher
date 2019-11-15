@@ -45,41 +45,36 @@ msgid "Shubham Arora"
 msgstr "Shubham Arora"
 
 #: data/com.github.arshubham.cipher.appdata.xml.in:34
-#, fuzzy
 msgid "Added Dutch translation Thanks @Vistaus (https://github.com/Vistaus)"
 msgstr ""
-"Ajout des traductions françaises. Merci @NathanBnm (https://github.com/"
-"NathanBnm)"
+"Ajout des traductions en néerlandais grâce à @Vistaus (https://github.com/"
+"Vistaus)"
 
 #: data/com.github.arshubham.cipher.appdata.xml.in:41
-#, fuzzy
 msgid "New Icon! Thanks @Fatih20 (https://github.com/Fatih20)"
-msgstr ""
-"Ajout des traductions françaises. Merci @NathanBnm (https://github.com/"
-"NathanBnm)"
+msgstr "Nouvelle icône ! Grâce à @Fatih20 (https://github.com/Fatih20)"
 
 #: data/com.github.arshubham.cipher.appdata.xml.in:42
 msgid "Added Vigenere Cipher"
-msgstr ""
+msgstr "Ajout du chiffre de Vigenère"
 
 #: data/com.github.arshubham.cipher.appdata.xml.in:43
-#, fuzzy
 msgid "Added SHA384 and SHA512 Hash Functions"
-msgstr "Ajout des fonctions de hachage"
+msgstr "Ajout des fonctions de hachage SHA384 et SHA512"
 
 #: data/com.github.arshubham.cipher.appdata.xml.in:50
 msgid "Complete UI/UX Redesign!"
-msgstr "Refonte complète de l'interface"
+msgstr "Refonte complète de l'interface !"
 
 #: data/com.github.arshubham.cipher.appdata.xml.in:51
 msgid "Added i18n Capability"
-msgstr "Ajout de la compatibilité i18n"
+msgstr "Implémentation d'i18n"
 
 #: data/com.github.arshubham.cipher.appdata.xml.in:52
 msgid ""
 "Added French Tranlations. Thanks @NathanBnm (https://github.com/NathanBnm)"
 msgstr ""
-"Ajout des traductions françaises. Merci @NathanBnm (https://github.com/"
+"Ajout des traductions en français grâce à @NathanBnm (https://github.com/"
 "NathanBnm)"
 
 #: data/com.github.arshubham.cipher.appdata.xml.in:59
@@ -103,15 +98,15 @@ msgid "Appdata and minor language fixes"
 msgstr "Corrections du fichier Appdata et et langage mineures"
 
 #: data/com.github.arshubham.cipher.appdata.xml.in:79
-#, fuzzy
 msgid ""
 "A simple application for encoding and decoding text. Hide your text from "
 "prying eyes!"
-msgstr "Une simple application pour encoder et décoder du texte"
+msgstr "Une simple application pour encoder et décoder du texte. Masquez votre "
+"texte des regards indiscrets !"
 
 #: data/com.github.arshubham.cipher.appdata.xml.in:81
 msgid "Note:"
-msgstr "Note :"
+msgstr "Remarque :"
 
 #: data/com.github.arshubham.cipher.appdata.xml.in:83
 msgid "Available Ciphers"
@@ -143,9 +138,8 @@ msgstr "Carré de Polybe"
 
 #: data/com.github.arshubham.cipher.appdata.xml.in:91
 msgid "Vigenere Cipher"
-msgstr ""
+msgstr "Chiffre de Vigenère"
 
 #: data/com.github.arshubham.cipher.appdata.xml.in:92
-#, fuzzy
 msgid "Hashing Functions (MD5, SHA1, SHA256, SHA384, SHA512)"
-msgstr "Fonctions de hachage (MD5, SHA1, SHA256)"
+msgstr "Fonctions de hachage (MD5, SHA1, SHA256, SHA384, SHA512)"
