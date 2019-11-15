@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://github.com/arshubham/cipher/blob/master/data/images/icons/128/com.github.arshubham.cipher.svg" alt="preview"/>
+  <img src="https://github.com/arshubham/cipher/blob/master/data/icons/128/com.github.arshubham.cipher.svg" alt="preview"/>
 </p>
 <div>
   <h1 align="center">CIPHER</h1>
