@@ -28,7 +28,7 @@
     </screenshot>
   </screenshots>
   <releases>
-    <release version="2.5.0" date="2019-11-16">
+    <release version="2.5.1" date="2019-11-16">
       <description>
         <ul>
           <li> Added Dutch translation Thanks @Vistaus (https://github.com/Vistaus) </li>
