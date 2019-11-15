@@ -79,7 +79,7 @@ msgstr "Encodage ASCII"
 
 #: src/Views/CipherView.vala:88
 msgid "Vigenere Cipher"
-msgstr ""
+msgstr "Chiffre de Vigenère"
 
 #: src/Views/CaesarCipherView.vala:61
 msgid "Number of letters to shift to the right: "
@@ -87,15 +87,15 @@ msgstr "Nombre de lettres à décaler vers la droite : "
 
 #: src/Views/VigenereCipherView.vala:66
 msgid "Key must be at least 1 character long"
-msgstr ""
+msgstr "La clé doit comporter au moins un caractère"
 
 #: src/Views/VigenereCipherView.vala:78
 msgid "Key: "
-msgstr ""
+msgstr "Clé :"
 
 #: src/Views/VigenereCipherView.vala:80
 msgid "Preserve Case: "
-msgstr ""
+msgstr "Conserver la casse :"
 
 #: src/Configs/Constants.vala:25
 msgid "Cipher"
@@ -103,7 +103,7 @@ msgstr "Cipher"
 
 #: src/Widgets/HeaderBar.vala:79
 msgid "Back"
-msgstr ""
+msgstr "Retour"
 
 #: src/Widgets/HeaderBar.vala:88
 msgid "Light background"
