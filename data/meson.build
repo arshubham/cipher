@@ -11,16 +11,6 @@ foreach i : icon_sizes
     )
 endforeach
 
-#install_data(
-#    join_paths('images', meson.project_name() + '.svg'),
-#    install_dir: join_paths(get_option('datadir'), 'Cipher', 'images')
-#)
-
-#install_data(
-#    join_paths('images', meson.project_name() + '.png'),
-#    install_dir: join_paths(get_option('datadir'), 'pixmaps')
-#)
-
 i18n.merge_file(
     input: meson.project_name() + '.desktop.in',
     output: meson.project_name() + '.desktop',
