@@ -113,9 +113,3 @@ msgstr "Thème sombre"
 #, c-format
 msgid "Click to learn more about %s on Wikipedia"
 msgstr "Cliquez pour en savoir plus sur  %s sur Wikipédia"
-
-#~ msgid "com.github.arshubham.cipher"
-#~ msgstr "com.github.arshubham.cipher"
-
-#~ msgid "An simple app for encoding and decoding text"
-#~ msgstr "Une simple application pour encoder et décoder du texte"
