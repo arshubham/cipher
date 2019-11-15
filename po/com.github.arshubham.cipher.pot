@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.arshubham.cipher\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-15 15:20+0100\n"
+"POT-Creation-Date: 2019-11-15 16:32+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -99,6 +99,10 @@ msgstr ""
 
 #: src/Configs/Constants.vala:25
 msgid "Cipher"
+msgstr ""
+
+#: src/Widgets/HeaderBar.vala:79
+msgid "Back"
 msgstr ""
 
 #: src/Widgets/HeaderBar.vala:88
