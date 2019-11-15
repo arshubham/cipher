@@ -1,4 +1,4 @@
-project('com.github.arshubham.cipher', 'vala', 'c', version : '2.0.0', license: 'GPL-3.0')
+project('com.github.arshubham.cipher', 'vala', 'c', version : '2.5.0', license: 'GPL-3.0')
 
 gnome = import('gnome')
 i18n = import('i18n')

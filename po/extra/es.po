@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-15 16:34+0100\n"
+"POT-Creation-Date: 2019-11-15 15:47+0000\n"
 "PO-Revision-Date: 2019-11-14 19:42+0100\n"
 "Last-Translator: Daniel R. <riesp@pm.me>\n"
 "Language-Team: none\n"
@@ -46,59 +46,74 @@ msgstr "Shubham Arora"
 
 #: data/com.github.arshubham.cipher.appdata.xml.in:34
 #, fuzzy
-msgid "Added Dutch translation Thanks @Vistaus (https://github.com/Vistaus)"
+msgid "Add Dutch translations. Thanks @Vistaus (https://github.com/Vistaus)"
 msgstr ""
 "Añadida la traducción al francés. Gracias @NathanBnm (https://github.com/"
 "NathanBnm)"
 
-#: data/com.github.arshubham.cipher.appdata.xml.in:41
+#: data/com.github.arshubham.cipher.appdata.xml.in:35
+msgid ""
+"Add preserve case option to Vigenere Cipher. Thanks @sahilarora3117 (https://"
+"github.com/sahilarora3117)"
+msgstr ""
+
+#: data/com.github.arshubham.cipher.appdata.xml.in:36
+#, fuzzy
+msgid ""
+"Add Spanish and Galician translations. Thanks @riesp (https://github.com/"
+"riesp)"
+msgstr ""
+"Añadida la traducción al francés. Gracias @NathanBnm (https://github.com/"
+"NathanBnm)"
+
+#: data/com.github.arshubham.cipher.appdata.xml.in:43
 msgid "New Icon! Thanks @Fatih20 (https://github.com/Fatih20)"
 msgstr "¡Nuevo icono! Gracias @Fatih20 (https://github.com/Fatih20)"
 
-#: data/com.github.arshubham.cipher.appdata.xml.in:42
+#: data/com.github.arshubham.cipher.appdata.xml.in:44
 msgid "Added Vigenere Cipher"
 msgstr "Añadido el cifrado de Vigenère"
 
-#: data/com.github.arshubham.cipher.appdata.xml.in:43
+#: data/com.github.arshubham.cipher.appdata.xml.in:45
 msgid "Added SHA384 and SHA512 Hash Functions"
 msgstr "Añadidas las funciones «hash» SHA384 y SHA512"
 
-#: data/com.github.arshubham.cipher.appdata.xml.in:50
+#: data/com.github.arshubham.cipher.appdata.xml.in:52
 msgid "Complete UI/UX Redesign!"
 msgstr "¡Rediseño completo de UI/UX!"
 
-#: data/com.github.arshubham.cipher.appdata.xml.in:51
+#: data/com.github.arshubham.cipher.appdata.xml.in:53
 msgid "Added i18n Capability"
 msgstr "Añadida la capacidad i18n"
 
-#: data/com.github.arshubham.cipher.appdata.xml.in:52
+#: data/com.github.arshubham.cipher.appdata.xml.in:54
 msgid ""
 "Added French Tranlations. Thanks @NathanBnm (https://github.com/NathanBnm)"
 msgstr ""
 "Añadida la traducción al francés. Gracias @NathanBnm (https://github.com/"
 "NathanBnm)"
 
-#: data/com.github.arshubham.cipher.appdata.xml.in:59
+#: data/com.github.arshubham.cipher.appdata.xml.in:61
 msgid "Update for Juno"
 msgstr "Actualización para Juno"
 
-#: data/com.github.arshubham.cipher.appdata.xml.in:60
+#: data/com.github.arshubham.cipher.appdata.xml.in:62
 msgid "Add Hashing Functions"
 msgstr "Añadir funciones de «hash»"
 
-#: data/com.github.arshubham.cipher.appdata.xml.in:67
+#: data/com.github.arshubham.cipher.appdata.xml.in:69
 msgid "New Icon"
 msgstr "Nuevo icono"
 
-#: data/com.github.arshubham.cipher.appdata.xml.in:68
+#: data/com.github.arshubham.cipher.appdata.xml.in:70
 msgid "Fixes in .desktop file"
 msgstr "Correcciones en el fichero .desktop"
 
-#: data/com.github.arshubham.cipher.appdata.xml.in:74
+#: data/com.github.arshubham.cipher.appdata.xml.in:76
 msgid "Appdata and minor language fixes"
 msgstr "Appdata y correcciones menores de idioma"
 
-#: data/com.github.arshubham.cipher.appdata.xml.in:79
+#: data/com.github.arshubham.cipher.appdata.xml.in:81
 msgid ""
 "A simple application for encoding and decoding text. Hide your text from "
 "prying eyes!"
@@ -106,42 +121,42 @@ msgstr ""
 "Una aplicación simple para codificar y decodificar texto. ¡Oculte su texto "
 "de miradas indiscretas!"
 
-#: data/com.github.arshubham.cipher.appdata.xml.in:81
+#: data/com.github.arshubham.cipher.appdata.xml.in:83
 msgid "Note:"
 msgstr "Nota:"
 
-#: data/com.github.arshubham.cipher.appdata.xml.in:83
+#: data/com.github.arshubham.cipher.appdata.xml.in:85
 msgid "Available Ciphers"
 msgstr "Cifrados disponibles"
 
-#: data/com.github.arshubham.cipher.appdata.xml.in:85
+#: data/com.github.arshubham.cipher.appdata.xml.in:87
 msgid "Caesar Shift Cipher"
 msgstr "Cifrado César"
 
-#: data/com.github.arshubham.cipher.appdata.xml.in:86
+#: data/com.github.arshubham.cipher.appdata.xml.in:88
 msgid "Atbash Cipher"
 msgstr "Atbash"
 
-#: data/com.github.arshubham.cipher.appdata.xml.in:87
+#: data/com.github.arshubham.cipher.appdata.xml.in:89
 msgid "ROT13 Cipher"
 msgstr "ROT13"
 
-#: data/com.github.arshubham.cipher.appdata.xml.in:88
+#: data/com.github.arshubham.cipher.appdata.xml.in:90
 msgid "ASCII Encoding"
 msgstr "Codificación ASCII"
 
-#: data/com.github.arshubham.cipher.appdata.xml.in:89
+#: data/com.github.arshubham.cipher.appdata.xml.in:91
 msgid "Base64 Encoding"
 msgstr "Codificación Base64"
 
-#: data/com.github.arshubham.cipher.appdata.xml.in:90
+#: data/com.github.arshubham.cipher.appdata.xml.in:92
 msgid "Polybius Square Cipher"
 msgstr "Cuadrado de Polibio"
 
-#: data/com.github.arshubham.cipher.appdata.xml.in:91
+#: data/com.github.arshubham.cipher.appdata.xml.in:93
 msgid "Vigenere Cipher"
 msgstr "Cifrado de Vigenère"
 
-#: data/com.github.arshubham.cipher.appdata.xml.in:92
+#: data/com.github.arshubham.cipher.appdata.xml.in:94
 msgid "Hashing Functions (MD5, SHA1, SHA256, SHA384, SHA512)"
 msgstr "Funciones de «hash» (MD5, SHA1, SHA256, SHA384, SHA512)"
