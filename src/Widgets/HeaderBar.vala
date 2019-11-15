@@ -76,7 +76,7 @@ namespace Cipher.Widgets {
         construct {
             get_style_context ().add_class ("flat");
 
-            back_button = new Gtk.Button.with_label ("Back");
+            back_button = new Gtk.Button.with_label (_("Back"));
             back_button.get_style_context ().add_class (Granite.STYLE_CLASS_BACK_BUTTON);
             back_button.valign = Gtk.Align.CENTER;
 

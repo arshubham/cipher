@@ -101,6 +101,10 @@ msgstr "Conservar mayúsculas y minúsculas: "
 msgid "Cipher"
 msgstr "Cipher"
 
+#: src/Widgets/HeaderBar.vala:79
+msgid "Back"
+msgstr ""
+
 #: src/Widgets/HeaderBar.vala:88
 msgid "Light background"
 msgstr "Tema claro"
