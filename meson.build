@@ -1,37 +1,26 @@
-project('com.github.arshubham.cipher', ['vala', 'c'],
-    version : '2.0.0',
-    license: 'GPL-3.0'
-)
+project('com.github.arshubham.cipher', 'vala', 'c', version : '2.0.0', license: 'GPL-3.0')
 
 gnome = import('gnome')
 i18n = import('i18n')
 
-add_global_arguments('-DGETTEXT_PACKAGE="@0@"'.format (meson.project_name()), language:'c')
+add_project_arguments(
+    '-DGETTEXT_PACKAGE="@0@"'.format(meson.project_name()),
+    language: 'c'
+)
 
-gresource = gnome.compile_resources(
-    'as-resources', 'data/com.github.arshubham.cipher.gresource.xml',
+asresources = gnome.compile_resources(
+    'as-resources',
+    'data/' + meson.project_name() + '.gresource.xml',
     source_dir: 'data',
     c_name: 'as'
 )
 
-conf = configuration_data()
-conf.set_quoted('GETTEXT_PACKAGE', meson.project_name())
-configure_file(output: 'config.h', configuration: conf)
-config_h_dir = include_directories('.')
-
-c_args = [
-  '-include', 'config.h',
-  '-DGWEATHER_I_KNOW_THIS_IS_UNSTABLE',
-]
-
-subdir('data')
-
 subdir('src')
 
-executable('com.github.arshubham.cipher',
+executable(
+    meson.project_name(),
     sources,
-    gresource,
-    c_args: c_args,
+    asresources,
     dependencies :[
         dependency('granite'),
         dependency('gobject-2.0'),
@@ -42,7 +31,7 @@ executable('com.github.arshubham.cipher',
     install : true
 )
 
-meson.add_install_script('post_install.py')
-
+subdir('data')
 subdir('po')
 
+meson.add_install_script('meson/post_install.py')

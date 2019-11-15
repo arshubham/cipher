@@ -27,12 +27,12 @@ namespace Cipher {
             Object (
                 application: app,
                 deletable: true,
-                icon_name: Cipher.Configs.Constants.APP_ICON,
+                icon_name: Cipher.Configs.Constants.ID,
                 resizable: true,
                 title: Cipher.Configs.Constants.APP_NAME
             );
 
-            var settings = new GLib.Settings ("com.github.arshubham.cipher");
+            var settings = new GLib.Settings (Cipher.Configs.Constants.ID);
 
             int window_x, window_y;
             settings.get ("window-position", "(ii)", out window_x, out window_y);
