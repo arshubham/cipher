@@ -28,6 +28,13 @@
     </screenshot>
   </screenshots>
   <releases>
+    <release version="2.5.0" date="2019-11-16">
+      <description>
+        <ul>
+          <li> Added Dutch translation Thanks @Vistaus (https://github.com/Vistaus) </li>
+        </ul>
+      </description>
+    </release>
     <release version="2.0.0" date="2019-09-15">
       <description>
         <ul>
