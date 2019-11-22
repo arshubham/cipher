@@ -1,5 +1,13 @@
 com.github.arshubham.cipher (2.0.0) precise; urgency=low
 
+  * Add Dutch translations. Thanks @Vistaus (https://github.com/Vistaus)
+  * Add preserve case option to Vigenere Cipher. Thanks @sahilarora3117 (https://github.com/sahilarora3117)
+  * Add Spanish and Galician translations. Thanks @riesp (https://github.com/riesp)
+
+ -- Shubham Arora <shubhamarora@protonmail.com>  Wed, 22 Nov 2019 16:30:00 +0530
+
+com.github.arshubham.cipher (2.0.0) precise; urgency=low
+
   * New Icon! Thanks @Fatih20 (https://github.com/Fatih20)
   * Added Vigenere Cipher
   * Added SHA384 and SHA512 Hash Functions
