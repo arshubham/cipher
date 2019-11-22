@@ -1,4 +1,4 @@
-com.github.arshubham.cipher (2.0.0) precise; urgency=low
+com.github.arshubham.cipher (2.5.0) precise; urgency=low
 
   * Add Dutch translations. Thanks @Vistaus (https://github.com/Vistaus)
   * Add preserve case option to Vigenere Cipher. Thanks @sahilarora3117 (https://github.com/sahilarora3117)
