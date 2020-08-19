@@ -2,118 +2,120 @@
 # Copyright (C) 2019 THE com.github.arshubham.cipher'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the com.github.arshubham.cipher package.
 # Automatically generated, 2019.
+# André Barata <andretiagob@protonmail.com>, 2020.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: com.github.arshubham.cipher\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-15 15:47+0000\n"
-"PO-Revision-Date: 2019-11-15 15:20+0100\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2020-08-19 17:00+0100\n"
+"Last-Translator: André Barata <andretiagob@protonmail.com>\n"
+"Language-Team: Portuguese (Portugal)\n"
 "Language: pt\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=ASCII\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 2.4.1\n"
 
 #: src/Views/ROT13CipherView.vala:48 src/Views/PolybiusSquareCipherView.vala:48
 #: src/Views/CaesarCipherView.vala:53 src/Views/Base64EncodingView.vala:48
 #: src/Views/AtbashCipherView.vala:48 src/Views/AsciiEncodingView.vala:48
 #: src/Views/VigenereCipherView.vala:70
 msgid "Encipher"
-msgstr ""
+msgstr "Cifrar"
 
 #: src/Views/ROT13CipherView.vala:49 src/Views/PolybiusSquareCipherView.vala:49
 #: src/Views/CaesarCipherView.vala:54 src/Views/Base64EncodingView.vala:49
 #: src/Views/AtbashCipherView.vala:49 src/Views/AsciiEncodingView.vala:49
 #: src/Views/VigenereCipherView.vala:71
 msgid "Decipher"
-msgstr ""
+msgstr "Decifrar"
 
 #: src/Views/ROT13CipherView.vala:51 src/Views/PolybiusSquareCipherView.vala:51
 #: src/Views/HashFunctionsView.vala:73 src/Views/CaesarCipherView.vala:64
 #: src/Views/Base64EncodingView.vala:51 src/Views/AtbashCipherView.vala:51
 #: src/Views/AsciiEncodingView.vala:51 src/Views/VigenereCipherView.vala:84
 msgid "Plain Text"
-msgstr ""
+msgstr "Texto Simples"
 
 #: src/Views/ROT13CipherView.vala:54 src/Views/PolybiusSquareCipherView.vala:54
 #: src/Views/CaesarCipherView.vala:68 src/Views/Base64EncodingView.vala:54
 #: src/Views/AtbashCipherView.vala:54 src/Views/AsciiEncodingView.vala:54
 #: src/Views/VigenereCipherView.vala:88
 msgid "Cipher Text"
-msgstr ""
+msgstr "Texto Cifrado"
 
 #: src/Views/HashFunctionsView.vala:51
 msgid "Generate Hash"
-msgstr ""
+msgstr "Gerar Hash"
 
 #: src/Views/CipherView.vala:81
 msgid "Caesar Shift Cipher"
-msgstr ""
+msgstr "Cifrar Caesar Shift"
 
 #: src/Views/CipherView.vala:82
 msgid "Atbash Cipher"
-msgstr ""
+msgstr "Cifrar Atbash"
 
 #: src/Views/CipherView.vala:83
 msgid "Polybius Square Cipher"
-msgstr ""
+msgstr "Cifrar Polybius Square"
 
 #: src/Views/CipherView.vala:84
 msgid "ROT13 Cipher"
-msgstr ""
+msgstr "Cifrar ROT13"
 
 #: src/Views/CipherView.vala:85
 msgid "Base64 Encoding"
-msgstr ""
+msgstr "Codificar Base64"
 
 #: src/Views/CipherView.vala:86
 msgid "Hash Functions"
-msgstr ""
+msgstr "Funções Hash"
 
 #: src/Views/CipherView.vala:87
 msgid "ASCII Encoding"
-msgstr ""
+msgstr "Codificar ASCII"
 
 #: src/Views/CipherView.vala:88
 msgid "Vigenere Cipher"
-msgstr ""
+msgstr "Cifrar Vigenere"
 
 #: src/Views/CaesarCipherView.vala:61
 msgid "Number of letters to shift to the right: "
-msgstr ""
+msgstr "Número de letras a alternar para a direita:"
 
 #: src/Views/VigenereCipherView.vala:66
 msgid "Key must be at least 1 character long"
-msgstr ""
+msgstr "A chave tem que ter pelo menos 1 caracter de comprimento"
 
 #: src/Views/VigenereCipherView.vala:78
 msgid "Key: "
-msgstr ""
+msgstr "Chave:"
 
 #: src/Views/VigenereCipherView.vala:80
 msgid "Preserve Case: "
-msgstr ""
+msgstr "Preservar Chave:"
 
 #: src/Configs/Constants.vala:25
 msgid "Cipher"
-msgstr ""
+msgstr "Cifrar"
 
 #: src/Widgets/HeaderBar.vala:79
 msgid "Back"
-msgstr ""
+msgstr "Voltar"
 
 #: src/Widgets/HeaderBar.vala:88
 msgid "Light background"
-msgstr ""
+msgstr "Fundo Claro"
 
 #: src/Widgets/HeaderBar.vala:91
 msgid "Dark background"
-msgstr ""
+msgstr "Fundo Escuro"
 
 #: src/Widgets/HeaderBar.vala:131
 #, c-format
 msgid "Click to learn more about %s on Wikipedia"
-msgstr ""
+msgstr "Clique para aprender mais sobre %s na Wikipédia"
