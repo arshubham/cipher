@@ -78,7 +78,8 @@
     </release>
   </releases>
   <description>
-    <p>A simple application for encoding and decoding text. Hide your text from prying eyes! <b>Note:</b> This application does not actually encrypt files. This was made just to encipher strings. Have fun!</p>
+    A simple application for encoding and decoding text. Hide your text from prying eyes! 
+    <b>Note:</b> This application does not actually encrypt files. This was made just to encipher strings. Have fun!
     <p>Available Ciphers</p>
     <ul>
       <li>Caesar Shift Cipher</li>
