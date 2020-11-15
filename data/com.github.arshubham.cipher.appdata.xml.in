@@ -40,7 +40,7 @@
     <release version="2.0.0" date="2019-09-15">
       <description>
         <ul>
-          <li> New Icon! Thanks @Fatih20 (https://github.com/Fatih20) </li>
+          <li> New Icon! Thanks @Fatih20 </li>
           <li> Added Vigenere Cipher </li>
           <li> Added SHA384 and SHA512 Hash Functions </li>
         </ul>
@@ -51,7 +51,7 @@
         <ul>
           <li> Complete UI/UX Redesign! </li>
           <li> Added i18n Capability </li>
-          <li> Added French Tranlations. Thanks @NathanBnm (https://github.com/NathanBnm) </li>
+          <li> Added French Tranlations. Thanks @NathanBnm</li>
         </ul>
       </description>
     </release>
@@ -78,7 +78,7 @@
     </release>
   </releases>
   <description>
-    <p>A simple application for encoding and decoding text. Hide your text from prying eyes! <b>Note:</b> This application does not actually encrypt files. This was made just to encipher strings. Have fun!</p>
+    <p>A simple application for encoding and decoding text. Hide your text from prying eyes! Note: This application does not actually encrypt files. This was made just to encipher strings. Have fun!</p>
     <p>Available Ciphers</p>
     <ul>
       <li>Caesar Shift Cipher</li>
